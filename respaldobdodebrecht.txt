@@ -1,0 +1,112 @@
+/*
+Script generado por Aqua Data Studio 10.0.8 en mar-20-2012 04:21:18 PM
+Base de datos: odebrecht
+Esquema: <Todos los esquemas>
+Objetos: TABLE, VIEW
+*/
+DROP TABLE "users"
+GO
+DROP TABLE "test"
+GO
+DROP TABLE "subject"
+GO
+DROP TABLE "rol"
+GO
+DROP TABLE "question"
+GO
+DROP TABLE "project"
+GO
+DROP TABLE "post"
+GO
+DROP TABLE "donetest"
+GO
+DROP TABLE "company"
+GO
+DROP TABLE "area"
+GO
+DROP TABLE "answer"
+GO
+
+CREATE TABLE "answer"  ( 
+	"id_answer"  	int(11) AUTO_INCREMENT NOT NULL,
+	"id_question"	int(11) NOT NULL,
+	"answer"     	varchar(100) NOT NULL,
+	"file_image" 	varchar(100) NOT NULL,
+	"true_false" 	varchar(5) NOT NULL,
+	PRIMARY KEY("id_answer")
+)
+GO
+CREATE TABLE "area"  ( 
+	"id_area"  	int(11) AUTO_INCREMENT NOT NULL,
+	"name_area"	varchar(50) NOT NULL,
+	PRIMARY KEY("id_area")
+)
+GO
+CREATE TABLE "company"  ( 
+	"id_company"  	int(11) AUTO_INCREMENT NOT NULL,
+	"name_company"	varchar(50) NOT NULL,
+	PRIMARY KEY("id_company")
+)
+GO
+CREATE TABLE "donetest"  ( 
+	"id_donetest"	int(11) AUTO_INCREMENT NOT NULL,
+	"id_test"    	int(11) NOT NULL,
+	"id_user"    	int(11) NOT NULL,
+	"fecha"      	date NOT NULL,
+	PRIMARY KEY("id_donetest")
+)
+GO
+CREATE TABLE "post"  ( 
+	"id_post"  	int(11) AUTO_INCREMENT NOT NULL,
+	"name_post"	varchar(50) NOT NULL,
+	PRIMARY KEY("id_post")
+)
+GO
+CREATE TABLE "project"  ( 
+	"id_project"  	int(11) AUTO_INCREMENT NOT NULL,
+	"name_project"	varchar(50) NOT NULL,
+	PRIMARY KEY("id_project")
+)
+GO
+CREATE TABLE "question"  ( 
+	"id_question"	int(11) AUTO_INCREMENT NOT NULL,
+	"id_test"    	int(11) NOT NULL,
+	"quiestion"  	varchar(100) NOT NULL,
+	PRIMARY KEY("id_question")
+)
+GO
+CREATE TABLE "rol"  ( 
+	"id_rol"  	int(11) AUTO_INCREMENT NOT NULL,
+	"name_rol"	varchar(50) NOT NULL,
+	PRIMARY KEY("id_rol")
+)
+GO
+CREATE TABLE "subject"  ( 
+	"id_subject"  	int(11) AUTO_INCREMENT NOT NULL,
+	"name_subject"	varchar(20) NOT NULL,
+	"id_area"     	int(11) NOT NULL,
+	PRIMARY KEY("id_subject")
+)
+GO
+CREATE TABLE "test"  ( 
+	"id_test"  	int(11) AUTO_INCREMENT NOT NULL,
+	"name_test"	varchar(50) NOT NULL,
+	"id_area"  	int(11) NOT NULL,
+	"subject"  	varchar(50) NOT NULL,
+	PRIMARY KEY("id_test")
+)
+GO
+CREATE TABLE "users"  ( 
+	"id_user"      	int(11) AUTO_INCREMENT NOT NULL,
+	"name_user"    	varchar(20) NOT NULL,
+	"last_name"    	varchar(50) NOT NULL,
+	"password_user"	varchar(10) NOT NULL,
+	"id_project"   	int(11) NOT NULL,
+	"id_company"   	int(11) NOT NULL,
+	"id_post"      	int(11) NOT NULL,
+	"id_area"      	int(11) NOT NULL,
+	"id_rol"       	int(11) NOT NULL,
+	PRIMARY KEY("id_user")
+)
+GO
+
