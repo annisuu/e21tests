@@ -1,0 +1,99 @@
+
+
+class SubjectController {
+    
+    def index = { redirect(action:list,params:params) }
+
+    // the delete, save and update actions only accept POST requests
+    static allowedMethods = [delete:'POST', save:'POST', update:'POST']
+
+    def list = {
+        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+        [ subjectInstanceList: Subject.list( params ), subjectInstanceTotal: Subject.count() ]
+    }
+
+    def show = {
+        def subjectInstance = Subject.get( params.id )
+
+        if(!subjectInstance) {
+            flash.message = "Subject not found with id ${params.id}"
+            redirect(action:list)
+        }
+        else { return [ subjectInstance : subjectInstance ] }
+    }
+
+    def delete = {
+        def subjectInstance = Subject.get( params.id )
+        if(subjectInstance) {
+            try {
+                subjectInstance.delete(flush:true)
+                flash.message = "Subject ${params.id} deleted"
+                redirect(action:list)
+            }
+            catch(org.springframework.dao.DataIntegrityViolationException e) {
+                flash.message = "Subject ${params.id} could not be deleted"
+                redirect(action:show,id:params.id)
+            }
+        }
+        else {
+            flash.message = "Subject not found with id ${params.id}"
+            redirect(action:list)
+        }
+    }
+
+    def edit = {
+        def subjectInstance = Subject.get( params.id )
+
+        if(!subjectInstance) {
+            flash.message = "Subject not found with id ${params.id}"
+            redirect(action:list)
+        }
+        else {
+            return [ subjectInstance : subjectInstance ]
+        }
+    }
+
+    def update = {
+        def subjectInstance = Subject.get( params.id )
+        if(subjectInstance) {
+            if(params.version) {
+                def version = params.version.toLong()
+                if(subjectInstance.version > version) {
+                    
+                    subjectInstance.errors.rejectValue("version", "subject.optimistic.locking.failure", "Another user has updated this Subject while you were editing.")
+                    render(view:'edit',model:[subjectInstance:subjectInstance])
+                    return
+                }
+            }
+            subjectInstance.properties = params
+            if(!subjectInstance.hasErrors() && subjectInstance.save()) {
+                flash.message = "Subject ${params.id} updated"
+                redirect(action:show,id:subjectInstance.id)
+            }
+            else {
+                render(view:'edit',model:[subjectInstance:subjectInstance])
+            }
+        }
+        else {
+            flash.message = "Subject not found with id ${params.id}"
+            redirect(action:list)
+        }
+    }
+
+    def create = {
+        def subjectInstance = new Subject()
+        subjectInstance.properties = params
+        return ['subjectInstance':subjectInstance]
+    }
+
+    def save = {
+        def subjectInstance = new Subject(params)
+        if(!subjectInstance.hasErrors() && subjectInstance.save()) {
+            flash.message = "Subject ${subjectInstance.id} created"
+            redirect(action:show,id:subjectInstance.id)
+        }
+        else {
+            render(view:'create',model:[subjectInstance:subjectInstance])
+        }
+    }
+}
