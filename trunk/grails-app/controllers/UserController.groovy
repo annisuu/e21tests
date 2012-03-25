@@ -3,6 +3,7 @@
 class UserController {
     
     def index = { redirect(action:create,params:params) }
+   def ConsultaService
 
     // the delete, save and update actions only accept POST requests
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
@@ -81,9 +82,19 @@ class UserController {
     }
 
     def create = {
+      //creo mis cariables que haran consulta mediant elos metod2
+        def proyecto=ConsultaService.buscaProyecto()
+        def company=ConsultaService.buscaCompany()
+      def area=ConsultaService.buscaArea()
+      println("area"+ area.name_area)
+      println("compañias"+company.id_company)
+      println(proyecto.id_project)
+       println(proyecto.name_project)
         def userInstance = new User()
         userInstance.properties = params
-        return ['userInstance':userInstance]
+
+        return ['userInstance':userInstance,proyecto:proyecto,company:company,area:area]
+
     }
 
     def save = {
