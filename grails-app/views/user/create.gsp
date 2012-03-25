@@ -31,7 +31,13 @@
                                     <label for="idArea">Id Area:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idArea','errors')}">
-                                    <input type="text" id="idArea" name="idArea" value="${fieldValue(bean:userInstance,field:'idArea')}"/>
+                                    <select name="idArea">
+                                      <g:each var="c" in="${area}">
+                                        <option value="${c.id_area}">
+                                          ${c.name_area}
+                                        </option>
+                                      </g:each>
+                                    </select>
                                 </td>
                             </tr> 
                         
@@ -40,7 +46,14 @@
                                     <label for="idCompany">Id Company:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idCompany','errors')}">
-                                    <input type="text" id="idCompany" name="idCompany" value="${fieldValue(bean:userInstance,field:'idCompany')}"/>
+                                 <select name="idCompany">
+                                   <g:each var="b" in="${company}">
+                                     <option value="${b.id_company}">
+                                    ${b.name_company}
+                                    </option>
+                                   </g:each>
+
+                                 </select>
                                 </td>
                             </tr> 
                         
@@ -58,7 +71,11 @@
                                     <label for="idProyecto">Id Proyecto:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idProyecto','errors')}">
-                                    <input type="text" id="idProyecto" name="idProyecto" value="${fieldValue(bean:userInstance,field:'idProyecto')}"/>
+                                  <select name="idProyecto" id="idProyecto">
+               <g:each var="a" in="${proyecto}">
+                 <option value="${a.id_project}" <% if(userInstance.idProyecto==a.id_project){ println "selected"}%>>${a.name_project}</option>
+               </g:each>
+               </select>
                                 </td>
                             </tr> 
                         
@@ -96,7 +113,14 @@
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'password','errors')}">
                                     <input type="text" id="password" name="password" value="${fieldValue(bean:userInstance,field:'password')}"/>
                                 </td>
-                            </tr> 
+                            </tr>
+                        <tr>
+           <td>
+
+
+           </td>
+
+                        </tr>
                         
                         </tbody>
                     </table>
