@@ -40,7 +40,7 @@
       <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="true" />
     </content>
-    <content url="file://D:/Users/aNn/.grails/1.1.1/projects/etileno/plugins" />
+    <content url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="grails-1.1.1" level="application" />
@@ -48,12 +48,12 @@
       <library name="Grails User Library">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
-          <root url="file://D:/Users/aNn/.grails/1.1.1/projects/etileno/plugins/hibernate-1.1.1/lib" />
+          <root url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/hibernate-1.1.1/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
-        <jarDirectory url="file://D:/Users/aNn/.grails/1.1.1/projects/etileno/plugins/hibernate-1.1.1/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/hibernate-1.1.1/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>
