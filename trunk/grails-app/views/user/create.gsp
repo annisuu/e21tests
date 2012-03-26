@@ -28,14 +28,14 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idArea">Id Area:</label>
+                                    <label>Id Area:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idArea','errors')}">
                                     <select name="idArea">
                                       <g:each var="c" in="${area}">
                                         <option value="${c.id_area}">
                                           ${c.name_area}
-                                        </option>
+                                         </option>
                                       </g:each>
                                     </select>
                                 </td>
@@ -43,7 +43,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idCompany">Id Company:</label>
+                                    <label>Id Company:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idCompany','errors')}">
                                  <select name="idCompany" >
@@ -59,7 +59,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idPost">Id Post:</label>
+                                    <label>Id Post:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idPost','errors')}">
                                  <select name="idPost">
