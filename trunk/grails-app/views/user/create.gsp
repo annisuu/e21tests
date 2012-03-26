@@ -90,7 +90,7 @@
                                     <label for="idRol">Idrol:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idrol','errors')}">
-                                    <select name="idRol" id="idRol">
+                                    <select name="idrol" id="idrol">
                                       <g:each var="d" in ="${rol}">
                                       <option  value="${d.id_rol}">
                                         ${d.name_rol}

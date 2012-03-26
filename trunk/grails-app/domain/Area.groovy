@@ -1,6 +1,6 @@
 class Area {
   String nameArea
-
+              //Agregando un comentario para hacer commit
     static constraints = {
     }
    static mapping={
