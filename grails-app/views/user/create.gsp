@@ -46,7 +46,7 @@
                                     <label for="idCompany">Id Company:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idCompany','errors')}">
-                                 <select name="idCompany">
+                                 <select name="idCompany" >
                                    <g:each var="b" in="${company}">
                                      <option value="${b.id_company}">
                                     ${b.name_company}
@@ -62,7 +62,13 @@
                                     <label for="idPost">Id Post:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idPost','errors')}">
-                                    <input type="text" id="idPost" name="idPost" value="${fieldValue(bean:userInstance,field:'idPost')}"/>
+                                 <select name="idPost">
+                                  <g:each var="e" in ="${post}">
+                                    <option value="${e.id_post}">
+                                     ${e.name_post} 
+                                    </option>
+                                  </g:each>
+                                  </select>
                                 </td>
                             </tr> 
                         
@@ -81,10 +87,16 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idrol">Idrol:</label>
+                                    <label for="idRol">Idrol:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idrol','errors')}">
-                                    <input type="text" id="idrol" name="idrol" value="${fieldValue(bean:userInstance,field:'idrol')}"/>
+                                    <select name="idRol" id="idRol">
+                                      <g:each var="d" in ="${rol}">
+                                      <option  value="${d.id_rol}">
+                                        ${d.name_rol}
+                                      </option>
+                                      </g:each>
+                                      </select>
                                 </td>
                             </tr> 
                         

@@ -83,9 +83,14 @@ class UserController {
 
     def create = {
       //creo mis cariables que haran consulta mediant elos metod2
-        def proyecto=ConsultaService.buscaProyecto()
-        def company=ConsultaService.buscaCompany()
+
+      def proyecto=ConsultaService.buscaProyecto()
+      def company=ConsultaService.buscaCompany()
       def area=ConsultaService.buscaArea()
+      def rol=ConsultaService.buscaRol()
+      def post=ConsultaService.buscaPost()
+      println("puesto"+ post.name_post)
+      println("rol"+rol.name_rol)
       println("area"+ area.name_area)
       println("compañias"+company.id_company)
       println(proyecto.id_project)
@@ -93,7 +98,7 @@ class UserController {
         def userInstance = new User()
         userInstance.properties = params
 
-        return ['userInstance':userInstance,proyecto:proyecto,company:company,area:area]
+        return ['userInstance':userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post]
 
     }
 
