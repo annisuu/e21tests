@@ -50,4 +50,28 @@ class ConsultaService {
      return resultado
    }
 
+  def buscaRol (){
+    def sql=new Sql(dataSource)
+    def resultado=[]
+    sql.eachRow("select id_rol,name_rol from rol"){
+      def rol=new Expando()
+      rol.id_rol=it.id_rol
+      rol.name_rol=it.name_rol
+      resultado.add(rol)
+    }
+    return resultado
+  }
+
+  def buscaPost (){
+    def sql= new Sql(dataSource)
+    def resultado=[]
+    sql.eachRow("select id_post,name_post from post") {
+
+      def post =new Expando()
+      post.id_post=it.id_post
+      post.name_post=it.name_post
+      resultado.add(post)
+    }
+    return resultado
+  }
 }
