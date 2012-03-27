@@ -4,7 +4,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
-        <title>Create User</title>         
+        <title>Create User</title>
+      <g:javascript library="jquery"></g:javascript>
+      <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
+      <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
     </head>
     <body>
         <div class="nav">
@@ -111,10 +114,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameUser">Name User:</label>
+                                    <label for="nameUser">Name User: (Just Capital Letter)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'nameUser','errors')}">
-                                    <input type="text" id="nameUser" name="nameUser" value="${fieldValue(bean:userInstance,field:'nameUser')}"/>
+                                    <input type="text" id="nameUser" class="nameUser tb" name="nameUser" value="${fieldValue(bean:userInstance,field:'nameUser')}"/>
                                 </td>
                             </tr> 
                         
@@ -142,5 +145,12 @@
                 </div>
             </g:form>
         </div>
+    <g:javascript>
+
+$('#nameUser').alpha({allcaps:true});
+
+
+</g:javascript>
     </body>
 </html>
+
