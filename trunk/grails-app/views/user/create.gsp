@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
         <title>Create User</title>
+      
       <g:javascript library="jquery"></g:javascript>
       <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
       <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
@@ -105,7 +106,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="lastName">Last Name:</label>
+                                    <label for="lastName">Last Name:(Solo Mayusculas)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'lastName','errors')}">
                                     <input type="text" id="lastName" name="lastName" value="${fieldValue(bean:userInstance,field:'lastName')}"/>
@@ -114,7 +115,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameUser">Name User: (Just Capital Letter)</label>
+                                    <label for="nameUser">Name User: (Solo Mayusculas)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'nameUser','errors')}">
                                     <input type="text" id="nameUser" class="nameUser tb" name="nameUser" value="${fieldValue(bean:userInstance,field:'nameUser')}"/>
@@ -148,6 +149,7 @@
     <g:javascript>
 
 $('#nameUser').alpha({allcaps:true});
+$('#lastName').alpha({allcaps:true});
 
 
 </g:javascript>

@@ -4,7 +4,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
-        <title>Create Proyecto</title>         
+        <title>Create Proyecto</title>
+
+        <g:javascript library="jquery"></g:javascript>
+      <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
+      <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
+
     </head>
     <body>
         <div class="nav">
@@ -28,7 +33,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameProyecto">Name Proyecto:</label>
+                                    <label for="nameProyecto">Name Proyecto:(Solo Mayuscula)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:proyectoInstance,field:'nameProyecto','errors')}">
                                     <input type="text" id="nameProyecto" name="nameProyecto" value="${fieldValue(bean:proyectoInstance,field:'nameProyecto')}"/>
@@ -43,5 +48,10 @@
                 </div>
             </g:form>
         </div>
+    <g:javascript>
+ $('#nameProyecto').alpha({allcaps:true});
+             </g:javascript>
+
+
     </body>
 </html>

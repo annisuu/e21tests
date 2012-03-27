@@ -4,8 +4,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
-        <title>Create Area</title>         
-    </head>
+        <title>Create Area</title>
+
+       <g:javascript library="jquery"></g:javascript>
+      <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
+      <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
+         </head>
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
@@ -28,7 +32,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameArea">Name Area:</label>
+                                    <label for="nameArea">Name Area:(Solo Mayusculas)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:areaInstance,field:'nameArea','errors')}">
                                     <input type="text" id="nameArea" name="nameArea" value="${fieldValue(bean:areaInstance,field:'nameArea')}"/>
@@ -43,5 +47,9 @@
                 </div>
             </g:form>
         </div>
-    </body>
+
+             <g:javascript>
+$('#nameArea').alpha({allcaps:true});
+            </g:javascript>
+      </body>
 </html>

@@ -4,7 +4,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
-        <title>Create Post</title>         
+        <title>Create Post</title>
+
+       <g:javascript library="jquery"></g:javascript>
+      <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
+      <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
+
     </head>
     <body>
         <div class="nav">
@@ -28,7 +33,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="namePost">Name Post:</label>
+                                    <label for="namePost">Name Post (Solo Mayusculas):</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:postInstance,field:'namePost','errors')}">
                                     <input type="text" id="namePost" name="namePost" value="${fieldValue(bean:postInstance,field:'namePost')}"/>
@@ -43,5 +48,9 @@
                 </div>
             </g:form>
         </div>
+               <g:javascript>
+$('#namePost').alpha({allcaps:true});
+            </g:javascript>
+
     </body>
 </html>
