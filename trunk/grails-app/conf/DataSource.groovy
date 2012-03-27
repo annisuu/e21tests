@@ -16,9 +16,9 @@ environments {
 			driverClassName = "com.mysql.jdbc.Driver"
           // se espicifca el nombre de la bd despues del puerto 3306 y se pone el user y pw que se tiene para la bd
 
-         url = "jdbc:mysql://localhost:3306/obredecht"
+         url = "jdbc:mysql://localhost:3306/odebrecht"
          username = "root"
-         password = "00562793"
+         password = "1234"
 		}
 	}
 	test {
