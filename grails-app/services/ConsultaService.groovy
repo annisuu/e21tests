@@ -86,4 +86,17 @@ class ConsultaService {
     }
     return resultado
   }
+  def users (String param){
+    def sql= new Sql(dataSource)
+    def resultado=[]
+    sql.eachRow("select id_user,name_user from users where name_user like "+ param+ " ") {
+
+      def u =new Expando()
+      u.id=it.id_user
+      u.name=it.name_user
+
+      resultado.add(u)
+    }
+    return resultado
+  }
 }

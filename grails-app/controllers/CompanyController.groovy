@@ -3,6 +3,7 @@
 class CompanyController {
     
     def index = { redirect(action:create,params:params) }
+    def ConsultaService
 
     // the delete, save and update actions only accept POST requests
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
@@ -94,6 +95,22 @@ class CompanyController {
         }
         else {
             render(view:'create',model:[companyInstance:companyInstance])
+        }
+    }
+  def searchAJAX = {
+        def companys = Company.findAllByNameCompanyLike("%${params.query}%")
+
+        //Create XML response
+        render(contentType: "text/xml") {
+	    results() {
+	        companys.each { company ->
+		    result(){
+		        name(company.nameCompany)
+                        //Optional id which will be available in onItemSelect
+                        id(company.id)
+		    }
+		}
+            }
         }
     }
 }
