@@ -74,4 +74,16 @@ class ConsultaService {
     }
     return resultado
   }
+  def buscaSubject (){
+    def sql= new Sql(dataSource)
+    def resultado=[]
+    sql.eachRow("select id_subject,name_subject from subject") {
+
+      def subject =new Expando()
+      subject.id=it.id_subject
+      subject.name=it.name_subject
+      resultado.add(subject)
+    }
+    return resultado
+  }
 }
