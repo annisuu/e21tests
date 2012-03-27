@@ -4,7 +4,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
-        <title>Create Subject</title>         
+        <title>Create Subject</title>
+         // se manda a llamar el jscript desde la ruta dode se encuentra 
+       <g:javascript library="jquery"></g:javascript>
+      <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
+      <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
+
     </head>
     <body>
         <div class="nav">
@@ -59,5 +64,10 @@
                 </div>
             </g:form>
         </div>
+                // se abre el script para hacer referencia al campo que se valida
+        <g:javascript>
+     $('#nameSubject').alpha({allcaps:true});
+                 </g:javascript>
+
     </body>
 </html>

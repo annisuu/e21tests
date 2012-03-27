@@ -4,7 +4,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
-        <title>Create Rol</title>         
+        <title>Create Rol</title>
+      
+      <g:javascript library="jquery"></g:javascript>
+      <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
+      <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
+
     </head>
     <body>
         <div class="nav">
@@ -28,7 +33,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameRol">Name Rol:</label>
+                                    <label for="nameRol">Name Rol(Solo Maysculas):</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:rolInstance,field:'nameRol','errors')}">
                                     <input type="text" id="nameRol" name="nameRol" value="${fieldValue(bean:rolInstance,field:'nameRol')}"/>
@@ -43,5 +48,10 @@
                 </div>
             </g:form>
         </div>
+    <g:javascript>
+     $('#nameRol').alpha({allcaps:true});
+                 </g:javascript>
+
+
     </body>
 </html>
