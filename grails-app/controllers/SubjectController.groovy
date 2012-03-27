@@ -2,7 +2,8 @@
 
 class SubjectController {
     
-    def index = { redirect(action:list,params:params) }
+    def index = { redirect(action:create,params:params) }
+     def ConsultaService
 
     // the delete, save and update actions only accept POST requests
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
@@ -81,9 +82,13 @@ class SubjectController {
     }
 
     def create = {
+        def area=ConsultaService.buscaArea()
+      println("Area"+area.name_area)
+
+
         def subjectInstance = new Subject()
         subjectInstance.properties = params
-        return ['subjectInstance':subjectInstance]
+        return ['subjectInstance':subjectInstance,area:area]
     }
 
     def save = {

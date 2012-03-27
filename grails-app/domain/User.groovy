@@ -9,6 +9,7 @@ class User {
       String idArea
 
     static constraints = {
+      
     }
   static mapping={
 
