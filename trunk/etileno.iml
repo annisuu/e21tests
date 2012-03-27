@@ -15,6 +15,7 @@
       <configuration>
         <webroots>
           <root url="file://$MODULE_DIR$/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/richui-0.8/web-app" relative="/" />
         </webroots>
         <sourceRoots />
         <building>
@@ -40,7 +41,12 @@
       <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="true" />
     </content>
-    <content url="file://$MODULE_DIR$/../../Users/misaelburgos/.grails/1.1.1/projects/etileno/plugins" />
+    <content url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins">
+      <sourceFolder url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/richui-0.8/grails-app/controllers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/richui-0.8/grails-app/services" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/richui-0.8/grails-app/taglib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/richui-0.8/src/groovy" isTestSource="false" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="grails-1.1.1" level="application" />
@@ -48,12 +54,14 @@
       <library name="Grails User Library">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
-          <root url="file://$MODULE_DIR$/../../Users/misaelburgos/.grails/1.1.1/projects/etileno/plugins/hibernate-1.1.1/lib" />
+          <root url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/hibernate-1.1.1/lib" />
+          <root url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/richui-0.8/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
-        <jarDirectory url="file://$MODULE_DIR$/../../Users/misaelburgos/.grails/1.1.1/projects/etileno/plugins/hibernate-1.1.1/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/hibernate-1.1.1/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../Users/Quaxar2/.grails/1.1.1/projects/etileno/plugins/richui-0.8/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>
