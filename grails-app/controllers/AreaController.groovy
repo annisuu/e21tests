@@ -96,4 +96,21 @@ class AreaController {
             render(view:'create',model:[areaInstance:areaInstance])
         }
     }
+   def searchAJAX = {
+
+        def res = Area.findAllByNameAreaLike("%${params.query}%")
+         println res
+        //Create XML response
+        render(contentType: "text/xml") {
+	    results() {
+	        res.each { re ->
+		    result(){
+		        name(re.nameArea)
+                        //Optional id which will be available in onItemSelect
+                        id(re.id)
+		    }
+		}
+            }
+        }
+    }
 }

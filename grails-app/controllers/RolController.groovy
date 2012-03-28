@@ -96,4 +96,21 @@ class RolController {
             render(view:'create',model:[rolInstance:rolInstance])
         }
     }
+  def searchAJAX = {
+
+        def res = Rol.findAllByNameRolLike("%${params.query}%")
+
+        //Create XML response
+        render(contentType: "text/xml") {
+	    results() {
+	        res.each { re ->
+		    result(){
+		        name(re.nameRol)
+                        //Optional id which will be available in onItemSelect
+                        id(re.id)
+		    }
+		}
+            }
+        }
+    }
 }
