@@ -101,4 +101,22 @@ class SubjectController {
             render(view:'create',model:[subjectInstance:subjectInstance])
         }
     }
+
+   def searchAJAX = {
+
+        def res = Subject.findAllByNameSubjectLike("%${params.query}%")
+
+        //Create XML response
+        render(contentType: "text/xml") {
+	    results() {
+	        res.each { re ->
+		    result(){
+		        name(re.nameSubject)
+                        //Optional id which will be available in onItemSelect
+                        id(re.id)
+		    }
+		}
+            }
+        }
+    }
 }

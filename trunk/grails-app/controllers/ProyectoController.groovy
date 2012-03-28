@@ -96,4 +96,21 @@ class ProyectoController {
             render(view:'create',model:[proyectoInstance:proyectoInstance])
         }
     }
+  def searchAJAX = {
+
+        def res = Proyecto.findAllByNameProyectoLike("%${params.query}%")
+
+        //Create XML response
+        render(contentType: "text/xml") {
+	    results() {
+	        res.each { re ->
+		    result(){
+		        name(re.nameProyecto)
+                        //Optional id which will be available in onItemSelect
+                        id(re.id)
+		    }
+		}
+            }
+        }
+    }
 }

@@ -3,7 +3,7 @@ String nameTest
   String idArea
   String idSubject
   static mapping={
-    table 'tests'
+    table 'test'
     version false
     columns{
 

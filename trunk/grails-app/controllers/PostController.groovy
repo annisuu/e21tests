@@ -96,4 +96,21 @@ class PostController {
             render(view:'create',model:[postInstance:postInstance])
         }
     }
+  def searchAJAX = {
+
+        def res = Post.findAllByNamePostLike("%${params.query}%")
+
+        //Create XML response
+        render(contentType: "text/xml") {
+	    results() {
+	        res.each { re ->
+		    result(){
+		        name(re.namePost)
+                        //Optional id which will be available in onItemSelect
+                        id(re.id)
+		    }
+		}
+            }
+        }
+    }
 }

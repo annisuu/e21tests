@@ -98,4 +98,21 @@ class TestController {
             render(view:'create',model:[testInstance:testInstance])
         }
     }
+   def searchAJAX = {
+
+        def res = Test.findAllByNameTestLike("%${params.query}%")
+         println res
+        //Create XML response
+        render(contentType: "text/xml") {
+	    results() {
+	        res.each { re ->
+		    result(){
+		        name(re.nameTest)
+                        //Optional id which will be available in onItemSelect
+                        id(re.id)
+		    }
+		}
+            }
+        }
+    }
 }

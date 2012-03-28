@@ -4,7 +4,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
-        <title>Create Test</title>         
+        <title>Create Test</title>
+      <resource:autoComplete skin="default" />
     </head>
     <body>
         <div class="nav">
@@ -25,7 +26,13 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
+                              <TR><TD>Buscar </TD>
+                          <td>
+                           <!-- <richui:autoComplete name="user" action="${createLinkTo('dir': 'test/searchAJAX')}" />  -->
+                                 <richui:autoComplete name="searchuser" action="${createLinkTo('dir': 'test/searchAJAX')}"
+                                  onItemSelect="document.location.href = '${createLinkTo(dir: 'test/edit')}/' + id;" />
+                            <!--       <richui:autoComplete name="person" delimChar="," action="${createLinkTo('dir': 'test/searchAJAX')}" />    -->
+                          </td></TR>
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="idArea">Id Area:</label>
