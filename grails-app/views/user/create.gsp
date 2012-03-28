@@ -7,6 +7,7 @@
       <g:javascript library="jquery"></g:javascript>
       <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
       <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
+      <resource:autoComplete skin="default" />
     </head>
     <body>
         <div class="nav">
@@ -27,7 +28,13 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
+                              <TR><TD>Buscar </TD>
+                          <td>
+                           <!-- <richui:autoComplete name="user" action="${createLinkTo('dir': 'user/searchAJAX')}" />  -->
+                                 <richui:autoComplete name="searchuser" action="${createLinkTo('dir': 'user/searchAJAX')}"
+                                  onItemSelect="document.location.href = '${createLinkTo(dir: 'user/edit')}/' + id;" />
+                            <!--       <richui:autoComplete name="person" delimChar="," action="${createLinkTo('dir': 'user/searchAJAX')}" />    -->
+                          </td></TR>
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label>Id Area:</label>

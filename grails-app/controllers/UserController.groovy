@@ -117,4 +117,21 @@ class UserController {
             render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
         }
     }
+  def searchAJAX = {
+    println "xxxxx"
+        def users = User.findAllByNameUserLike("%${params.query}%")
+
+        //Create XML response
+        render(contentType: "text/xml") {
+	    results() {
+	        users.each { user ->
+		    result(){
+		        name(user.nameUser)
+                        //Optional id which will be available in onItemSelect
+                        id(user.id)
+		    }
+		}
+            }
+        }
+    }
 }

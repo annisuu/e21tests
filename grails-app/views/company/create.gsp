@@ -26,8 +26,6 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
-                            <tr class="prop">
                               <TR><TD>Buscar </TD>
                           <td>
                            <!-- <richui:autoComplete name="person" action="${createLinkTo('dir': 'company/searchAJAX')}" />  -->
@@ -35,6 +33,8 @@
                                   onItemSelect="document.location.href = '${createLinkTo(dir: 'company/edit')}/' + id;" />
                             <!--       <richui:autoComplete name="person" delimChar="," action="${createLinkTo('dir': 'company/searchAJAX')}" />    -->
                           </td></TR>
+                            <tr class="prop">
+
                                 <td valign="top" class="name">
 
                                     <label for="nameCompany">Name Company:</label>
