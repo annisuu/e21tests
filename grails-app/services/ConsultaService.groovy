@@ -99,4 +99,20 @@ class ConsultaService {
     }
     return resultado
   }
+  def findQuestion(String id){
+     def sql= new Sql(dataSource)
+    def resultado=[]
+    sql.eachRow("select * from do_question where idq = "+ id + " ") {
+
+      def u =new Expando()
+      u.idq=it.idq
+      u.question=it.questiontext
+      u.idanswer=it.idanswer
+      
+
+      resultado.add(u)
+    }
+    return resultado
+
+  }
 }

@@ -23,7 +23,7 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="idArea" title="Id Area" />
+                   	        <g:sortableColumn property="idArea" title="Area" />
                         
                    	        <g:sortableColumn property="idCompany" title="Id Company" />
                         
@@ -40,8 +40,12 @@
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
                             <td><g:link action="show" id="${userInstance.id}">${fieldValue(bean:userInstance, field:'id')}</g:link></td>
-                        
-                            <td>${fieldValue(bean:userInstance, field:'idArea')}</td>
+
+                            <td><!--${fieldValue(bean:userInstance, field:'idArea')} -->
+                              <g:each var="c" in="${area}">
+                                 <%if("${userInstance.idArea}"==c.id_area.toString()){println c.name_area}%>
+                                 
+                                </g:each></td>
                         
                             <td>${fieldValue(bean:userInstance, field:'idCompany')}</td>
                         

@@ -9,8 +9,9 @@ class UserController {
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
+       def area=ConsultaService.buscaArea()
         params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
-        [ userInstanceList: User.list( params ), userInstanceTotal: User.count() ]
+        [ userInstanceList: User.list( params ), userInstanceTotal: User.count() ,area:area]
     }
 
     def show = {
@@ -44,10 +45,10 @@ class UserController {
 
     def edit = {
         def userInstance = User.get( params.id )
-
+         def area=ConsultaService.buscaArea()
         if(!userInstance) {
             flash.message = "User not found with id ${params.id}"
-            redirect(action:list)
+            redirect(action:list,area:area)
         }
         else {
             return [ userInstance : userInstance ]
