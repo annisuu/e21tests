@@ -6,6 +6,7 @@
         <meta name="layout" content="main" />
         <title>Create Company</title>
       <resource:autoComplete skin="default" />
+
     </head>
     <body>
         <div class="nav">
@@ -26,7 +27,7 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                              <TR><TD>Buscar </TD>
+                              <TR><TD>Buscar ${ann} </TD>
                           <td>
                            <!-- <richui:autoComplete name="person" action="${createLinkTo('dir': 'company/searchAJAX')}" />  -->
                                  <richui:autoComplete name="searchperson" action="${createLinkTo('dir': 'company/searchAJAX')}"

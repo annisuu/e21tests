@@ -42,7 +42,7 @@
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idArea','errors')}">
                                     <select name="idArea">
                                       <g:each var="c" in="${area}">
-                                        <option value="${c.id_area}">
+                                        <option value="${c.id_area}" <%if(c.id_area==userInstance.idArea.toString()){println "selected"}%>>
                                           ${c.name_area}
                                          </option>
                                       </g:each>
