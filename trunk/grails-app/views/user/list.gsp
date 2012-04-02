@@ -43,6 +43,7 @@
 
                             <td><!--${fieldValue(bean:userInstance, field:'idArea')} -->
                               <g:each var="c" in="${area}">
+                                
                                  <%if("${userInstance.idArea}"==c.id_area.toString()){println c.name_area}%>
                                  
                                 </g:each></td>
