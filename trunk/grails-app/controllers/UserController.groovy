@@ -9,9 +9,14 @@ class UserController {
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
+
        def area=ConsultaService.buscaArea()
+       def company=ConsultaService.buscaCompany()
+      def post=ConsultaService.buscaPost()
+      def proyecto=ConsultaService.buscaProyecto()
+      def rol=ConsultaService.buscaRol()
         params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
-        [ userInstanceList: User.list( params ), userInstanceTotal: User.count() ,area:area]
+        [ userInstanceList: User.list( params ), userInstanceTotal: User.count() ,area:area,company:company,post:post,proyecto:proyecto,rol:rol]
     }
 
     def show = {
@@ -44,14 +49,20 @@ class UserController {
     }
 
     def edit = {
+       def proyecto=ConsultaService.buscaProyecto()
+      def company=ConsultaService.buscaCompany()
+      def area=ConsultaService.buscaArea()
+      def rol=ConsultaService.buscaRol()
+      def post=ConsultaService.buscaPost()
+
         def userInstance = User.get( params.id )
-         def area=ConsultaService.buscaArea()
+       
         if(!userInstance) {
             flash.message = "User not found with id ${params.id}"
             redirect(action:list,area:area)
         }
         else {
-            return [ userInstance : userInstance ]
+            return [ userInstance : userInstance,proyecto:proyecto,company:company,rol:rol,post:post,area:area ]
         }
     }
 

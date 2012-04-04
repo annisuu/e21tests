@@ -23,9 +23,11 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="idArea" title="Id Area" />
+                   	            <g:sortableColumn property="nameSubject" title="Nombre de Tematica" />
+
+                   	        <g:sortableColumn property="idArea" title="Area" />
                         
-                   	        <g:sortableColumn property="nameSubject" title="Name Subject" />
+
                         
                         </tr>
                     </thead>
@@ -34,10 +36,14 @@
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
                             <td><g:link action="show" id="${subjectInstance.id}">${fieldValue(bean:subjectInstance, field:'id')}</g:link></td>
+
+                               <td>${fieldValue(bean:subjectInstance, field:'nameSubject')}</td>
+
+                                <td><g:each var="a" in="${area}">
+                                <%if("${subjectInstance.idArea}"==a.id_area.toString()){println a.name_area}%>
+                                </g:each></td>
                         
-                            <td>${fieldValue(bean:subjectInstance, field:'idArea')}</td>
-                        
-                            <td>${fieldValue(bean:subjectInstance, field:'nameSubject')}</td>
+
                         
                         </tr>
                     </g:each>

@@ -20,42 +20,65 @@
                 <table>
                     <thead>
                         <tr>
-                        
-                   	        <g:sortableColumn property="id" title="Id" />
-                        
-                   	        <g:sortableColumn property="idArea" title="Area" />
-                        
-                   	        <g:sortableColumn property="idCompany" title="Id Company" />
-                        
-                   	        <g:sortableColumn property="idPost" title="Id Post" />
-                        
-                   	        <g:sortableColumn property="idProyecto" title="Id Proyecto" />
-                        
-                   	        <g:sortableColumn property="idrol" title="Idrol" />
-                        
+
+                   	        <g:sortableColumn property="id" title="Id"/>
+
+                            <g:sortableColumn property="name_user" title="Nombre"/>
+
+                   	        <g:sortableColumn property="last_name" title="Apellido"/>
+
+                   	        <g:sortableColumn property="idArea" title="Area"/>
+
+                   	        <g:sortableColumn property="idCompany" title="Compania"/>
+
+                            <g:sortableColumn property="idPost" title="Puesto"/>
+
+                   	        <g:sortableColumn property="idProyecto" title="Proyecto"/>
+
+                   	        <g:sortableColumn property="idrol" title="Rol"/>
+
+
                         </tr>
                     </thead>
                     <tbody>
                     <g:each in="${userInstanceList}" status="i" var="userInstance">
-                        <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                        
-                            <td><g:link action="show" id="${userInstance.id}">${fieldValue(bean:userInstance, field:'id')}</g:link></td>
+                         <td><g:link action="show" id="${userInstance.id}">${fieldValue(bean:userInstance, field:'id')}</g:link></td>
 
-                            <td><!--${fieldValue(bean:userInstance, field:'idArea')} -->
-                              <g:each var="c" in="${area}">
-                                
-                                 <%if("${userInstance.idArea}"==c.id_area.toString()){println c.name_area}%>
-                                 
+                             <td>${fieldValue(bean:userInstance, field:'nameUser')}</td>
+
+                             <td>${fieldValue(bean:userInstance, field:'lastName')}</td>
+
+                                <td><g:each var="a" in="${area}">
+                                <%if("${userInstance.idArea}"==a.id_area.toString()){println a.name_area}%>
                                 </g:each></td>
-                        
-                            <td>${fieldValue(bean:userInstance, field:'idCompany')}</td>
-                        
-                            <td>${fieldValue(bean:userInstance, field:'idPost')}</td>
-                        
-                            <td>${fieldValue(bean:userInstance, field:'idProyecto')}</td>
-                        
-                            <td>${fieldValue(bean:userInstance, field:'idrol')}</td>
-                        
+
+
+
+                                <td><!--${fieldValue(bean:userInstance, field:'idCompany')} -->
+                                <g:each var="b" in="${company}">
+                                <%if("${userInstance.idCompany}"==b.id_company.toString()){println b.name_company}%>
+                                </g:each></td>
+
+                                <td><!--${fieldValue(bean:userInstance, field:'idPost')} -->
+                                <g:each var="c" in="${post}">
+                                <%if("${userInstance.idPost}"==c.id_post.toString()){println c.name_post}%>
+                                </g:each></td>
+
+
+
+                                <td><!--${fieldValue(bean:userInstance, field:'idProyecto')} -->
+                                <g:each var="d" in="${proyecto}">
+                                <%if("${userInstance.idProyecto}"==d.id_project.toString()){println d.name_project}%>
+                                </g:each></td>
+
+
+
+                                <td><!--${fieldValue(bean:userInstance, field:'idrol')} -->
+                                <g:each var="e" in="${rol}">
+                                <%if("${userInstance.idrol}"==e.id_rol.toString()){println e.name_rol}%>
+                                </g:each></td>
+
+
                         </tr>
                     </g:each>
                     </tbody>

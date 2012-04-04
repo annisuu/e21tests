@@ -28,70 +28,99 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
-                            <tr class="prop">
+
+                           <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idArea">Id Area:</label>
+                                    <label>Id Area:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idArea','errors')}">
-                                    <input type="text" id="idArea" name="idArea" value="${fieldValue(bean:userInstance,field:'idArea')}"/>
+                                    <select name="idArea">
+                                      <g:each var="c" in="${area}">
+                                        <option value="${c.id_area}">
+                                          ${c.name_area}
+                                         </option>
+                                      </g:each>
+                                    </select>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idCompany">Id Company:</label>
+                                    <label>Id Company:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idCompany','errors')}">
-                                    <input type="text" id="idCompany" name="idCompany" value="${fieldValue(bean:userInstance,field:'idCompany')}"/>
+                                 <select name="idCompany" >
+                                   <g:each var="b" in="${company}">
+                                     <option value="${b.id_company}">
+                                    ${b.name_company}
+                                    </option>
+                                   </g:each>
+
+                                 </select>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idPost">Id Post:</label>
+                                    <label>Id Post:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idPost','errors')}">
-                                    <input type="text" id="idPost" name="idPost" value="${fieldValue(bean:userInstance,field:'idPost')}"/>
+                                 <select name="idPost">
+                                  <g:each var="e" in ="${post}">
+                                    <option value="${e.id_post}">
+                                     ${e.name_post}
+                                    </option>
+                                  </g:each>
+                                  </select>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="idProyecto">Id Proyecto:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idProyecto','errors')}">
-                                    <input type="text" id="idProyecto" name="idProyecto" value="${fieldValue(bean:userInstance,field:'idProyecto')}"/>
+                                  <select name="idProyecto" id="idProyecto">
+               <g:each var="a" in="${proyecto}">
+                 <option value="${a.id_project}" <% if(userInstance.idProyecto==a.id_project){ println "selected"}%>>${a.name_project}</option>
+               </g:each>
+               </select>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idrol">Idrol:</label>
+                                    <label for="idRol">Idrol:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idrol','errors')}">
-                                    <input type="text" id="idrol" name="idrol" value="${fieldValue(bean:userInstance,field:'idrol')}"/>
+                                    <select name="idrol" id="idrol">
+                                      <g:each var="d" in ="${rol}">
+                                      <option  value="${d.id_rol}">
+                                        ${d.name_rol}
+                                      </option>
+                                      </g:each>
+                                      </select>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="lastName">Last Name:</label>
+                                    <label for="lastName">Last Name:(Solo Mayusculas)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'lastName','errors')}">
                                     <input type="text" id="lastName" name="lastName" value="${fieldValue(bean:userInstance,field:'lastName')}"/>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameUser">Name User:</label>
+                                    <label for="nameUser">Name User: (Solo Mayusculas)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'nameUser','errors')}">
-                                    <input type="text" id="nameUser" name="nameUser" value="${fieldValue(bean:userInstance,field:'nameUser')}"/>
+                                    <input type="text" id="nameUser" class="nameUser tb" name="nameUser" value="${fieldValue(bean:userInstance,field:'nameUser')}"/>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="password">Password:</label>
@@ -99,8 +128,9 @@
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'password','errors')}">
                                     <input type="text" id="password" name="password" value="${fieldValue(bean:userInstance,field:'password')}"/>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+                        <tr>
+
                         </tbody>
                     </table>
                 </div>

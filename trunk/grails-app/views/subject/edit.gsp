@@ -31,10 +31,17 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idArea">Id Area:</label>
+                                    <label >Id Area:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'idArea','errors')}">
-                                    <input type="text" id="idArea" name="idArea" value="${fieldValue(bean:subjectInstance,field:'idArea')}"/>
+                                    <select name="idArea">
+                                    <g:each var="c" in="${area}" >
+                                    <option value="${c.id_area}">
+                                      ${c.name_area}
+                                    </option>
+                                    </g:each>
+                                    </select>
+                                </td>
                                 </td>
                             </tr> 
                         

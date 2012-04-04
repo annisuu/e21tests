@@ -8,8 +8,12 @@ class TestController {
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
+      def area=ConsultaService.buscaArea()
+      def subject=ConsultaService.buscaSubject()
+      println "subject de :::"+subject.id
+       println "id area de :::"+subject.name
         params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
-        [ testInstanceList: Test.list( params ), testInstanceTotal: Test.count() ]
+        [ testInstanceList: Test.list( params ), testInstanceTotal: Test.count(),area:area,subject:subject ]
     }
 
     def show = {
