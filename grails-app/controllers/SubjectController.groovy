@@ -9,8 +9,9 @@ class SubjectController {
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = {
+      def area=ConsultaService.buscaArea()
         params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
-        [ subjectInstanceList: Subject.list( params ), subjectInstanceTotal: Subject.count() ]
+        [ subjectInstanceList: Subject.list( params ), subjectInstanceTotal: Subject.count(),area:area ]
     }
 
     def show = {
@@ -43,14 +44,16 @@ class SubjectController {
     }
 
     def edit = {
-        def subjectInstance = Subject.get( params.id )
 
+      def area=ConsultaService.buscaArea()
+
+        def subjectInstance = Subject.get( params.id )
         if(!subjectInstance) {
             flash.message = "Subject not found with id ${params.id}"
-            redirect(action:list)
+            redirect(action:list,area:area)
         }
         else {
-            return [ subjectInstance : subjectInstance ]
+            return [ subjectInstance : subjectInstance,area:area ]
         }
     }
 

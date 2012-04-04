@@ -22,12 +22,14 @@
                         <tr>
                         
                    	        <g:sortableColumn property="id" title="Id" />
+
+                             <g:sortableColumn property="nameTest" title="Nombre de Test" />
+
+                   	        <g:sortableColumn property="idArea" title="Area" />
                         
-                   	        <g:sortableColumn property="idArea" title="Id Area" />
-                        
-                   	        <g:sortableColumn property="idSubject" title="Id Subject" />
-                        
-                   	        <g:sortableColumn property="nameTest" title="Name Test" />
+                   	        <g:sortableColumn property="idSubject" title="Tematica" />
+
+
                         
                         </tr>
                     </thead>
@@ -37,12 +39,19 @@
                         
                             <td><g:link action="show" id="${testInstance.id}">${fieldValue(bean:testInstance, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:testInstance, field:'idArea')}</td>
-                        
-                            <td>${fieldValue(bean:testInstance, field:'idSubject')}</td>
-                        
-                            <td>${fieldValue(bean:testInstance, field:'nameTest')}</td>
-                        
+                              <td>${fieldValue(bean:testInstance, field:'nameTest')}</td>
+
+                            <td>
+                                <g:each var="a" in="${area}">
+                                <%if("${testInstance.idArea}"==a.id_area.toString()){println a.name_area}%>
+                                </g:each></td>
+
+                            <td>  <g:each var="subject" in="${subject}">
+                                <%if("${testInstance.idSubject}"==subject.id.toString()){println subject.name}%>
+                                </g:each></td>
+
+
+
                         </tr>
                     </g:each>
                     </tbody>
