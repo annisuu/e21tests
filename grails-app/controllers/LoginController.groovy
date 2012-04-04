@@ -4,7 +4,8 @@ class LoginController {
     def login = {}
     def manejaLogin={
       def user=ConsultaService.findUserforLogin(params.pasword)
-      if(!user)
+      println "user:"+user.idu
+      if(!user.idu)
       {
         flash.message="Usuario no encontrado"
         redirect(action:'login')

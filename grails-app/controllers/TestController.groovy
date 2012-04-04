@@ -46,6 +46,8 @@ class TestController {
     }
 
     def edit = {
+      def area=ConsultaService.buscaArea()
+       def subject=ConsultaService.buscaSubject()
         def testInstance = Test.get( params.id )
 
         if(!testInstance) {
@@ -53,7 +55,7 @@ class TestController {
             redirect(action:list)
         }
         else {
-            return [ testInstance : testInstance ]
+            return [ testInstance : testInstance,area:area,subject:subject]
         }
     }
 

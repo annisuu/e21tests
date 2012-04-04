@@ -119,16 +119,21 @@ class ConsultaService {
       def sql= new Sql(dataSource)
    // def resultado=[]
      def u =new Expando()
-    sql.eachRow("select * from users where password_user = "+ password + " ") {
+    sql.eachRow("select * from login where password_user = '"+ password + "' ") {
 
-
+      u.idu=it.id_user
       u.name_user=it.name_user
       u.last_name=it.last_name
       u.id_project=it.id_project
+      u.name_project=it.name_project
       u.id_company=it.id_company
+      u.name_company=it.name_company
       u.id_rol=it.id_rol
+      u.name_rol=it.name_rol
       u.id_post=it.id_post
+      u.name_post=it.name_post
       u.id_area=it.id_area
+      u.name_area=it.name_area
 
 
 

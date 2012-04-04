@@ -1,5 +1,4 @@
 
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -8,7 +7,7 @@
       <div id="menu">
     
       <g:if test="${session.user}">
-        <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b> |
+        <b>${session.user?.name_user}&nbsp;${session.user?.last_name}&nbsp;${session.user?.name_company}&nbsp;${session.user?.name_post}&nbsp;${session.user?.name_area}&nbsp;${session.user?.name_project}&nbsp;${session.user?.name_rol}</b> |
          <g:link controller="login" action="logout">Logout</g:link>
       </g:if>
      <g:else>
@@ -68,7 +67,7 @@
         </div>
 
              <g:javascript>
-$('#nameArea').alpha({allcaps:true});
+$('#nameArea').alpha({allcaps:true,allow:' '});
             </g:javascript>
       </body>
 </html>

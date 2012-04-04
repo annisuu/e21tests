@@ -7,6 +7,21 @@
         <title>Create Company</title>
       <resource:autoComplete skin="default" />
 
+      <g:if test="${session.user}">
+        <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b> |
+         <g:link controller="login" action="logout">Logout</g:link>
+      </g:if>
+     <g:else>
+       <g:link controller="login" action="login">Login</g:link>
+     </g:else>
+
+
+       <g:javascript library="jquery"></g:javascript>
+      <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
+      <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
+       <resource:autoComplete skin="default" />
+
+      
     </head>
     <body>
         <div class="nav">
@@ -53,5 +68,8 @@
                 </div>
             </g:form>
         </div>
+    <g:javascript>
+$('#nameCompany').alpha({allcaps:true,allow:' '});
+            </g:javascript>
     </body>
 </html>
