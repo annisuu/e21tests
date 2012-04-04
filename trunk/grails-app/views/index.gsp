@@ -3,6 +3,8 @@
         <title>Welcome to Grails</title>
 		<meta name="layout" content="main" />
     </head>
+
+  
     <body>
         <h1 style="margin-left:20px;">Welcome to Grails</h1>
         <p style="margin-left:20px;width:80%">Congratulations, you have successfully started your first Grails application! At the moment

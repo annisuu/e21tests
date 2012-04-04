@@ -31,19 +31,33 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idArea">Id Area:</label>
+                                    <label for=>Id Area:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idArea','errors')}">
-                                    <input type="text" id="idArea" name="idArea" value="${fieldValue(bean:testInstance,field:'idArea')}"/>
+                                    <select name="idArea">
+                                    <g:each var="c" in="${area}" >
+                                    <option value="${c.id_area}">
+                                      ${c.name_area}
+                                    </option>
+                                    </g:each>
+                                    </select>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idSubject">Id Subject:</label>
+                                    <label for=>Id Subject:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idSubject','errors')}">
-                                    <input type="text" id="idSubject" name="idSubject" value="${fieldValue(bean:testInstance,field:'idSubject')}"/>
+
+                                  <select name="idSubject">
+                                    <g:each var="subject" in="${subject}" >
+                                    <option value="${subject.id}">
+                                      ${subject.name}
+                                    </option>
+                                    </g:each>
+                                    </select>
+                                  
                                 </td>
                             </tr> 
                         

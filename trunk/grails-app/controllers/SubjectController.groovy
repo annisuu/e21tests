@@ -10,6 +10,7 @@ class SubjectController {
 
     def list = {
       def area=ConsultaService.buscaArea()
+
         params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
         [ subjectInstanceList: Subject.list( params ), subjectInstanceTotal: Subject.count(),area:area ]
     }
