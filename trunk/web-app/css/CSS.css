@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+margin:0 auto;
+position:relative;
+width:1200px;
+background-image: url(../images/metallic.jpg);
+color:#FF0000;
+/*color: rgb(51,0,0);*/
+/*background-color: rgb(255,204,102);*/
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-variant:small-caps;
+}
+
+#apDiv1{
+	position:absolute;
+	width:1043px;
+	height:775px;
+	z-index:1;
+	left: 82px;
+	top: 11px;
+	background-image:url(../images/trasparencia0.png)
+}
+
+#apDiv2 {
+	position:absolute;
+	width:904px;
+	height:84px;
+	z-index:3;
+	left: 155px;
+	top: 29px;
+}
+#apDiv3 {
+	position:absolute;
+	width:680px;
+	height:37px;
+	z-index:4;
+	left: 265px;
+	top: 140px;
+	border:#FF0000;
+}
+
+#apDiv6 {
+	position:absolute;
+	width:443px;
+	height:37px;
+	z-index:4;
+	left: 418px;
+	top: 129px;
+	border:#FF0000;
+}
+
+#apDiv7 {
+	position:absolute;
+	width:680px;
+	height:37px;
+	z-index:4;
+	left: 201px;
+	top: 131px;
+	border:#FF0000;
+}
+
+#apDiv4 {
+	position:absolute;
+	width:853px;
+	height:569px;
+	z-index:6;
+	left: 185px;
+	top: 187px;
+	border:#333333;
+	background-image:url(../images/margen.png);
+	}
+	
+#capaInstructor {
+	position:absolute;
+	width:853px;
+	height:534px;
+	z-index:6;
+	left: 187px;
+	top: 224px;
+	border:#333333;
+	background-image:url(../images/margenInstructor.png);
+
+}
+
+#apDiv5 {
+	position:absolute;
+	width:824px;
+	height:537px;
+	z-index:7;
+	left: 15px;
+	top: 15px;
+}
+
+
+#margenInstructor {
+	position:absolute;
+	width:824px;
+	height:490px;
+	z-index:7;
+	left: 15px;
+	top: 15px;
+}
+#TransparenciaInstructor{
+	position:absolute;
+	width:1043px;
+	height:775px;
+	z-index:1;
+	left: 82px;
+	top: 11px;
+	background-image:url(../images/trasparencia0.png)
+}
