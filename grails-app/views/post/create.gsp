@@ -6,18 +6,24 @@
         <meta name="layout" content="main" />
         <title>Create Post</title>
 
-       <g:javascript library="jquery"></g:javascript>
+      <g:javascript library="jquery"></g:javascript>
       <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
       <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
       <resource:autoComplete skin="default" />
 
+
       <g:if test="${session.user}">
-        <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b> |
+        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
+         <p> Projecto:<b>${session.user?.name_project}</b> </p>
+         <p> Rol:<b>${session.user?.name_rol}</b> </p>
+
          <g:link controller="login" action="logout">Logout</g:link>
       </g:if>
      <g:else>
        <g:link controller="login" action="login">Login</g:link>
      </g:else>
+
+
 
 
     </head>

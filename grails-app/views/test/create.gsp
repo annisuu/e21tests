@@ -5,7 +5,25 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
         <title>Create Test</title>
+
+      <g:javascript library="jquery"></g:javascript>
+      <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
+      <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
       <resource:autoComplete skin="default" />
+      <resource:autoComplete skin="default" />
+
+
+
+      <g:if test="${session.user}">
+        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
+         <p> Projecto:<b>${session.user?.name_project}</b> </p>
+         <p> Rol:<b>${session.user?.name_rol}</b> </p>
+
+         <g:link controller="login" action="logout">Logout</g:link>
+      </g:if>
+     <g:else>
+       <g:link controller="login" action="login">Login</g:link>
+     </g:else>
     </head>
     <body>
         <div class="nav">
@@ -67,7 +85,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameTest">Name Test:</label>
+                                    <label for="nameTest">Name Test:(Solo Mayusculas)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'nameTest','errors')}">
                                     <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:testInstance,field:'nameTest')}"/>
@@ -82,5 +100,12 @@
                 </div>
             </g:form>
         </div>
+     <g:javascript>
+$('#nameTest').alpha({allcaps:true,allow:' '});
+
+
+
+
+</g:javascript>
     </body>
 </html>

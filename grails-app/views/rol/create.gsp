@@ -12,12 +12,15 @@
       <resource:autoComplete skin="default" />
 
       <g:if test="${session.user}">
-        <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b> |
+        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
+         <p> Projecto:<b>${session.user?.name_project}</b> </p>
+         <p> Rol:<b>${session.user?.name_rol}</b> </p>
+
          <g:link controller="login" action="logout">Logout</g:link>
       </g:if>
      <g:else>
        <g:link controller="login" action="login">Login</g:link>
-     </g:else>
+     </g:else>>
 
     </head>
     <body>
