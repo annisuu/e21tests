@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="../css/CSS.css" media="screen" type="text/css" title="Mi hoja de estilo"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Documento sin t&iacute;tulo</title>
+   
 <g:javascript library="AC_RunActiveContent"></g:javascript>
 <!--<script src="../Scripts/AC_RunActiveContent.js" type="text/javascript"></script> -->
 <g:javascript library="SpryAccordion"></g:javascript>
@@ -15,19 +16,19 @@
 #capaAdmin{
 	position:absolute;
 	width:1043px;
-	height:882px;
+	height:649px;
 	z-index:1;
 	left: 82px;
 	top: 11px;
-	background-image:url(../images/tranparenciaAdmin.png)
+	background-image:url(../images/tranparenciaAdmin2.png)
 }
 #apDiv8 {
 	position:absolute;
 	width:818px;
 	height:264px;
 	z-index:7;
-	left: 19px;
-	top: 67px;
+	left: 206px;
+	top: 214px;
 }
 
 #margenAdmin {
@@ -56,6 +57,11 @@
 }
 -->
 </style>
+   <g:javascript library="jquery"></g:javascript>
+      <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
+      <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
+   <resource:autoComplete skin="default" />
+  
 </head>
 
 <body>
@@ -91,39 +97,34 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 <!-- End Vista-Buttons.com -->
 
 </div>
-<div id="margenAdmin">
   <div id="apDiv8">
 <fieldset>
-  <legend><span class="Estilo3">ALTA </span></legend>
+  <g:form action="save" method="post" >
+  <legend><span class="Estilo3">AGREGAR AREAS </span></legend>
    <br />
-  <label for="id"> <span class="Estilo4">Id Empresa:</span></label>
-  <input type="text" id="id" size="10" maxlength="9" />
-  <label for="nombre">  <span class="Estilo4">Nombre:</span></label>
-  <input type="text" id="nombre" size="30" />
- <br />
- <br />
   <label for="buscar"> <span class="Estilo4">Buscar:</span></label>
-  <input type="text" id="buscar" size="20" />
-  <input  type="image" name="Bucar" value="Buscar" src="../images/Icons/Buscar.gif" />
+   <richui:autoComplete name="searchuser" action="${createLinkTo('dir': 'area/searchAJAX')}"
+      onItemSelect="document.location.href = '${createLinkTo(dir: 'area/edit')}/' + id;" />
+    <br/>
+    <br/>
+  
+  <label for="nombre">  <span class="Estilo4">Nombre:</span></label>
+  <input type="text" id="nameArea" name="nameArea" value="${fieldValue(bean:areaInstance,field:'nameArea')}"/> <br />
+ <br />
   <table width="200" border="0" align="center">
   <tr>
     <td><center><input type="image" name="Guardar" value="Guardar" src="../images/Icons/Guardar.png" /></center></td>
-    <td><center><input type="image" name="Actualizar" value="Actualizar" src="../images/Icons/Actualizar.png" /></center></td>
-    <td><center><input type="image" name="Eliminar" value="Eliminar" src="../images/Icons/Eliminar.png" /></center></td>
-  </tr>
+    </tr>
   <tr>
-    <td><input type="button" name="Guardar" value="Guardar" /></td>
-    <td><input type="button" name="Actualizar" value="Actualizar" /></td>
-    <td><input type="button" name="Eliminar" value="Eliminar" /></td>
+    <td><input class="save" type="submit" value="Create" /></td>
+
   </tr>
 </table>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
+
+
+</g:form>
 </fieldset>
 
   </div>
-</div>
-
-
 </body>
 </html>
