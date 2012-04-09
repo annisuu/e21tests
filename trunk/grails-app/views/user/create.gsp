@@ -14,10 +14,10 @@
          <p> Projecto:<b>${session.user?.name_project}</b> </p>
          <p> Rol:<b>${session.user?.name_rol}</b> </p>
 
-         <g:link controller="login" action="logout">Logout</g:link>
+         <g:link controller="login" action="logout">Cerrar Sesion</g:link>
       </g:if>
      <g:else>
-       <g:link controller="login" action="login">Login</g:link>
+       <g:link controller="login" action="login">Entrar</g:link>
      </g:else>
 
     </head>
@@ -49,7 +49,7 @@
                           </td></TR>
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label>Id Area:</label>
+                                    <label> Area:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idArea','errors')}">
                                     <select name="idArea">
@@ -64,7 +64,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label>Id Company:</label>
+                                    <label>Company:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idCompany','errors')}">
                                  <select name="idCompany" >
@@ -80,7 +80,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label>Id Post:</label>
+                                    <label>Puesto:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idPost','errors')}">
                                  <select name="idPost">
@@ -95,7 +95,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idProyecto">Id Proyecto:</label>
+                                    <label for="idProyecto">Proyecto:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idProyecto','errors')}">
                                   <select name="idProyecto" id="idProyecto">
@@ -108,7 +108,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idRol">Idrol:</label>
+                                    <label for="idRol">Rol:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idrol','errors')}">
                                     <select name="idrol" id="idrol">
@@ -123,7 +123,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="lastName">Last Name:(Solo Mayusculas)</label>
+                                    <label for="lastName">Apellidos:(Solo Mayusculas)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'lastName','errors')}">
                                     <input type="text" id="lastName" name="lastName" value="${fieldValue(bean:userInstance,field:'lastName')}"/>
@@ -132,7 +132,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameUser">Name User: (Solo Mayusculas)</label>
+                                    <label for="nameUser">Nombre: (Solo Mayusculas)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'nameUser','errors')}">
                                     <input type="text" id="nameUser" class="nameUser tb" name="nameUser" value="${fieldValue(bean:userInstance,field:'nameUser')}"/>
@@ -141,7 +141,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="password">Password:</label>
+                                    <label for="password">Clave:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:userInstance,field:'password','errors')}">
                                     <input type="text" id="password" name="password" value="${fieldValue(bean:userInstance,field:'password')}"/>

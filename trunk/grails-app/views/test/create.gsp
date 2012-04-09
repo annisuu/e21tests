@@ -53,7 +53,7 @@
                           </td></TR>
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idArea">Id Area:</label>
+                                    <label for="idArea">Area:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idArea','errors')}">
                                   <!--  <input type="text" id="idArea" name="idArea" value="${fieldValue(bean:testInstance,field:'idArea')}"/>  -->
@@ -69,7 +69,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idSubject">Id Subject:</label>
+                                    <label for="idSubject">Tematica:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idSubject','errors')}">
                                     <!--<input type="text" id="idSubject" name="idSubject" value="${fieldValue(bean:testInstance,field:'idSubject')}"/>-->
@@ -85,7 +85,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameTest">Name Test:(Solo Mayusculas)</label>
+                                    <label for="nameTest">Nombre de Test:(Solo Mayusculas)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'nameTest','errors')}">
                                     <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:testInstance,field:'nameTest')}"/>

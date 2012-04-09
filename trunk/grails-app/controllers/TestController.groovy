@@ -17,13 +17,15 @@ class TestController {
     }
 
     def show = {
+         def area=ConsultaService.buscaArea()
+         def subject=ConsultaService.buscaSubject()
         def testInstance = Test.get( params.id )
 
         if(!testInstance) {
             flash.message = "Test not found with id ${params.id}"
             redirect(action:list)
         }
-        else { return [ testInstance : testInstance ] }
+        else { return [ testInstance : testInstance,area:area,subject:subject ] }
     }
 
     def delete = {

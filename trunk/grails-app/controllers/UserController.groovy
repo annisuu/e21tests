@@ -20,13 +20,19 @@ class UserController {
     }
 
     def show = {
+
+     def area=ConsultaService.buscaArea()
+      def company=ConsultaService.buscaCompany()
+      def post=ConsultaService.buscaPost()
+      def proyecto=ConsultaService.buscaProyecto()
+      def rol=ConsultaService.buscaRol()
         def userInstance = User.get( params.id )
 
         if(!userInstance) {
             flash.message = "User not found with id ${params.id}"
             redirect(action:list)
         }
-        else { return [ userInstance : userInstance ] }
+        else { return [ userInstance : userInstance ,area:area,company:company,post:post,proyecto:proyecto,rol:rol] }
     }
 
     def delete = {
