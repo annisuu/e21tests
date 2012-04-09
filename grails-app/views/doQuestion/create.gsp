@@ -9,10 +9,7 @@
         <div class="nav">
             <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
             <span class="menuButton"><g:link class="list" action="list">DoQuestion List</g:link></span>
-         
-       <%  session.setAttribute("ana","ann") %>
         </div>
-        <div class="body">
             <h1>Create DoQuestion</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
@@ -24,16 +21,55 @@
             </g:hasErrors>
             <g:form action="save" method="post" enctype="multipart/form-data">
                 <div class="dialog">
-                    <table>
-                        <tbody>
+                    <table width="589" height="288">
+                      <tbody>
+<tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="idArea">Id Area:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idArea','errors')}">
+                                  <!--  <input type="text" id="idArea" name="idArea" value="${fieldValue(bean:testInstance,field:'idArea')}"/>  -->
+                                      <select name="idArea" id="idArea">
+                                      <g:each var="area" in ="${area}">
+                                      <option  value="${area.id_area}">
+                                        ${area.name_area}
+                                      </option>
+                                      </g:each>
+                                      </select>
+                                </td>
+                          </tr>
 
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="idSubject">Id Subject:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idSubject','errors')}">
+                                    <!--<input type="text" id="idSubject" name="idSubject" value="${fieldValue(bean:testInstance,field:'idSubject')}"/>-->
+                                   <select name="idSubject" id="idSubject">
+                                      <g:each var="subject" in ="${subject}">
+                                      <option  value="${subject.id}">
+                                        ${subject.name}
+                                      </option>
+                                      </g:each>
+                                  </select>
+                                </td>
+                            </tr>
+
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="nameTest">Name Test:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:testInstance,field:'nameTest','errors')}">
+                                    <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:testInstance,field:'nameTest')}"/>
+                                </td>
+                            </tr>
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="questiontext">Questiontext:</label>
                                 </td>
                                 <td colspan="4" valign="top" class="value ${hasErrors(bean:doQuestionInstance,field:'questiontext','errors')}">
                                 <input type="hidden" id="id_test" name="id_test" value="1"/>
-                                <input type="text" id="questiontext" name="questiontext" value="${fieldValue(bean:doQuestionInstance,field:'questiontext')}"/>
+                                <textarea id="questiontext" name="questiontext"></textarea>
                                 </td>
 
                             </tr>
@@ -106,12 +142,11 @@
                             </tr>
 
                         </tbody>
-                    </table>
+                  </table>
                 </div>
                 <div class="buttons">
                     <span class="button"><input class="save" type="submit" value="Create" /></span>
                 </div>
             </g:form>
-        </div>
     </body>
 </html>
