@@ -42,10 +42,10 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Id Area:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:subjectInstance, field:'idArea')}</td>
-                            
+                       <td valign="top" class="name">Id Area:</td>
+                       <td><g:each var="a" in="${area}">
+                        <%if("${subjectInstance.idArea}"==a.id_area.toString()){println a.name_area}%>
+                       </g:each></td>
                         </tr>
                     
                         <tr class="prop">

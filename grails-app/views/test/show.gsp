@@ -11,10 +11,10 @@
          <p> Projecto:<b>${session.user?.name_project}</b> </p>
          <p> Rol:<b>${session.user?.name_rol}</b> </p>
 
-         <g:link controller="login" action="logout">Logout</g:link>
+         <g:link controller="login" action="logout">Cerrar sesiont</g:link>
       </g:if>
      <g:else>
-       <g:link controller="login" action="login">Login</g:link>
+       <g:link controller="login" action="login">Entrar</g:link>
      </g:else>
 
     </head>
@@ -40,23 +40,22 @@
                             <td valign="top" class="value">${fieldValue(bean:testInstance, field:'id')}</td>
                             
                         </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name">Id Area:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:testInstance, field:'idArea')}</td>
-                            
+                     <tr class="prop">
+                          <td valign="top" class="name">Area:</td>
+                          <td><g:each var="a" in="${area}">
+                         <%if("${testInstance.idArea}"==a.id_area.toString()){println a.name_area}%>
+                         </g:each></td>
                         </tr>
+
+                        <tr class="prop">
+                            <td valign="top" class="name">Tematica:</td>
+                          <td>  <g:each var="subject" in="${subject}">
+                           <%if("${testInstance.idSubject}"==subject.id.toString()){println subject.name}%>
+                        </g:each></td>
+                     </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Id Subject:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:testInstance, field:'idSubject')}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name">Name Test:</td>
+                            <td valign="top" class="name">Nombre Test:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:testInstance, field:'nameTest')}</td>
                             

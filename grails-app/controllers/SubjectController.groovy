@@ -16,13 +16,14 @@ class SubjectController {
     }
 
     def show = {
+      def area=ConsultaService.buscaArea()
         def subjectInstance = Subject.get( params.id )
 
         if(!subjectInstance) {
             flash.message = "Subject not found with id ${params.id}"
             redirect(action:list)
         }
-        else { return [ subjectInstance : subjectInstance ] }
+        else { return [ subjectInstance : subjectInstance,area:area ] }
     }
 
     def delete = {

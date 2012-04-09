@@ -43,7 +43,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for=>Id Area:</label>
+                                    <label for=>Area:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idArea','errors')}">
                                     <select name="idArea">
@@ -58,7 +58,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for=>Id Subject:</label>
+                                    <label for=>Tematica:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idSubject','errors')}">
 
@@ -75,7 +75,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameTest">Name Test:</label>
+                                    <label for="nameTest">Nombre Test:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'nameTest','errors')}">
                                     <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:testInstance,field:'nameTest')}"/>
