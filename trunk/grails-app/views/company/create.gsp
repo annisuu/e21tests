@@ -5,15 +5,22 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
         <title>Create Company</title>
-      <resource:autoComplete skin="default" />
+
 
       <g:if test="${session.user}">
-        <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b> |
+        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
+         <p> Projecto:<b>${session.user?.name_project}</b> </p>
+         <p> Rol:<b>${session.user?.name_rol}</b> </p>
+
          <g:link controller="login" action="logout">Logout</g:link>
       </g:if>
      <g:else>
        <g:link controller="login" action="login">Login</g:link>
      </g:else>
+
+
+      <resource:autoComplete skin="default" />
+
 
 
        <g:javascript library="jquery"></g:javascript>
