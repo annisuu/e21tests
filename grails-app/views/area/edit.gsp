@@ -3,20 +3,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="mainAdmin" />
         <title>Edit Area</title>
 
 
-      <g:if test="${session.user}">
-        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
-         <p> Projecto:<b>${session.user?.name_project}</b> </p>
-         <p> Rol:<b>${session.user?.name_rol}</b> </p>
-
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>
+    
 
     </head>
     <body>

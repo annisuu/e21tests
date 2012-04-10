@@ -4,17 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="mainAdmin" />
         <title>Create Area</title>
-      <div id="menu">
     
-      <g:if test="${session.user}">
-        <b>${session.user?.name_user}&nbsp;${session.user?.last_name}&nbsp;${session.user?.name_company}&nbsp;${session.user?.name_post}&nbsp;${session.user?.name_area}&nbsp;${session.user?.name_project}&nbsp;${session.user?.name_rol}</b> |
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>
-
-</div>
 
        <g:javascript library="jquery"></g:javascript>
       <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
