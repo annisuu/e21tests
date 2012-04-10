@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Welcome to Grails</title>
+        <title>SISTEMA DE TESTS </title>
 		<meta name="layout" content="main" />
     </head>
 

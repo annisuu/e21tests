@@ -41,7 +41,7 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="nameArea">Name Area:</label>
@@ -49,8 +49,8 @@
                                 <td valign="top" class="value ${hasErrors(bean:areaInstance,field:'nameArea','errors')}">
                                     <input type="text" id="nameArea" name="nameArea" value="${fieldValue(bean:areaInstance,field:'nameArea')}"/>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
