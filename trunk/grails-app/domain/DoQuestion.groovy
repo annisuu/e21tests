@@ -8,19 +8,7 @@ class DoQuestion {
   String answer3
   String image3
   String trueanswer
-  static constraints={
-    id_test(blank:false,nullable:false)
-    questiontext(blank:false,nullable:false)
-    answer1(blank:false,nullable:false)
-    image1(blank:true,nullable:false)
-    answer2(blank:false,nullable:false)
-    image2(blank:true,nullable:false)
-    answer3(blank:false,nullable:false)
-    image3(blank:true,nullable:false)
-    trueanswer(blank:false,nullable:false)
-
-
-  }
+  
   static mapping={
      table 'do_question'
     version false

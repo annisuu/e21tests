@@ -1,5 +1,4 @@
 
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -28,7 +27,7 @@
       <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
        <resource:autoComplete skin="default" />
 
-      
+
     </head>
     <body>
         <div class="nav">
@@ -65,8 +64,8 @@
                                 <td valign="top" class="value ${hasErrors(bean:companyInstance,field:'nameCompany','errors')}">
                                     <input type="text" id="nameCompany" name="nameCompany" value="${fieldValue(bean:companyInstance,field:'nameCompany')}"/>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
