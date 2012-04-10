@@ -4,7 +4,7 @@ class DoQuestionController {
     
     def index = { redirect(action:list,params:params) }
      Properties prop = System.getProperties();
-      //System.getProperties().list(System.out);
+     def ConsultaService
       String appPath = System.getProperties().getProperty("user.dir");
 
     // the delete, save and update actions only accept POST requests
@@ -84,15 +84,27 @@ class DoQuestionController {
     }
 
     def create = {
+      def area=ConsultaService.buscaArea()
+      def subject=ConsultaService.buscaSubject()
 
         def doQuestionInstance = new DoQuestion()
         doQuestionInstance.properties = params
      
-        return ['doQuestionInstance':doQuestionInstance]
+        return ['doQuestionInstance':doQuestionInstance,area:area,subject:subject]
     }
 
     def save = {
-        def doQuestionInstance = new DoQuestion(params)
+      def area=ConsultaService.buscaArea()
+      def subject=ConsultaService.buscaSubject()
+      def testInstance =new Test();
+      def doQuestionInstance = new DoQuestion(params)
+      testInstance.idArea=params.idArea;
+      testInstance.idSubject=params.idSubject;
+      testInstance.nameTest=params.nameTest
+
+      if(testInstance.save())
+      {
+        println ""+doQuestionInstance.questiontext
         def files = request.getFileMap()
       //imagen 1
         def file=files.get("image1")
@@ -112,11 +124,16 @@ class DoQuestionController {
         doQuestionInstance.image3=fileName3
 
         if(!doQuestionInstance.hasErrors() && doQuestionInstance.save()) {
+          
             flash.message = "DoQuestion ${doQuestionInstance.id} created"
             redirect(action:show,id:doQuestionInstance.id)
         }
+         else {
+            render(view:'create',model:[doQuestionInstance:doQuestionInstance,testInstance:testInstance,area:area,subject:subject])
+        }
+      }
         else {
-            render(view:'create',model:[doQuestionInstance:doQuestionInstance])
+            render(view:'create',model:[doQuestionInstance:doQuestionInstance,testInstance:testInstance,area:area,subject:subject])
         }
     }
   public  subirFile(def up)

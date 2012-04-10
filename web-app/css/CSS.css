@@ -2,24 +2,44 @@
 /* CSS Document */
 
 body{
-margin:0 auto;
-position:relative;
-width:1200px;
+text-align: left;
+	 margin: 0;
+	 padding: 0;
+	 margin: 0 auto;
+
 background-image: url(../images/metallic.jpg);
 color:#FF0000;
-/*color: rgb(51,0,0);*/
-/*background-color: rgb(255,204,102);*/
+
 font-family:Verdana, Arial, Helvetica, sans-serif;
 font-variant:small-caps;
 }
 
 #apDiv1{
-	position:absolute;
+	width: 60%;
+	right: 0px;
+	min-height: 560px;
+	margin: 0px auto;
+	width: 500px;
+	position: relative;
 	width:1043px;
 	height:775px;
 	z-index:1;
-	left: 82px;
-	top: 11px;
+	left: -1px;
+	top: 21px;
+	background-image:url(../images/trasparencia0.png)
+}
+#TransparenciaInstructor{
+	width: 60%;
+	right: 0px;
+	min-height: 560px;
+	margin: 0px auto;
+	width: 500px;
+	position: relative;
+	width:1043px;
+	height:775px;
+	z-index:1;
+	left: -1px;
+	top: 22px;
 	background-image:url(../images/trasparencia0.png)
 }
 
@@ -28,16 +48,16 @@ font-variant:small-caps;
 	width:904px;
 	height:84px;
 	z-index:3;
-	left: 155px;
-	top: 29px;
+	left: 62px;
+	top: 34px;
 }
 #apDiv3 {
 	position:absolute;
 	width:680px;
 	height:37px;
 	z-index:4;
-	left: 265px;
-	top: 140px;
+	left: 82px;
+	top: 134px;
 	border:#FF0000;
 }
 
@@ -46,8 +66,8 @@ font-variant:small-caps;
 	width:443px;
 	height:37px;
 	z-index:4;
-	left: 418px;
-	top: 129px;
+	left: 299px;
+	top: 133px;
 	border:#FF0000;
 }
 
@@ -56,8 +76,8 @@ font-variant:small-caps;
 	width:680px;
 	height:37px;
 	z-index:4;
-	left: 201px;
-	top: 131px;
+	left: 83px;
+	top: 138px;
 	border:#FF0000;
 }
 
@@ -66,7 +86,7 @@ font-variant:small-caps;
 	width:853px;
 	height:569px;
 	z-index:6;
-	left: 185px;
+	left: 95px;
 	top: 187px;
 	border:#333333;
 	background-image:url(../images/margen.png);
@@ -77,8 +97,8 @@ font-variant:small-caps;
 	width:853px;
 	height:534px;
 	z-index:6;
-	left: 187px;
-	top: 224px;
+	left: 98px;
+	top: 225px;
 	border:#333333;
 	background-image:url(../images/margenInstructor.png);
 
@@ -97,17 +117,60 @@ font-variant:small-caps;
 #margenInstructor {
 	position:absolute;
 	width:824px;
-	height:490px;
-	z-index:7;
+	height:504px;
 	left: 15px;
 	top: 15px;
 }
-#TransparenciaInstructor{
-	position:absolute;
+
+#TransparenciaCrearTest{
+	width: 60%;
+	right: 0px;
+	min-height: 560px;
+	margin: 0px auto;
+	width: 500px;
+	position: relative;
 	width:1043px;
-	height:775px;
+	height:3683px;
 	z-index:1;
-	left: 82px;
-	top: 11px;
-	background-image:url(../images/trasparencia0.png)
+	left: -1px;
+	top: 21px;
+	background-image: url(../images/TrasparenciaCreaTest.png)
+}
+
+#margenCrearTest {
+	position:absolute;
+	width:824px;
+	height:3358px;
+	z-index:7;
+	left: 15px;
+	top: 15px;
+	}
+	
+#capaCrearTest {
+	position:absolute;
+	width:853px;
+	height:3395px;
+	z-index:6;
+	left: 93px;
+	top: 230px;
+	border:#333333;
+	background-image:url(../images/margenCrearTest.png);
+}
+#margenAdmin {
+	position:absolute;
+	width:700px;
+	height:538px;
+	z-index:6;
+	left: 270px;
+	top: 200px;
+	border:#333333;
+	background-image:url(../images/margenAdmin.png)
+}
+#menuAdmin {
+	position:absolute;
+	width:154px;
+	height:225px;
+	z-index:7;
+	left: 76px;
+	top: 248px;
 }
