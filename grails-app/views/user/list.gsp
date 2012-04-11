@@ -52,8 +52,10 @@
 
                         </tr>
                     </thead>
+
                     <tbody>
                     <g:each in="${userInstanceList}" status="i" var="userInstance">
+                      <tr>
                          <td><g:link action="show" id="${userInstance.id}">${fieldValue(bean:userInstance, field:'id')}</g:link></td>
 
                              <td>${fieldValue(bean:userInstance, field:'nameUser')}</td>
