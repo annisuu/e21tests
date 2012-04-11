@@ -3,30 +3,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
-        <title>Edit Rol</title>
-
-
-      <g:if test="${session.user}">
-        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
-         <p> Projecto:<b>${session.user?.name_project}</b> </p>
-         <p> Rol:<b>${session.user?.name_rol}</b> </p>
-
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>
+          <meta name="layout" content="mainAdmin" />
+        <title>Roles</title>
 
     </head>
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Rol List</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">New Rol</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">Lista de Roles</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">Nuevo Rol</g:link></span>
         </div>
         <div class="body">
-            <h1>Edit Rol</h1>
+            <h1>Editar Rol</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -44,7 +32,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameRol">Name Rol:</label>
+                                    <label for="nameRol">Nombre de  Rol:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:rolInstance,field:'nameRol','errors')}">
                                     <input type="text" id="nameRol" name="nameRol" value="${fieldValue(bean:rolInstance,field:'nameRol')}"/>

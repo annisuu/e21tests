@@ -3,30 +3,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
-        <title>Create Rol</title>
+       <meta name="layout" content="mainAdmin" />
+        <title>Crear Rol</title>
       
       <g:javascript library="jquery"></g:javascript>
       <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
       <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
       <resource:autoComplete skin="default" />
 
-      <g:if test="${session.user}">
-        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
-         <p> Projecto:<b>${session.user?.name_project}</b> </p>
-         <p> Rol:<b>${session.user?.name_rol}</b> </p>
-
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>>
 
     </head>
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Rol List</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">Lista de Roles</g:link></span>
         </div>
         <div class="body">
             <h1>Create Rol</h1>
@@ -51,7 +41,7 @@
                           </td></TR>
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameRol">Name Rol(Solo Maysculas):</label>
+                                    <label for="nameRol">Nombre Rol(Solo Maysculas):</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:rolInstance,field:'nameRol','errors')}">
                                     <input type="text" id="nameRol" name="nameRol" value="${fieldValue(bean:rolInstance,field:'nameRol')}"/>

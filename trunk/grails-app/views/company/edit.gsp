@@ -3,29 +3,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
-        <title>Edit Company</title>
-
-      <g:if test="${session.user}">
-        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
-         <p> Projecto:<b>${session.user?.name_project}</b> </p>
-         <p> Rol:<b>${session.user?.name_rol}</b> </p>
-
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>
+           <meta name="layout" content="mainAdmin" />
+        <title>Editar Empresa</title>
 
     </head>
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Company List</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">New Company</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">Empresas</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">Nueva Empresa</g:link></span>
         </div>
         <div class="body">
-            <h1>Edit Company</h1>
+            <h1>Editar Empresa</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -43,7 +32,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameCompany">Name Company:</label>
+                                    <label for="nameCompany">Nombre de Empresa:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:companyInstance,field:'nameCompany','errors')}">
                                     <input type="text" id="nameCompany" name="nameCompany" value="${fieldValue(bean:companyInstance,field:'nameCompany')}"/>

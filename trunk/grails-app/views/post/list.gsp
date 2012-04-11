@@ -3,29 +3,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
-        <title>Post List</title>
-
-      <g:if test="${session.user}">
-        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
-         <p> Projecto:<b>${session.user?.name_project}</b> </p>
-         <p> Rol:<b>${session.user?.name_rol}</b> </p>
-
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>
-
+          <meta name="layout" content="mainAdmin" />
+        <title>Puestos</title>
 
     </head>
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="create" action="create">New Post</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">Nuevo Puesto</g:link></span>
         </div>
         <div class="body">
-            <h1>Post List</h1>
+            <h1>Puestos</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -36,7 +24,7 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="namePost" title="Name Post" />
+                   	        <g:sortableColumn property="namePost" title="Nombre de Puesto" />
                         
                         </tr>
                     </thead>
