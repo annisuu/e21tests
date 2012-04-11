@@ -9,8 +9,21 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
   <head><title>Simple GSP page</title></head>
-  <body>Place your content here</body>
- <g:each var="a" in="${tematicas}">
-        ${a.name_subject}
-               </g:each>
+<resource:accordion skin="default" />
+  <body>
+
+  BIENVENIDO AL TEST
+  ELIJE DE LA SIGUIENTE CATEGOR&Iacute;A DE TEMAS LA CATEGOR&Iacute;A QUE EL INSTRUCTOR TE INDIQUE:
+  <TABLE>
+  
+  <richui:accordion style="width: 500px;">
+    <g:each var="temas" in="${tematicas}">
+     <richui:accordionItem caption="${temas.name_subject}">
+        </richui:accordionItem>
+      </g:each>
+    </richui:accordion>
+  </TABLE>
+
+  </body>
+
 </html>

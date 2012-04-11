@@ -28,7 +28,7 @@ class LoginController {
         if(user.id_rol==3)
         {
            println "Is User"
-        redirect(controller:"menuUser", params:[idu:params.pasword])
+        redirect(controller:"menuUser")
         }
       }
     }

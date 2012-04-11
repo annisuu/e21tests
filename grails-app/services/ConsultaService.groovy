@@ -143,11 +143,12 @@ class ConsultaService {
   def findTematicas(int id){
     def sql= new Sql(dataSource)
     def resultado=[]
-    def tematica=new Expando()
+
     sql.eachRow("select * from subject where id_area= "+ id +" ") {
+      def tematica=new Expando()
       tematica.id_subject=it.id_subject
       tematica.name_subject=it.name_subject
-    resultado.add(tematica)
+      resultado.add(tematica)
     }
 
     return resultado
