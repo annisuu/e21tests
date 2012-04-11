@@ -140,4 +140,18 @@ class ConsultaService {
     }
     return u
   }
+  def findTematicas(int id){
+    def sql= new Sql(dataSource)
+    def resultado=[]
+    def tematica=new Expando()
+    sql.eachRow("select * from subject where id_area= "+ id +" ") {
+      tematica.id_subject=it.id_subject
+      tematica.name_subject=it.name_subject
+    resultado.add(tematica)
+    }
+
+    return resultado
+  }
+
+
 }
