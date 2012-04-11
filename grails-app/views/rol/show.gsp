@@ -3,26 +3,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
-        <title>Show Rol</title>
+          <meta name="layout" content="mainAdmin" />
+        <title>Roles</title>
 
-
-      <g:if test="${session.user}">
-        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
-         <p> Projecto:<b>${session.user?.name_project}</b> </p>
-         <p> Rol:<b>${session.user?.name_rol}</b> </p>
-
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>
     </head>
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Rol List</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">New Rol</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">Lista de Roles</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">Nuevo Rol</g:link></span>
         </div>
         <div class="body">
             <h1>Show Rol</h1>
@@ -42,7 +31,7 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Name Rol:</td>
+                            <td valign="top" class="name">Nombre de  Rol:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:rolInstance, field:'nameRol')}</td>
                             

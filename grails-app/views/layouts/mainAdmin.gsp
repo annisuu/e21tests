@@ -94,14 +94,14 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 <!-- End Vista-Buttons.com -->
 
 </div>
-       <div  id="Login">
-      <g:if test="${session.user}">
-        BIENVENIDO: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}&nbsp;
-        <BR>AREA:${session.user?.name_area}&nbsp;
-        <BR>PROYECTO: ${session.user?.name_project}
-      <BR>LOGUEADO COMO: &nbsp;${session.user?.name_rol}</b> |
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
+        <div  id="Login">
+        <g:if test="${session.user}">
+        BIENVENIDO: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>&nbsp;
+        <p></p> AREA:<b>${session.user?.name_area}</b>&nbsp;
+        <p>PROYECTO: <b>${session.user?.name_project}</b>
+        <p></p> LOGUEADO COMO: &nbsp;<b>${session.user?.name_rol}</b>
+        <g:link controller="login" action="logout">Logout</g:link>
+        </g:if>
      <g:else>
        <g:link controller="login" action="login">Login</g:link>
      </g:else>

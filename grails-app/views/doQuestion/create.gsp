@@ -4,6 +4,18 @@
         <meta name="layout" content="main" />
         <title>Create DoQuestion</title>
 
+      <g:if test="${session.user}">
+        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
+         <p> Projecto:<b>${session.user?.name_project}</b> </p>
+         <p> Rol:<b>${session.user?.name_rol}</b> </p>
+
+         <g:link controller="login" action="logout">Logout</g:link>
+      </g:if>
+     <g:else>
+       <g:link controller="login" action="login">Login</g:link>
+     </g:else>
+
+
     </head>
     <body>
         <div class="nav">
@@ -96,6 +108,7 @@
                                       <input type="radio" id="trueanswer" name="trueanswer" value="1"/>
                                     </div></td>
                             </tr>
+                        
 
                             <tr class="prop">
                                 <td valign="top" class="name">

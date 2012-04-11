@@ -7,7 +7,7 @@ class LoginController {
       println "user:"+user.idu
       if(!user.idu)
       {
-        flash.message="Usuario no encontrado"
+        flash.message="Usuario no encontrado, por favor registrese de nuevo"
         redirect(action:'login')
         return
       }
@@ -18,7 +18,7 @@ class LoginController {
         if(user.id_rol==1)
         {
           println "Is Admin"
-        redirect(controller:'area')
+        redirect(controller:'user')
         }
         if(user.id_rol==2)
         {
