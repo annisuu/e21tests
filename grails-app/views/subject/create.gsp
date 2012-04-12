@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="mainInstrutor" />
         <title>Create Subject</title>
          <!-- se manda a llamar el jscript desde la ruta dode se encuentra  -->
        <g:javascript library="jquery"></g:javascript>
@@ -11,18 +11,6 @@
       <g:javascript library="jquery.alphanumeric.pack"></g:javascript>
        <resource:autoComplete skin="default" />
       
-
-      <g:if test="${session.user}">
-        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
-         <p> Projecto:<b>${session.user?.name_project}</b> </p>
-         <p> Rol:<b>${session.user?.name_rol}</b> </p>
-
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>
-
     </head>
     <body>
         <div class="nav">
@@ -50,20 +38,20 @@
                                   onItemSelect="document.location.href = '${createLinkTo(dir: 'subject/edit')}/' + id;" />
                             <!--       <richui:autoComplete name="person" delimChar="," action="${createLinkTo('dir': 'subject/searchAJAX')}" />    -->
                           </td></TR>
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label>Id Area:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'idArea','errors')}">
-                                   <select name="idArea">
-                                    <g:each var="c" in="${area}" >
-                                    <option value="${c.id_area}">
-                                      ${c.name_area}
-                                    </option>
-                                    </g:each>
-                                    </select>
 
-                                </td>
+                            <tr class="prop">
+                            <td valign="top" class="name">
+                            <label>Area:</label>
+                            </td>
+                            <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'idArea','errors')}">
+                            <select name="idArea" id="idarea">>
+                            <g:each var="c" in="${area}" >
+                            <option value="${c.id_area}">
+                            ${c.name_area}
+                            </option>
+                            </g:each>
+                            </select>
+                            </td>
                             </tr> 
                         
                             <tr class="prop">
