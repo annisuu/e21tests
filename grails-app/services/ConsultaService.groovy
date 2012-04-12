@@ -154,5 +154,19 @@ class ConsultaService {
     return resultado
   }
 
+  def findTests(){
+      def sql= new Sql(dataSource)
+      def resultado=[]
+
+      sql.eachRow("select * from test ") {
+        def examen=new Expando()
+        examen.id_test=it.id_test
+        examen.name_test=it.name_test
+        examen.subject=it.subject
+        resultado.add(examen)
+      }
+
+      return resultado
+    }
 
 }
