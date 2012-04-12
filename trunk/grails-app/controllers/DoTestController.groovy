@@ -82,13 +82,18 @@ class DoTestController {
     }
 
     def create = {
+       def area=ConsultaService.buscaArea()
+      def subject=ConsultaService.buscaSubject()
         def doTestInstance = new DoTest()
         doTestInstance.properties = params
-        return ['doTestInstance':doTestInstance]
+        return ['doTestInstance':doTestInstance,area:area,subject:subject]
     }
 
     def save = {
+      def area=ConsultaService.buscaArea()
+      def subject=ConsultaService.buscaSubject()
       def doTestInstance = new DoTest(params)
+      if(doTestInstance.validate()){
       def test =new Test()
       test.nameTest="x "
       test.idSubject="1"
@@ -99,7 +104,6 @@ class DoTestController {
       println "id test:::  "+test.id
       question.id_test=test.id
       question.questiontext=doTestInstance.question1
-         println "id test:::  "
       question.answer1=doTestInstance.answer1A
       //subir imagen 1
       question.image1=subirFile("image1A")
@@ -272,51 +276,57 @@ class DoTestController {
 
                     }
                     else {
-                        render(view:'create',model:[doTestInstance:doTestInstance])
+                        render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
                     }
                     }
                     else {
-                        render(view:'create',model:[doTestInstance:doTestInstance])
+                        render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
                     }
                     }
                     else {
-                        render(view:'create',model:[doTestInstance:doTestInstance])
+                        render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
                     }
                     }
                     else {
-                        render(view:'create',model:[doTestInstance:doTestInstance])
+                        render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
                     }
                     }
                     else {
-                        render(view:'create',model:[doTestInstance:doTestInstance])
+                        render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
                     }
                                 
                 }
                 else {
-                    render(view:'create',model:[doTestInstance:doTestInstance])
+                    render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
                 }
                 }
                 else {
-                    render(view:'create',model:[doTestInstance:doTestInstance])
+                    render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
                 }
     
             }
             else {
-                render(view:'create',model:[doTestInstance:doTestInstance])
+                render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
             }
     
             }
             else {
-                render(view:'create',model:[doTestInstance:doTestInstance])
+                render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
             }
         }
         else {
-            render(view:'create',model:[doTestInstance:doTestInstance])
+            render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
         }
 
       }   else {
-            render(view:'create',model:[doTestInstance:doTestInstance])
+            render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
         }
+    }
+      else
+      {
+        flash.message = "Verifique los campos remarcados con rojo"        
+        render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
+      }
     }
 public String  subirFile(String up)
   {  println "subiedo... "

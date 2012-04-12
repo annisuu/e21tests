@@ -3,8 +3,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="mainInstrutor" />
         <title>Create DoTest</title>
+<resource:accordion skin="default" />
+
     </head>
     <body>
         <div class="nav">
@@ -16,11 +18,7 @@
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${doTestInstance}">
-            <div class="errors">
-                <g:renderErrors bean="${doTestInstance}" as="list" />
-            </div>
-            </g:hasErrors>
+           
             <g:form action="save" method="post" enctype="multipart/form-data">
                 <div class="dialog">
                     <table>
@@ -30,17 +28,26 @@
                                     <label for="idArea">Id Area:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idArea','errors')}">
-                                    <input type="text" id="idArea" name="idArea" value="${fieldValue(bean:doTestInstance,field:'idArea')}"/>
-                                </td>
-                            </tr>
-
-                            <tr class="prop">
+                                      <select name="idArea" id="idArea">
+                                      <g:each var="area" in ="${area}">
+                                      <option  value="${area.id_area}">
+                                        ${area.name_area}
+                                      </option>
+                                      </g:each>
+                                      </select></td>
+                          
                                 <td valign="top" class="name">
                                     <label for="idSubject">Id Subject:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idSubject','errors')}">
-                                    <input type="text" id="idSubject" name="idSubject" value="${fieldValue(bean:doTestInstance,field:'idSubject')}"/>
-                                    <input type="hidden" id="id_test" name="id_test" value="${fieldValue(bean:doTestInstance,field:'id_test')}"/>
+                                      <select name="idSubject" id="idSubject">
+                                      <g:each var="subject" in ="${subject}">
+                                      <option  value="${subject.id}">
+                                        ${subject.name}
+                                      </option>
+                                      </g:each>
+                                  </select>
+                                  <input type="hidden" id="id_test" name="id_test" value="${fieldValue(bean:doTestInstance,field:'id_test')}"/>
 
                                 </td>
                             </tr>
@@ -52,8 +59,14 @@
                                     <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:doTestInstance,field:'nameTest')}"/>
                                 </td>
                             </tr>
+                         </tbody>
+                      </table>
+                  <richui:accordion style="width: 500px;">
+    <richui:accordionItem caption="Question1">
+                 <table>
+                        <tbody>
 
- <tr class="prop">
+                                <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="question1">Question1:</label>
                                 </td>
@@ -120,6 +133,12 @@
                                     <input type="text" id="trueanswer1" name="trueanswer1" value="${fieldValue(bean:doTestInstance,field:'trueanswer1')}"/>
                                 </td>
                             </tr>
+                         </tbody>
+                      </table>
+      </richui:accordionItem>
+               <richui:accordionItem caption="Question2">
+                 <table>
+                        <tbody>
                         <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="question2">Question2:</label>
@@ -189,7 +208,12 @@
                                     <input type="text" id="trueanswer2" name="trueanswer2" value="${fieldValue(bean:doTestInstance,field:'trueanswer2')}"/>
                                 </td>
                             </tr>
-
+                             </tbody>
+                      </table>
+      </richui:accordionItem>
+               <richui:accordionItem caption="Question3">
+                 <table>
+                        <tbody>
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="question3">Question3:</label>
@@ -258,7 +282,12 @@
                                     <input type="text" id="trueanswer3" name="trueanswer3" value="${fieldValue(bean:doTestInstance,field:'trueanswer3')}"/>
                                 </td>
                             </tr>
-
+                               </tbody>
+                      </table>
+      </richui:accordionItem>
+               <richui:accordionItem caption="Question4">
+                 <table>
+                        <tbody>
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="question4">Question4:</label>
@@ -329,7 +358,12 @@
                                 </td>
                             </tr>
 
-
+                              </tbody>
+                      </table>
+      </richui:accordionItem>
+               <richui:accordionItem caption="Question5">
+                 <table>
+                        <tbody>
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="question5">Question5:</label>
@@ -378,7 +412,7 @@
                                     <label for="image5B">Image5 B:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image5B','errors')}">
-                                  <input type="file" id="imag5B" name="image5B" width="250px">
+                                  <input type="file" id="image5B" name="image5B" width="250px">
                                 </td>
                             </tr>
 
@@ -398,6 +432,12 @@
                                     <input type="text" id="trueanswer5" name="trueanswer5" value="${fieldValue(bean:doTestInstance,field:'trueanswer5')}"/>
                                 </td>
                             </tr>
+                          </tbody>
+                      </table>
+      </richui:accordionItem>
+               <richui:accordionItem caption="Question6">
+                 <table>
+                        <tbody>
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="question6">Question6:</label>
@@ -466,6 +506,12 @@
                                     <input type="text" id="trueanswer6" name="trueanswer6" value="${fieldValue(bean:doTestInstance,field:'trueanswer6')}"/>
                                 </td>
                             </tr>
+                          </tbody>
+                      </table>
+      </richui:accordionItem>
+               <richui:accordionItem caption="Question7">
+                 <table>
+                        <tbody>
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="question7">Question7:</label>
@@ -534,6 +580,12 @@
                                     <input type="text" id="trueanswer7" name="trueanswer7" value="${fieldValue(bean:doTestInstance,field:'trueanswer7')}"/>
                                 </td>
                             </tr>
+                          </tbody>
+                      </table>
+      </richui:accordionItem>
+               <richui:accordionItem caption="Question8">
+                 <table>
+                        <tbody>
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="question8">Question8:</label>
@@ -602,6 +654,12 @@
                                     <input type="text" id="trueanswer8" name="trueanswer8" value="${fieldValue(bean:doTestInstance,field:'trueanswer8')}"/>
                                 </td>
                             </tr>
+                          </tbody>
+                      </table>
+      </richui:accordionItem>
+               <richui:accordionItem caption="Question9">
+                 <table>
+                        <tbody>
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="question9">Question9:</label>
@@ -670,6 +728,12 @@
                                     <input type="text" id="trueanswer9" name="trueanswer9" value="${fieldValue(bean:doTestInstance,field:'trueanswer9')}"/>
                                 </td>
                             </tr>
+                          </tbody>
+                      </table>
+      </richui:accordionItem>
+               <richui:accordionItem caption="Question10">
+                 <table>
+                        <tbody>
                          <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="question10">Question10:</label>
@@ -744,6 +808,8 @@
 
                </tbody>
                     </table>
+                  </richui:accordionItem>
+                     </richui:accordion>
                 </div>
                 <div class="buttons">
                     <span class="button"><input class="save" type="submit" value="Create" /></span>

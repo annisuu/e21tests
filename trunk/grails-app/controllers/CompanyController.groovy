@@ -94,6 +94,7 @@ class CompanyController {
             redirect(action:show,id:companyInstance.id)
         }
         else {
+          flash.message = "Verifique los campos remarcados con rojo"
             render(view:'create',model:[companyInstance:companyInstance])
         }
     }

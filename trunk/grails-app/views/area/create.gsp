@@ -14,19 +14,14 @@
          </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Areas</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">Listado de Areas</g:link></span>
         </div>
         <div class="body">
             <h1>Agregar Area</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${areaInstance}">
-            <div class="errors">
-                <g:renderErrors bean="${areaInstance}" as="list" />
-            </div>
-            </g:hasErrors>
+            
             <g:form action="save" method="post" >
                 <div class="dialog">
                     <table>

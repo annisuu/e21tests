@@ -93,6 +93,7 @@ class PostController {
             redirect(action:show,id:postInstance.id)
         }
         else {
+          flash.message = "Verifique los campos remarcados con rojo"
             render(view:'create',model:[postInstance:postInstance])
         }
     }
