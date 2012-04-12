@@ -17,7 +17,8 @@
 
   BIENVENIDO AL TEST
   ELIJE DE LA SIGUIENTE CATEGOR&Iacute;A DE TEMAS LA CATEGOR&Iacute;A QUE EL INSTRUCTOR TE INDIQUE:
-  <TABLE>
+  <TABLE align="center">
+    <tr> <td aling="center">
   
   <richui:accordion style="width: 500px;">
     <g:each var="temas" in="${tematicas}">
@@ -29,6 +30,8 @@
         </richui:accordionItem>
       </g:each>
     </richui:accordion>
+      </td>
+    </tr>
   </TABLE>
 
   </body>

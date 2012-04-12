@@ -93,6 +93,7 @@ class AreaController {
             redirect(action:show,id:areaInstance.id)
         }
         else {
+          flash.message = "Verifique los campos remarcados con rojo"
             render(view:'create',model:[areaInstance:areaInstance])
         }
     }

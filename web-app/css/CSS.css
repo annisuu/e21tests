@@ -8,9 +8,9 @@ text-align: left;
 	 margin: 0 auto;
 
 background-image: url(../images/metallic.jpg);
-color:#FF0000;
-
-font-family:Verdana, Arial, Helvetica, sans-serif;
+color: #333333;
+font-family:Verdana, Arial, Helvetica, sans-serif ;
+    font-weight: bold;
 font-variant:small-caps;
 }
 
@@ -178,7 +178,7 @@ font-variant:small-caps;
 	left: 20px;
 	top: 200px;
     color: #000000;
-	<!--font-weight: bold;-->
+	<!---->
 	font-size: 12px;
     border:#333333;
     bgcolor:#333333;
