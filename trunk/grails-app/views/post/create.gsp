@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
           <meta name="layout" content="mainAdmin" />
-        <title>Crear Puesto</title>
+        <title>Crear Cargo</title>
 
       <g:javascript library="jquery"></g:javascript>
       <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
@@ -15,10 +15,10 @@
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Puestos</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">Cargos</g:link></span>
         </div>
         <div class="body">
-            <h1>Agregar Puesto</h1>
+            <h1>Agregar Cargo</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -40,7 +40,7 @@
                           </td></TR>
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="namePost">Nombre de Puesto (Solo Mayusculas):</label>
+                                    <label for="namePost">Nombre de Cargo (Solo Mayusculas):</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:postInstance,field:'namePost','errors')}">
                                     <input type="text" id="namePost" name="namePost" value="${fieldValue(bean:postInstance,field:'namePost')}"/>

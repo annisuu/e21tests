@@ -28,7 +28,7 @@
                    	        <g:sortableColumn property="idProyecto" title="Proyecto"/>
                    	        <g:sortableColumn property="idCompany" title="Empresa"/>
                             <g:sortableColumn property="idArea" title="Area"/>
-                            <g:sortableColumn property="idPost" title="Puesto"/>
+                            <g:sortableColumn property="idPost" title="Cargoo"/>
                    	        <g:sortableColumn property="idrol" title="Rol"/>
                         </tr>
 

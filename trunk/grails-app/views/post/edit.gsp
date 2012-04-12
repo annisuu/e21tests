@@ -4,17 +4,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
          <meta name="layout" content="mainAdmin" />
-        <title>Editar Puestos</title>
+        <title>Editar Cargos</title>
 
     </head>
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
             <span class="menuButton"><g:link class="list" action="list">Puestos</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">Nuevo Puesto</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">Nuevo Cargo</g:link></span>
         </div>
         <div class="body">
-            <h1>Editar Puesto</h1>
+            <h1>Editar Cargo</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -32,7 +32,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="namePost">Nombre de Puesto:</label>
+                                    <label for="namePost">Nombre de Cargo:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:postInstance,field:'namePost','errors')}">
                                     <input type="text" id="namePost" name="namePost" value="${fieldValue(bean:postInstance,field:'namePost')}"/>

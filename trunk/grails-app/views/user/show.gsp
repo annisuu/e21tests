@@ -67,7 +67,7 @@
                     
 
                         <tr class="prop">
-                        <td valign="top" class="name">Puesto:</td>
+                        <td valign="top" class="name">Cargo:</td>
                         <td> <g:each var="c" in="${post}">
                         <%if("${userInstance.idPost}"==c.id_post.toString()){println c.name_post}%>
                         </g:each></td>

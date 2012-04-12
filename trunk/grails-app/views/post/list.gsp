@@ -4,16 +4,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
           <meta name="layout" content="mainAdmin" />
-        <title>Puestos</title>
+        <title>Cargos</title>
 
     </head>
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="create" action="create">Nuevo Puesto</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">Nuevo Cargo</g:link></span>
         </div>
         <div class="body">
-            <h1>Puestos</h1>
+            <h1>Cargos</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -24,7 +24,7 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="namePost" title="Nombre de Puesto" />
+                   	        <g:sortableColumn property="namePost" title="Nombre de Cargo" />
                         
                         </tr>
                     </thead>

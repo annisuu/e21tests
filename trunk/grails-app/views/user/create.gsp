@@ -113,7 +113,7 @@
                         
                          <tr class="prop">
                         <td valign="top" class="name">
-                        <label>Puesto:</label>
+                        <label>Cargo:</label>
                         </td>
                         <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idPost','errors')}">
                         <select name="idPost">
