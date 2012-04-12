@@ -8,7 +8,8 @@ class MenuUserController {
     println idarea
    def tematicas=ConsultaService.findTematicas(idarea)
      println tematicas
-     render(view:'menuUser',model:[tematicas:tematicas])
+   def examen=ConsultaService.findTests()
+     render(view:'menuUser',model:[tematicas:tematicas,examen:examen])
   }
    
  

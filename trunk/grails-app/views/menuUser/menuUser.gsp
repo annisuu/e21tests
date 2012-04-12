@@ -8,8 +8,11 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-  <head><title>Simple GSP page</title></head>
-<resource:accordion skin="default" />
+  <head>
+    <meta name="layout" content="mainUser" />
+    <resource:accordion skin="default" />
+              
+    <title>Simple GSP page</title></head>
   <body>
 
   BIENVENIDO AL TEST
@@ -19,6 +22,10 @@
   <richui:accordion style="width: 500px;">
     <g:each var="temas" in="${tematicas}">
      <richui:accordionItem caption="${temas.name_subject}">
+         <g:each var="examen" in="${examen}">
+            <%if("${temas.id_subject}"==examen.subject.toString()){println examen.name_test}%>
+
+           </g:each>
         </richui:accordionItem>
       </g:each>
     </richui:accordion>
