@@ -4,17 +4,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
          <meta name="layout" content="mainAdmin" />
-        <title>Usuarios</title>
+        <title>Usuario</title>
 
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Usuarios</g:link></span>
+
+            <span class="menuButton"><g:link class="list" action="list">Lista de Usuarios</g:link></span>
             <span class="menuButton"><g:link class="create" action="create">Nuevo Usuario</g:link></span>
         </div>
         <div class="body">
-            <h1>Show User</h1>
+            <h1>Usuario</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

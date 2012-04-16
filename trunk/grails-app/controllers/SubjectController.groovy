@@ -103,7 +103,8 @@ class SubjectController {
             redirect(action:show,id:subjectInstance.id)
         }
         else {
-            render(view:'create',model:[subjectInstance:subjectInstance])
+                    def area=ConsultaService.buscaArea()
+            render(view:'create',model:[subjectInstance:subjectInstance,area:area])
         }
     }
 

@@ -3,8 +3,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
-        <title>Create Test</title>
+        <meta name="layout" content="mainInstruc" />
+        <title>Agregar  Test</title>
 
       <g:javascript library="jquery"></g:javascript>
       <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
@@ -12,26 +12,14 @@
       <resource:autoComplete skin="default" />
       <resource:autoComplete skin="default" />
 
-
-
-      <g:if test="${session.user}">
-        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
-         <p> Projecto:<b>${session.user?.name_project}</b> </p>
-         <p> Rol:<b>${session.user?.name_rol}</b> </p>
-
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Test List</g:link></span>
+
+            <span class="menuButton"><g:link class="list" action="list">Lista de Test</g:link></span>
         </div>
         <div class="body">
-            <h1>Create Test</h1>
+            <h1>Agregar Test</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -58,6 +46,7 @@
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idArea','errors')}">
                                   <!--  <input type="text" id="idArea" name="idArea" value="${fieldValue(bean:testInstance,field:'idArea')}"/>  -->
                                       <select name="idArea" id="idArea">
+                                   <option value="">SELECIONA EL AREA</option>
                                       <g:each var="area" in ="${area}">
                                       <option  value="${area.id_area}">
                                         ${area.name_area}
@@ -74,6 +63,7 @@
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idSubject','errors')}">
                                     <!--<input type="text" id="idSubject" name="idSubject" value="${fieldValue(bean:testInstance,field:'idSubject')}"/>-->
                                    <select name="idSubject" id="idSubject">
+                                   <option value="">SELECIONA LA TEMATICA</option>
                                       <g:each var="subject" in ="${subject}">
                                       <option  value="${subject.id}">
                                         ${subject.name}

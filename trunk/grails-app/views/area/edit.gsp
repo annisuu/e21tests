@@ -10,8 +10,8 @@
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Areas</g:link></span>
+            
+            <span class="menuButton"><g:link class="list" action="list">Lista de Areas</g:link></span>
             <span class="menuButton"><g:link class="create" action="create">Nueva Area</g:link></span>
         </div>
         <div class="body">

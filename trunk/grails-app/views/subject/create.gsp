@@ -3,8 +3,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="mainInstrutor" />
-        <title>Create Subject</title>
+        <meta name="layout" content="mainInstruc" />
+        <title>Agregar Tematica</title>
          <!-- se manda a llamar el jscript desde la ruta dode se encuentra  -->
        <g:javascript library="jquery"></g:javascript>
       <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
@@ -14,11 +14,10 @@
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Subject List</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">Lista de Tematicas</g:link></span>
         </div>
         <div class="body">
-            <h1>Create Subject</h1>
+            <h1>Agregar Tematica</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -44,7 +43,8 @@
                             <label>Area:</label>
                             </td>
                             <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'idArea','errors')}">
-                            <select name="idArea" id="idarea">>
+                            <select name="idArea" id="idarea">
+                               <option value="">SELECIONA LA TEMATICA</option>
                             <g:each var="c" in="${area}" >
                             <option value="${c.id_area}">
                             ${c.name_area}
@@ -56,7 +56,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameSubject">Name Subject:(SOLO MAYUSCULA)</label>
+                                    <label for="nameSubject">Nombre de la Tematica:(SOLO MAYUSCULA)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'nameSubject','errors')}">
                                     <input type="text" id="nameSubject" name="nameSubject" value="${fieldValue(bean:subjectInstance,field:'nameSubject')}"/>
