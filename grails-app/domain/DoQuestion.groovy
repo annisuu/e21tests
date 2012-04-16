@@ -8,6 +8,7 @@ class DoQuestion {
   String answer3
   String image3
   String trueanswer
+  String numberq
   
   static mapping={
      table 'do_question'
@@ -23,6 +24,7 @@ class DoQuestion {
       answer3 column: 'answer3'
       image3 column: 'image3'
       trueanswer column: 'trueanswer'
+      numberq column: 'numberq'
 
     }
 
