@@ -93,6 +93,7 @@ class DoTestController {
       def area=ConsultaService.buscaArea()
       def subject=ConsultaService.buscaSubject()
       def doTestInstance = new DoTest(params)
+      println doTestInstance.validate()
       if(doTestInstance.validate()){
       def test =new Test()
       test.nameTest="x "
@@ -116,6 +117,7 @@ class DoTestController {
       //subir imagen 3
       question.image3=subirFile("image1C")
       question.trueanswer=doTestInstance.trueanswer1
+      question.numberq="1"
         if(question.save())
         {
           println "question 1"
@@ -133,6 +135,8 @@ class DoTestController {
           //subir imagen 3
           question2.image3=subirFile("image2C")
           question2.trueanswer=doTestInstance.trueanswer2
+          question2.numberq="2"
+
           println question2
             if(question2.save())
             {
@@ -151,6 +155,7 @@ class DoTestController {
           //subir imagen 3
           question3.image3=subirFile("image3C")
           question3.trueanswer=doTestInstance.trueanswer3
+          question3.numberq="3"              
             if(question3.save())
             {
                   println "question 3"
@@ -168,6 +173,7 @@ class DoTestController {
               //subir imagen 3
               question4.image3=subirFile("image4C")
               question4.trueanswer=doTestInstance.trueanswer4
+              question4.numberq="4" 
                 if(question4.save())
                 {
                   println "question 4"
@@ -185,6 +191,7 @@ class DoTestController {
               //subir imagen 3
               question5.image3=subirFile("image5C")
               question5.trueanswer=doTestInstance.trueanswer5
+              question5.numberq="5"
                 if(question5.save())
                 {
                   println "question 5"
@@ -202,6 +209,7 @@ class DoTestController {
                   //subir imagen 3
                   question6.image3=subirFile("image6C")
                   question6.trueanswer=doTestInstance.trueanswer6
+                  question6.numberq="6" 
                     if(question6.save())
                     {
                       println "question 6"
@@ -219,6 +227,7 @@ class DoTestController {
                   //subir imagen 3
                   question7.image3=subirFile("image7C")
                   question7.trueanswer=doTestInstance.trueanswer7
+                  question7.numberq="7" 
                     if(question7.save())
                     {
                       println "question 7"
@@ -236,6 +245,7 @@ class DoTestController {
                   //subir imagen 3
                   question8.image3=subirFile("image8C")
                   question8.trueanswer=doTestInstance.trueanswer8
+                  question8.numberq="8"
                     if(question8.save())
                     {
                       println "question 8"
@@ -253,6 +263,7 @@ class DoTestController {
                   //subir imagen 3
                   question9.image3=subirFile("image9C")
                   question9.trueanswer=doTestInstance.trueanswer9
+                  question9.numberq="9"
                     if(question9.save())
                     {
                       println "question 9"
@@ -270,6 +281,7 @@ class DoTestController {
                   //subir imagen 3
                   question10.image3=subirFile("image10C")
                   question10.trueanswer=doTestInstance.trueanswer10
+                  question10.numberq="10" 
                     if(question10.save())
                     {
                       println "question 10"
