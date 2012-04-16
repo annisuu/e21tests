@@ -3,28 +3,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
-        <title>Test List</title>
+        <meta name="layout" content="mainInstruc" />
+        <title>Lista de Test</title>
 
 
-      <g:if test="${session.user}">
-        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
-         <p> Projecto:<b>${session.user?.name_project}</b> </p>
-         <p> Rol:<b>${session.user?.name_rol}</b> </p>
-
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="create" action="create">New Test</g:link></span>
+
+            <span class="menuButton"><g:link class="create" action="create">Nuevo Test</g:link></span>
         </div>
         <div class="body">
-            <h1>Test List</h1>
+            <h1>Lista de Test</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

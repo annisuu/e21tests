@@ -14,7 +14,7 @@
          </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><g:link class="list" action="list">Listado de Areas</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">Lista de  Areas</g:link></span>
         </div>
         <div class="body">
             <h1>Agregar Area</h1>

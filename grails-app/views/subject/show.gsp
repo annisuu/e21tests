@@ -4,18 +4,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="mainInstrutor" />
-        <title>Show Subject</title>
+        <title>Tematica</title>
 
      
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Subject List</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">New Subject</g:link></span>
+
+            <span class="menuButton"><g:link class="list" action="list">Lista de Tematicas</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">Nueva Tematica</g:link></span>
         </div>
         <div class="body">
-            <h1>Show Subject</h1>
+            <h1>Tematica</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -32,14 +32,14 @@
                         </tr>
                     
                         <tr class="prop">
-                       <td valign="top" class="name">Id Area:</td>
+                       <td valign="top" class="name">Area:</td>
                        <td><g:each var="a" in="${area}">
                         <%if("${subjectInstance.idArea}"==a.id_area.toString()){println a.name_area}%>
                        </g:each></td>
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Name Subject:</td>
+                            <td valign="top" class="name">Nombre de Tematica:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:subjectInstance, field:'nameSubject')}</td>
                             

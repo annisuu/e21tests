@@ -4,16 +4,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
            <meta name="layout" content="mainAdmin" />
-        <title>Proyectos</title>
+        <title>Lista de Proyectos</title>
 
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
+
             <span class="menuButton"><g:link class="create" action="create">Nuevo Proyecto</g:link></span>
         </div>
         <div class="body">
-            <h1>Proyectos</h1>
+            <h1>Lista de Proyectos</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

@@ -3,29 +3,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
-        <title>Edit Test</title>
+        <meta name="layout" content="mainInstruc" />
+        <title>Editar Test</title>
 
 
-      <g:if test="${session.user}">
-        Usuario: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>
-         <p> Projecto:<b>${session.user?.name_project}</b> </p>
-         <p> Rol:<b>${session.user?.name_rol}</b> </p>
-
-         <g:link controller="login" action="logout">Logout</g:link>
-      </g:if>
-     <g:else>
-       <g:link controller="login" action="login">Login</g:link>
-     </g:else>
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Test List</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">New Test</g:link></span>
+
+            <span class="menuButton"><g:link class="list" action="list">Lista de Test</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">Nuevo Test</g:link></span>
         </div>
         <div class="body">
-            <h1>Edit Test</h1>
+            <h1>Editar Test</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -47,6 +37,7 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idArea','errors')}">
                                     <select name="idArea">
+                                       <option value="">SELECIONA EL AREA</option>
                                     <g:each var="c" in="${area}" >
                                     <option value="${c.id_area}">
                                       ${c.name_area}
@@ -63,6 +54,7 @@
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idSubject','errors')}">
 
                                   <select name="idSubject">
+                                     <option value="">SELECIONA LA TEMATICA</option>
                                     <g:each var="subject" in="${subject}" >
                                     <option value="${subject.id}">
                                       ${subject.name}

@@ -102,8 +102,11 @@ class TestController {
             flash.message = "Test ${testInstance.id} created"
             redirect(action:show,id:testInstance.id)
         }
+
         else {
-            render(view:'create',model:[testInstance:testInstance])
+          def area=ConsultaService.buscaArea()
+        def subject=ConsultaService.buscaSubject()
+            render(view:'create',model:[testInstance:testInstance,area:area,subject:subject])
         }
     }
    def searchAJAX = {

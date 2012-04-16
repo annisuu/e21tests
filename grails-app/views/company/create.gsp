@@ -16,7 +16,7 @@
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><g:link class="list" action="list">Listado de Empresas</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">Lista de Empresas</g:link></span>
         </div>
         <div class="body">
             <h1>Agregar Empresa</h1>

@@ -14,8 +14,8 @@
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${resource(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="list" action="list">Cargos</g:link></span>
+
+            <span class="menuButton"><g:link class="list" action="list">Lista de Cargos</g:link></span>
         </div>
         <div class="body">
             <h1>Agregar Cargo</h1>
