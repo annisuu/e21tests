@@ -170,10 +170,10 @@ class ConsultaService {
     }
   def startTest(def idt,def number){
       def sql= new Sql(dataSource)
-      def resultado=[]
       println "parametros :"+idt+"-- "+number
+     def examen=new Expando()
       sql.eachRow("select * from stest where id_test= '"+idt+"' and numberq='"+number+"' ") {
-        def examen=new Expando()
+
         examen.id_test=it.id_test
         examen.id_area=it.id_area
         examen.subject=it.subject
@@ -187,10 +187,10 @@ class ConsultaService {
         examen.answer3=it.answer3
         examen.image3=it.image3
         examen.trueanswer=it.trueanswer
-        resultado.add(examen)
+
       }
 
-      return resultado
+      return examen
     }
 
 }

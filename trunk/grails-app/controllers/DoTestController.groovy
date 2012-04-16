@@ -96,9 +96,9 @@ class DoTestController {
       println doTestInstance.validate()
       if(doTestInstance.validate()){
       def test =new Test()
-      test.nameTest="x "
-      test.idSubject="1"
-      test.idArea="1"
+      test.nameTest=doTestInstance.nameTest
+      test.idSubject=doTestInstance.idSubject
+      test.idArea=doTestInstance.idArea
        if(test.save())
       {
       def question = new DoQuestion()
@@ -346,7 +346,7 @@ public String  subirFile(String up)
      def files = request.getFileMap()
      def file=files.get(up)
      String fileName = file.getOriginalFilename()
-    def savepath=appPath+"\\upload\\imagesQuestion\\";
+    def savepath=appPath+"\\web-app\\images\\upload\\imagesQuestion\\";
     println savepath
     if(fileName!="")
     {
