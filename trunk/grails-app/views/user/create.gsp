@@ -68,7 +68,7 @@
                        </td>
                        <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idProyecto','errors')}">
                        <select name="idProyecto" id="idProyecto">
-                          <option value="">SELECIONA EL PROYECTO</option>
+                          <option value="">SELECCIONA EL PROYECTO</option>
                         <g:each var="a" in="${proyecto}">
                         <option value="${a.id_project}" <% if(userInstance.idProyecto==a.id_project){ println "selected"}%>>${a.name_project}</option>
                         </g:each>
@@ -82,7 +82,7 @@
                        </td>
                        <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idCompany','errors')}">
                        <select name="idCompany" >
-                        <option value="">SELECIONA LA EMPRESA</option>
+                        <option value="">SELECCIONA LA EMPRESA</option>
                         <g:each var="b" in="${company}">
                         <option value="${b.id_company}">
                         ${b.name_company}
@@ -99,7 +99,7 @@
                         </td>
                         <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idArea','errors')}">
                         <select name="idArea">
-                           <option value="">SELECIONA EL AREA</option>
+                           <option value="">SELECCIONA EL AREA</option>
                         <g:each var="c" in="${area}">
                         <option value="${c.id_area}" <%if(c.id_area==userInstance.idArea.toString()){println "selected"}%>>
                         ${c.name_area}
@@ -116,7 +116,7 @@
                         </td>
                         <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idPost','errors')}">
                         <select name="idPost">
-                           <option value="">SELECIONA EL CARGO</option>
+                           <option value="">SELECCIONA EL CARGO</option>
                           <g:each var="e" in ="${post}">
                           <option value="${e.id_post}">
                           ${e.name_post}
@@ -134,7 +134,7 @@
                         </td>
                         <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idrol','errors')}">
                         <select name="idrol" id="idrol">
-                           <option value="">SELECIONA EL ROL</option>
+                           <option value="">SELECCIONA EL ROL</option>
                          <g:each var="d" in ="${rol}">
                          <option  value="${d.id_rol}">
                          ${d.name_rol}
