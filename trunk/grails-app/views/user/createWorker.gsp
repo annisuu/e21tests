@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-           <meta name="layout" content="mainInstrutor" />
+           <meta name="layout" content="mainInstruc" />
         <title>Agregar Usuario</title>
 
       <g:javascript library="jquery"></g:javascript>
@@ -134,11 +134,9 @@
                         </td>
                         <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idrol','errors')}">
                         <select name="idrol" id="idrol">
-                         <g:each var="d" in ="${rol}">
-                         <option  value="${d.id_rol}">
-                         ${d.name_rol}
-                         </option>
-                         </g:each>
+                         
+                         <option value="2">Trabajador</option>
+
                         </select>
                         </td>
                         </tr>
