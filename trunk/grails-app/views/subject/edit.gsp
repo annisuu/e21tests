@@ -29,7 +29,18 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
+
+                        <tr class="prop">
+                            <td valign="top" class="name">
+                                <label for="nameSubject">Name Subject:</label>
+                            </td>
+                            <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'nameSubject','errors')}">
+                                <input type="text" id="nameSubject" name="nameSubject" value="${fieldValue(bean:subjectInstance,field:'nameSubject')}"/>
+                            </td>
+                        </tr>
+
+
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label > Area:</label>
@@ -44,18 +55,10 @@
                                     </g:each>
                                     </select>
                                 </td>
-                                </td>
+                               
                             </tr> 
                         
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="nameSubject">Name Subject:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'nameSubject','errors')}">
-                                    <input type="text" id="nameSubject" name="nameSubject" value="${fieldValue(bean:subjectInstance,field:'nameSubject')}"/>
-                                </td>
-                            </tr> 
-                        
+
                         </tbody>
                     </table>
                 </div>

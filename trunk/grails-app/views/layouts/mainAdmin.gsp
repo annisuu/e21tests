@@ -114,6 +114,6 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
      </g:else>
 </div>
 </div>
-</div>
+
     </body>
 </html>

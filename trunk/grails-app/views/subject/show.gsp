@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="mainInstrutor" />
+        <meta name="layout" content="mainInstruc" />
         <title>Tematica</title>
 
      
@@ -30,7 +30,12 @@
                             <td valign="top" class="value">${fieldValue(bean:subjectInstance, field:'id')}</td>
                             
                         </tr>
-                    
+
+                   <tr class="prop">
+                   <td valign="top" class="name">Nombre de Tematica:</td>
+                   <td valign="top" class="value">${fieldValue(bean:subjectInstance, field:'nameSubject')}</td>
+                   </tr> 
+
                         <tr class="prop">
                        <td valign="top" class="name">Area:</td>
                        <td><g:each var="a" in="${area}">
@@ -38,12 +43,7 @@
                        </g:each></td>
                         </tr>
                     
-                        <tr class="prop">
-                            <td valign="top" class="name">Nombre de Tematica:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:subjectInstance, field:'nameSubject')}</td>
-                            
-                        </tr>
+
                     
                     </tbody>
                 </table>

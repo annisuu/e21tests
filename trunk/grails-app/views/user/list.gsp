@@ -43,9 +43,7 @@
 
                          <td>${fieldValue(bean:userInstance, field:'lastName')}</td>
 
-                         <td><g:each var="a" in="${area}">
-                         <%if("${userInstance.idArea}"==a.id_area.toString()){println a.name_area}%>
-                         </g:each></td>
+
 
                          <td><!--${fieldValue(bean:userInstance, field:'idProyecto')} -->
                          <g:each var="d" in="${proyecto}">
@@ -58,6 +56,10 @@
                          <%if("${userInstance.idCompany}"==b.id_company.toString()){println b.name_company}%>
                          </g:each></td>
 
+                          <td><!--${fieldValue(bean:userInstance, field:'idArea')} -->
+                         <g:each var="a" in="${area}">
+                         <%if("${userInstance.idArea}"==a.id_area.toString()){println a.name_area}%>
+                         </g:each></td> 
 
                          <td><!--${fieldValue(bean:userInstance, field:'idPost')} -->
                          <g:each var="c" in="${post}">
