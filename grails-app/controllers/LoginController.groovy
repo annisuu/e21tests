@@ -23,7 +23,7 @@ class LoginController {
         if(user.id_rol==2)
         {
            println "Is Instructor"
-        redirect(controller:'doQuestion')
+        redirect(controller:'test')
         }
         if(user.id_rol==3)
         {

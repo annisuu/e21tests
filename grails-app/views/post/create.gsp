@@ -22,11 +22,7 @@
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${postInstance}">
-            <div class="errors">
-                <g:renderErrors bean="${postInstance}" as="list" />
-            </div>
-            </g:hasErrors>
+          
             <g:form action="save" method="post" >
                 <div class="dialog">
                     <table>

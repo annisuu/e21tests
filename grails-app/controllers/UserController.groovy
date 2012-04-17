@@ -68,6 +68,7 @@ class UserController {
             redirect(action:list,area:area)
         }
         else {
+
             return [ userInstance : userInstance,proyecto:proyecto,company:company,rol:rol,post:post,area:area ]
         }
     }
@@ -147,11 +148,14 @@ class UserController {
             redirect(action:show,id:userInstance.id)
         }
         else {
+
+
            def proyecto=ConsultaService.buscaProyecto()
       def company=ConsultaService.buscaCompany()
       def area=ConsultaService.buscaArea()
       def rol=ConsultaService.buscaRol()
       def post=ConsultaService.buscaPost()
+           flash.message = "Los campos remarcados con rojo,no deben de estar vacios y deben de llevar minimo 5 letras para guardar "
             render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
         }
     }

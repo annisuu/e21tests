@@ -104,6 +104,7 @@ class TestController {
         }
 
         else {
+            flash.message = "Los campos remarcados con rojo,no deben de estar vacios y deben de llevar minimo 5 letras para guardar "
           def area=ConsultaService.buscaArea()
         def subject=ConsultaService.buscaSubject()
             render(view:'create',model:[testInstance:testInstance,area:area,subject:subject])
