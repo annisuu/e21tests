@@ -134,18 +134,14 @@
                         </td>
                         <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idrol','errors')}">
                         <select name="idrol" id="idrol">
-                         
-                         <option value="2">Trabajador</option>
-
-                        </select>
+                         <option value="3">TRABAJADOR</option>
+                         </select>
                         </td>
                         </tr>
 
-
-
            <td>
            </td>
-           </tr>
+
 
                         </tbody>
                     </table>
@@ -158,8 +154,6 @@
     <g:javascript>
 $('#nameUser').alpha({allcaps:true,allow:' '});
 $('#lastName').alpha({allcaps:true,allow:' '});
-
-
 
 </g:javascript>
     </body>

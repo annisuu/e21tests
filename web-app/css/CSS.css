@@ -21,12 +21,11 @@ font-variant:small-caps;
 	margin: 0px auto;
 	width: 500px;
 	position: relative;
-	position:absolute;
 	width:1043px;
 	height:775px;
 	z-index:1;
 	left: -1px;
-	top: 21px;
+	top: 20px;
 	background-image:url(../images/trasparencia0.png)
 }
 #TransparenciaInstructor{
@@ -36,12 +35,11 @@ font-variant:small-caps;
 	margin: 0px auto;
 	width: 500px;
 	position: relative;
-	position:absolute;
 	width:1043px;
 	height:775px;
 	z-index:1;
 	left: -1px;
-	top: 22px;
+	top: 20px;
 	background-image:url(../images/trasparencia0.png)
 }
 
@@ -130,13 +128,12 @@ font-variant:small-caps;
 	min-height: 560px;
 	margin: 0px auto;
 	width: 500px;
-	position: relative;
-	position:absolute;
+	position: relative; 	
 	width:1043px;
 	height:3683px;
 	z-index:1;
 	left: -1px;
-	top: 21px;
+	top: 20px;
 	background-image: url(../images/TrasparenciaCreaTest.png)
 }
 
@@ -161,10 +158,10 @@ font-variant:small-caps;
 }
 #margenAdmin {
 	position:absolute;
-	width:700px;
-	height:538px;
+	width:737px;
+	height:548px;
 	z-index:6;
-	left: 286px;
+	left: 250px;
 	top: 200px;
 	border:#333333;
 	background-image:url(../images/margenAdmin.png)
@@ -203,11 +200,11 @@ font-variant:small-caps;
 }
 #CapaFormulario {
 	position:absolute;
-	width:666px;
-	height:431px;
+	width:710px;
+	height:517px;
 	z-index:7;
-	left: 17px;
-	top: 28px;
+	left: 13px;
+	top: 14px;
 }
 #menuAdmin {
 	position:absolute;

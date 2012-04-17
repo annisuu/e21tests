@@ -34,6 +34,18 @@
                             <!--       <richui:autoComplete name="person" delimChar="," action="${createLinkTo('dir': 'subject/searchAJAX')}" />    -->
                           </td></TR>
 
+
+
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="nameSubject">Nombre de la Tematica:(SOLO MAYUSCULA)</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'nameSubject','errors')}">
+                                    <input type="text" id="nameSubject" name="nameSubject" value="${fieldValue(bean:subjectInstance,field:'nameSubject')}"/>
+                                </td>
+                            </tr>
+
+
                             <tr class="prop">
                             <td valign="top" class="name">
                             <label>Area:</label>
@@ -49,15 +61,7 @@
                             </select>
                             </td>
                             </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="nameSubject">Nombre de la Tematica:(SOLO MAYUSCULA)</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'nameSubject','errors')}">
-                                    <input type="text" id="nameSubject" name="nameSubject" value="${fieldValue(bean:subjectInstance,field:'nameSubject')}"/>
-                                </td>
-                            </tr> 
+
                         
                         </tbody>
                     </table>

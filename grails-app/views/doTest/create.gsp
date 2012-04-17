@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="mainInstrutor" />
+        <meta name="layout" content="mainInstruc" />
         <title>Create DoTest</title>
 <resource:accordion skin="default" />
 
@@ -24,42 +24,50 @@
                <div class="dialog">
                     <table style="width: 600px;">
                         <tbody>
+
+
                         <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="idArea">Id Area:</label>
+                                <label for="nameTest">Name Test:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idArea','errors')}">
-                                      <select name="idArea" id="idArea">
-                                      <g:each var="area" in ="${area}">
-                                      <option  value="${area.id_area}">
-                                        ${area.name_area}
-                                      </option>
-                                      </g:each>
-                                      </select></td>
+                                <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'nameTest','errors')}" colspan="3">
+                                <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:doTestInstance,field:'nameTest')}"/>
+                                </td>
+                            </tr>
 
-                                <td valign="top" class="name">
-                                    <label for="idSubject">Id Subject:</label>
+                        <tr>
+                         <td valign="top" class="name">
+                                    <label for="idSubject">Tematica:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idSubject','errors')}">
-                                      <select name="idSubject" id="idSubject">
-                                      <g:each var="subject" in ="${subject}">
+                                <select name="idSubject" id="idSubject">
+                                <g:each var="subject" in ="${subject}">
                                       <option  value="${subject.id}">
                                         ${subject.name}
                                       </option>
                                       </g:each>
                                   </select>
                                   <input type="hidden" id="id_test" name="id_test" value="${fieldValue(bean:doTestInstance,field:'id_test')}"/>
+                                 </td>
+                            </tr>
 
-                                </td>
-                            </tr>
-                             <tr class="prop">
+
+                        <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="nameTest">Name Test:</label>
+                                    <label for="idArea">Area:</label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'nameTest','errors')}" colspan="3">
-                                    <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:doTestInstance,field:'nameTest')}"/>
-                                </td>
-                            </tr>
+                                <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idArea','errors')}">
+                                      <select name="idArea" id="idArea">
+                                      <g:each var="area" in ="${area}">
+                                      <option  value="${area.id_area}">
+                                       ${area.name_area}
+                                      </option>
+                                      </g:each>
+                                      </select></td>
+                                      </tr>
+
+
+
                          </tbody>
                       </table>
                   <richui:accordion style="width: 600px;">
