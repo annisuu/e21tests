@@ -63,17 +63,17 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 <g:javascript library="schyrh2-inst"></g:javascript>
 <table id="vista-buttons.com:idhyrh2" width=0 cellpadding=0 cellspacing=0 border=0>
 <tr><td style="padding-right:10px" title ="Proyecto">
-<a href="#" onMouseOver='xpe("hyrh2o");' onMouseOut='xpe("hyrh2n");' onMouseDown='xpe("hyrh2c");'><img src="${resource(dir:'images/AltaInstructor-files',file:'bthyrh2_0.gif')}" id="xpi_hyrh2"  name="vbhyrh2" width="130" height="38" border="0" alt="Proyecto"/></a></td>
+<g:link controller="proyecto" onMouseOver="xpe('hyrh2o');" onMouseOut="xpe('hyrh2n');" onMouseDown="xpe('hyrh2c');"><img src="${resource(dir:'images/AltaInstructor-files',file:'bthyrh2_0.gif')}" id="xpi_hyrh2"  name="vbhyrh2" width="130" height="38" border="0" alt="Proyecto"/></g:link></td>
 <td style="padding-right:10px" title ="Administrador">
-<a href="#" onMouseOver='xpe("jyrh2o");' onMouseOut='xpe("jyrh2n");' onMouseDown='xpe("jyrh2c");'><img id="xpi_jyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btjyrh2_0.gif')}" name="vbjyrh2" width="130" height="38" border="0" alt="Administrador"/></a></td>
+<g:link controller="proyecto" onMouseOver="xpe('jyrh2o');" onMouseOut="xpe('jyrh2n');" onMouseDown="xpe('jyrh2c');"><img id="xpi_jyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btjyrh2_0.gif')}" name="vbjyrh2" width="130" height="38" border="0" alt="Administrador"/></g:link></td>
 <td style="padding-right:10px" title ="Instructor">
-<a  href="../test" onMouseOver='xpe("kyrh2o");' onMouseOut='xpe("kyrh2n");' onMouseDown='xpe("kyrh2c");'><img id="xpi_kyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btkyrh2_0.gif')}" name="vbkyrh2" width="130" height="38" border="0" alt="Instructor"/></a></td>
+<g:link controller="doTest" onMouseOver="xpe('kyrh2o');" onMouseOut="xpe('kyrh2n');" onMouseDown="xpe('kyrh2c');"><img id="xpi_kyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btkyrh2_0.gif')}" name="vbkyrh2" width="130" height="38" border="0" alt="Instructor"/></g:link></td>
 <td style="padding-right:10px" title ="Reportes">
-<a href="#" onMouseOver='xpe("gyrh2o");' onMouseOut='xpe("gyrh2n");' onMouseDown='xpe("gyrh2c");'><img id="xpi_gyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btgyrh2_0.gif')}" name="vbgyrh2" width="130" height="38" border="0" alt="Reportes"/></a></td>
+<g:link controller="proyecto" onMouseOver="xpe('gyrh2o');" onMouseOut="xpe('gyrh2n');" onMouseDown="xpe('gyrh2c');"><img id="xpi_gyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btgyrh2_0.gif')}" name="vbgyrh2" width="130" height="38" border="0" alt="Reportes"/></g:link></td>
 <td style="padding-right:10px" title ="Test">
-<a href="#" onMouseOver='xpe("ixrh2o");' onMouseOut='xpe("ixrh2n");' onMouseDown='xpe("ixrh2c");'><img id="xpi_ixrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btixrh2_0.gif')}" name="vbixrh2" width="130" height="38" border="0" alt="Test"/></a></td>
+<g:link controller="doTest" onMouseOver="xpe('ixrh2o');" onMouseOut="xpe('ixrh2n');" onMouseDown="xpe('ixrh2c');"><img id="xpi_ixrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btixrh2_0.gif')}" name="vbixrh2" width="130" height="38" border="0" alt="Test"/></g:link></td>
 <td style="padding-right:5px" title ="Cerrar Sesion">
-<a href="../login" onMouseOver='xpe("1xrh2o");' onMouseOut='xpe("1xrh2n");' onMouseDown='xpe("1xrh2c");'><img id="xpi_1xrh2" src="${resource(dir:'images/AltaInstructor-files',file:'bt1xrh2_0.gif')}" name="vb1xrh2" width="130" height="38" border="0" alt="Cerrar Sesion"/></a></td>
+<g:link controller="login" action="logout" onMouseOver="xpe('1xrh2o');" onMouseOut="xpe('1xrh2n');" onMouseDown="xpe('1xrh2c');"><img id="xpi_1xrh2" src="${resource(dir:'images/AltaInstructor-files',file:'bt1xrh2_0.gif')}" name="vb1xrh2" width="130" height="38" border="0" alt="Cerrar Sesion"/></g:link></td>
 </tr></table>
 
 </div>
@@ -92,11 +92,11 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 <g:javascript library="scm53h1"></g:javascript>
 
 <table id="vista-buttons.com:idm53h1" width=0 cellpadding=0 cellspacing=0 border=0><tr><td style="padding-bottom:12px" title ="PROYECTO">
-<a href="../proyecto" onMouseOver='xpe("m53h1o");' onMouseOut='xpe("m53h1n");' onMouseDown='xpe("m53h1c");'><img id="xpi_m53h1" src="${resource(dir:'images/Odebrecht-files',file:'btm53h1_0.gif')}" name="vbm53h1" width="130" height="35" border="0" alt="PROYECTO"/></a></td></tr><tr><td style="padding-bottom:12px" title ="EMPRESA">
-<a href="../company" onMouseOver='xpe("553h1o");' onMouseOut='xpe("553h1n");' onMouseDown='xpe("553h1c");'><img id="xpi_553h1" src="${resource(dir:'images/Odebrecht-files',file:'bt553h1_0.gif')}" name="vb553h1" width="130" height="35" border="0" alt="EMPRESA"/></a></td></tr><tr><td style="padding-bottom:12px" title ="AREA">
-<a href="../area" onMouseOver='xpe("a53h1o");' onMouseOut='xpe("a53h1n");' onMouseDown='xpe("a53h1c");'><img id="xpi_a53h1" src="${resource(dir:'images/Odebrecht-files',file:'bta53h1_0.gif')}" name="vba53h1" width="130" height="35" border="0" alt="AREA"/></a></td></tr><tr><td style="padding-bottom:12px" title ="CARGO">
-<a href="../post" onMouseOver='xpe("s53h1o");' onMouseOut='xpe("s53h1n");' onMouseDown='xpe("s53h1c");'><img id="xpi_s53h1" src="${resource(dir:'images/Odebrecht-files',file:'bts53h1_0.gif')}" name="vbs53h1" width="130" height="35" border="0" alt="CARGO"/></a></td></tr><tr><td style="padding-bottom:12px" title ="INSTRUCTOR">
-<a href="../user" onMouseOver='xpe("353h1o");' onMouseOut='xpe("353h1n");' onMouseDown='xpe("353h1c");'><img id="xpi_353h1" src="${resource(dir:'images/Odebrecht-files',file:'bt353h1_0.gif')}" name="vb353h1" width="130" height="35" border="0" alt="INSTRUCTOR"/></a></td></tr></table>
+<g:link controller="proyecto" onMouseOver="xpe('m53h1o');" onMouseOut="xpe('m53h1n');" onMouseDown="xpe('m53h1c');"><img id="xpi_m53h1" src="${resource(dir:'images/Odebrecht-files',file:'btm53h1_0.gif')}" name="vbm53h1" width="130" height="35" border="0" alt="PROYECTO"/></g:link></td></tr><tr><td style="padding-bottom:12px" title ="EMPRESA">
+<g:link controller="company" onMouseOver="xpe('553h1o');" onMouseOut="xpe('553h1n');" onMouseDown="xpe('553h1c');"><img id="xpi_553h1" src="${resource(dir:'images/Odebrecht-files',file:'bt553h1_0.gif')}" name="vb553h1" width="130" height="35" border="0" alt="EMPRESA"/></g:link></td></tr><tr><td style="padding-bottom:12px" title ="AREA">
+<g:link controller="area" onMouseOver="xpe('a53h1o');" onMouseOut="xpe('a53h1n');" onMouseDown="xpe('a53h1c');"><img id="xpi_a53h1" src="${resource(dir:'images/Odebrecht-files',file:'bta53h1_0.gif')}" name="vba53h1" width="130" height="35" border="0" alt="AREA"/></g:link></td></tr><tr><td style="padding-bottom:12px" title ="CARGO">
+<g:link controller="post" onMouseOver="xpe('s53h1o');" onMouseOut="xpe('s53h1n');" onMouseDown="xpe('s53h1c');"><img id="xpi_s53h1" src="${resource(dir:'images/Odebrecht-files',file:'bts53h1_0.gif')}" name="vbs53h1" width="130" height="35" border="0" alt="CARGO"/></g:link></td></tr><tr><td style="padding-bottom:12px" title ="INSTRUCTOR">
+<g:link controller="user" onMouseOver="xpe('353h1o');" onMouseOut="xpe('353h1n');" onMouseDown="xpe('353h1c');"><img id="xpi_353h1" src="${resource(dir:'images/Odebrecht-files',file:'bt353h1_0.gif')}" name="vb353h1" width="130" height="35" border="0" alt="INSTRUCTOR"/></g:link></td></tr></table>
 
 <!-- End Vista-Buttons.com -->
 
