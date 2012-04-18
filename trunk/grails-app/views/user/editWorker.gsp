@@ -10,7 +10,7 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="list" action="list">Lista de Usuarios</g:link></span>
+            <span class="menuButton"><g:link class="list" action="listWorker">Lista de Usuarios</g:link></span>
             <span class="menuButton"><g:link class="create" action="create">Nuevo Usuario</g:link></span>
         </div>
         <div class="body">

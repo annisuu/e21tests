@@ -25,7 +25,7 @@
      <richui:accordionItem caption="${temas.name_subject}">
          <g:each var="examen" in="${examen}">
             <%if("${temas.id_subject}"==examen.subject.toString()){%>
-          <g:link action="welcome" params="[nameTest:examen.name_test,idTest:examen.id_test]">${examen.name_test}</g:link>
+          <g:link action="welcome" params="[nameTest:examen.name_test,idTest:examen.id_test]">${examen.name_test}</g:link><br>
            <%}%>
            </g:each>
         </richui:accordionItem>

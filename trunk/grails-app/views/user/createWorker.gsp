@@ -13,7 +13,7 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="list" action="list">Lista de Usuarios</g:link></span>
+            <span class="menuButton"><g:link class="list" action="listWorker">Lista de Usuarios</g:link></span>
         </div>
         <div class="body">
             <h1>Agregar Usuario</h1>
@@ -33,7 +33,7 @@
                           <td>
                            <!-- <richui:autoComplete name="user" action="${createLinkTo('dir': 'user/searchAJAX')}" />  -->
                                  <richui:autoComplete name="searchuser" action="${createLinkTo('dir': 'user/searchAJAX')}"
-                                  onItemSelect="document.location.href = '${createLinkTo(dir: 'user/edit')}/' + id;" />
+                                  onItemSelect="document.location.href = '${createLinkTo(dir: 'user/editWorker')}/' + id;" />
                             <!--       <richui:autoComplete name="person" delimChar="," action="${createLinkTo('dir': 'user/searchAJAX')}" />    -->
                           </td></TR>
 
