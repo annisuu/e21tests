@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="mainInstruc" />
+        <meta name="layout" content="main" />
         <title>Agregar  Test</title>
 
       <g:javascript library="jquery"></g:javascript>
