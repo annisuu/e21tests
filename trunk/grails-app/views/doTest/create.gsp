@@ -28,7 +28,7 @@
 
                         <tr class="prop">
                                 <td valign="top" class="name">
-                                <label for="nameTest">Name Test:</label>
+                                <label for="nameTest">Nombre del Test:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'nameTest','errors')}" colspan="3">
                                 <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:doTestInstance,field:'nameTest')}"/>
@@ -71,7 +71,7 @@
                          </tbody>
                       </table>
                   <richui:accordion style="width: 600px;">
-    <richui:accordionItem caption="Question1">
+    <richui:accordionItem caption="Pregunta 1">
         <table width="464">
                               <tbody>
                                 <tr class="prop">
@@ -138,7 +138,7 @@
                          </tbody>
                       </table>
       </richui:accordionItem>
-               <richui:accordionItem caption="Question2">
+               <richui:accordionItem caption="Pregunta 2">
                <table width="464">
                               <tbody>
                                 <tr class="prop">
@@ -205,7 +205,7 @@
                          </tbody>
                       </table>
       </richui:accordionItem>
-               <richui:accordionItem caption="Question3">
+               <richui:accordionItem caption="Pregunta 3">
               <table width="464">
                               <tbody>
                                 <tr class="prop">
@@ -272,7 +272,7 @@
                          </tbody>
                       </table>
       </richui:accordionItem>
-               <richui:accordionItem caption="Question4">
+               <richui:accordionItem caption="Pregunta 4">
                 <table width="464">
                               <tbody>
                                 <tr class="prop">
@@ -339,7 +339,7 @@
                          </tbody>
                       </table>
       </richui:accordionItem>
-               <richui:accordionItem caption="Question5">
+               <richui:accordionItem caption=" Pregunta 5">
                <table width="464">
                               <tbody>
                                 <tr class="prop">
@@ -406,7 +406,7 @@
                          </tbody>
                       </table>
       </richui:accordionItem>
-               <richui:accordionItem caption="Question6">
+               <richui:accordionItem caption="Pregunta 6">
                 <table width="464">
                               <tbody>
                                 <tr class="prop">
@@ -473,7 +473,7 @@
                          </tbody>
                       </table>
       </richui:accordionItem>
-               <richui:accordionItem caption="Question7">
+               <richui:accordionItem caption="Pregunta 7">
                  <table width="464">
                               <tbody>
                                 <tr class="prop">
@@ -540,7 +540,7 @@
                          </tbody>
                       </table>
       </richui:accordionItem>
-               <richui:accordionItem caption="Question8">
+               <richui:accordionItem caption="Pregunta 8">
                  <table width="464">
                               <tbody>
                                 <tr class="prop">
@@ -607,7 +607,7 @@
                          </tbody>
                       </table>
       </richui:accordionItem>
-               <richui:accordionItem caption="Question9">
+               <richui:accordionItem caption="Pregunta 9">
                   <table width="464">
                               <tbody>
                                 <tr class="prop">
@@ -674,7 +674,7 @@
                          </tbody>
                       </table>
       </richui:accordionItem>
-               <richui:accordionItem caption="Question10">
+               <richui:accordionItem caption="Pregunta 10">
                   <table width="464">
                               <tbody>
                                 <tr class="prop">

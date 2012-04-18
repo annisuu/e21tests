@@ -30,9 +30,35 @@
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
+
+                        <tr class="prop">
+               <td valign="top" class="name">
+               <label for="nameTest">Nombre Test:</label>
+              </td>
+             <td valign="top" class="value ${hasErrors(bean:testInstance,field:'nameTest','errors')}">
+            <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:testInstance,field:'nameTest')}"/>
+                </td>
+           </tr>
+                        <tr class="prop">
+                            <td valign="top" class="name">
+                                <label for=>Tematica:</label>
+                            </td>
+                            <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idSubject','errors')}">
+
+                              <select name="idSubject">
+                                 <option value="">SELECIONA LA TEMATICA</option>
+                                <g:each var="subject" in="${subject}" >
+                                <option value="${subject.id}">
+                                  ${subject.name}
+                                </option>
+                                </g:each>
+                                </select>
+
+                            </td>
+                        </tr>
+
+                        <tr class="prop">
+                          <td valign="top" class="name">
                                     <label for=>Area:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idArea','errors')}">
@@ -47,33 +73,8 @@
                                 </td>
                             </tr> 
                         
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for=>Tematica:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idSubject','errors')}">
 
-                                  <select name="idSubject">
-                                     <option value="">SELECIONA LA TEMATICA</option>
-                                    <g:each var="subject" in="${subject}" >
-                                    <option value="${subject.id}">
-                                      ${subject.name}
-                                    </option>
-                                    </g:each>
-                                    </select>
-                                  
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="nameTest">Nombre Test:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:testInstance,field:'nameTest','errors')}">
-                                    <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:testInstance,field:'nameTest')}"/>
-                                </td>
-                            </tr> 
-                        
+
                         </tbody>
                     </table>
                 </div>

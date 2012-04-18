@@ -93,7 +93,7 @@ class AreaController {
             redirect(action:show,id:areaInstance.id)
         }
         else {
-          flash.message = "Verifique los campos remarcados con rojo"
+          flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
             render(view:'create',model:[areaInstance:areaInstance])
         }
     }
