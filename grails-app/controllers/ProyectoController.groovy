@@ -93,7 +93,7 @@ class ProyectoController {
             redirect(action:show,id:proyectoInstance.id)
         }
         else {
-             flash.message = "Los campos remarcados con rojo,no deben de estar vacios y deben de llevar minimo 5 letras para guardar "
+             flash.message = "Los campos marcados con rojo,no deben de estar vacios para guardar "
             render(view:'create',model:[proyectoInstance:proyectoInstance])
         }
     }

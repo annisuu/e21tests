@@ -24,11 +24,23 @@
 
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Id:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:testInstance, field:'id')}</td>
-                            
-                        </tr>
+                        <td valign="top" class="name">Id:</td>
+                        <td valign="top" class="value">${fieldValue(bean:testInstance, field:'id')}</td>
+                       </tr>
+
+                        <tr class="prop">
+                        <td valign="top" class="name">Nombre Test:</td>
+                        <td valign="top" class="value">${fieldValue(bean:testInstance, field:'nameTest')}</td>
+                        </tr>   
+
+                         <tr class="prop">
+                        <td valign="top" class="name">Tematica:</td>
+                        <td>  <g:each var="subject" in="${subject}">
+                        <%if("${testInstance.idSubject}"==subject.id.toString()){println subject.name}%>
+                        </g:each></td>
+                         </tr>
+
+
                      <tr class="prop">
                           <td valign="top" class="name">Area:</td>
                           <td><g:each var="a" in="${area}">
@@ -36,19 +48,9 @@
                          </g:each></td>
                         </tr>
 
-                        <tr class="prop">
-                            <td valign="top" class="name">Tematica:</td>
-                          <td>  <g:each var="subject" in="${subject}">
-                           <%if("${testInstance.idSubject}"==subject.id.toString()){println subject.name}%>
-                        </g:each></td>
-                     </tr>
+
                     
-                        <tr class="prop">
-                            <td valign="top" class="name">Nombre Test:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:testInstance, field:'nameTest')}</td>
-                            
-                        </tr>
+
                     
                     </tbody>
                 </table>

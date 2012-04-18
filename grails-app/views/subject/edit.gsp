@@ -32,7 +32,7 @@
 
                         <tr class="prop">
                             <td valign="top" class="name">
-                                <label for="nameSubject">Name Subject:</label>
+                                <label for="nameSubject">Nombre de la Tematica:</label>
                             </td>
                             <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'nameSubject','errors')}">
                                 <input type="text" id="nameSubject" name="nameSubject" value="${fieldValue(bean:subjectInstance,field:'nameSubject')}"/>
@@ -47,7 +47,7 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'idArea','errors')}">
                                     <select name="idArea">
-                                       <option value="">SELECIONA LA TEMATICA</option>
+                                       <option value="">SELECCIONA LA TEMATICA</option>
                                     <g:each var="c" in="${area}" >
                                     <option value="${c.id_area}">
                                       ${c.name_area}

@@ -63,7 +63,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 <g:javascript library="schyrh2-inst"></g:javascript>
 <table id="vista-buttons.com:idhyrh2" width=0 cellpadding=0 cellspacing=0 border=0>
 <tr><td style="padding-right:10px" title ="Proyecto">
-<a href="../proyecto" onMouseOver='xpe("hyrh2o");' onMouseOut='xpe("hyrh2n");' onMouseDown='xpe("hyrh2c");'><img src="${resource(dir:'images/AltaInstructor-files',file:'bthyrh2_0.gif')}" id="xpi_hyrh2"  name="vbhyrh2" width="130" height="38" border="0" alt="Proyecto"/></a></td>
+<a href="#" onMouseOver='xpe("hyrh2o");' onMouseOut='xpe("hyrh2n");' onMouseDown='xpe("hyrh2c");'><img src="${resource(dir:'images/AltaInstructor-files',file:'bthyrh2_0.gif')}" id="xpi_hyrh2"  name="vbhyrh2" width="130" height="38" border="0" alt="Proyecto"/></a></td>
 <td style="padding-right:10px" title ="Administrador">
 <a href="#" onMouseOver='xpe("jyrh2o");' onMouseOut='xpe("jyrh2n");' onMouseDown='xpe("jyrh2c");'><img id="xpi_jyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btjyrh2_0.gif')}" name="vbjyrh2" width="130" height="38" border="0" alt="Administrador"/></a></td>
 <td style="padding-right:10px" title ="Instructor">
@@ -104,10 +104,10 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
         <div  id="Login">
         <g:if test="${session.user}">
         BIENVENIDO: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>&nbsp;
-        <p></p> AREA:<b>${session.user?.name_area}</b>&nbsp;
+        <p></p> AREA: <b>${session.user?.name_area}</b>&nbsp;
         <p>PROYECTO: <b>${session.user?.name_project}</b>
         <p></p> LOGUEADO COMO: &nbsp;<b>${session.user?.name_rol}</b>
-            <g:link controller="login" action="logout">Logout</g:link>
+            <g:link controller="login" action="logout"></g:link>
         </g:if>
      <g:else>
        <g:link controller="login" action="login">Login</g:link>

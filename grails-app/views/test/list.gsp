@@ -26,10 +26,8 @@
                    	        <g:sortableColumn property="id" title="Id" />
 
                              <g:sortableColumn property="nameTest" title="Nombre de Test" />
-
-                   	        <g:sortableColumn property="idArea" title="Area" />
-                        
                    	        <g:sortableColumn property="idSubject" title="Tematica" />
+                            <g:sortableColumn property="idArea" title="Area" />
 
 
                         

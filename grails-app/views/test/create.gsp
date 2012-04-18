@@ -36,6 +36,37 @@
                                   onItemSelect="document.location.href = '${createLinkTo(dir: 'test/edit')}/' + id;" />
                             <!--       <richui:autoComplete name="person" delimChar="," action="${createLinkTo('dir': 'test/searchAJAX')}" />    -->
                           </td></TR>
+
+
+                          <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="nameTest">Nombre de Test:(Solo Mayusculas)</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:testInstance,field:'nameTest','errors')}">
+                                    <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:testInstance,field:'nameTest')}"/>
+                                </td>
+                            </tr>
+
+
+
+
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="idSubject">Tematica:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idSubject','errors')}">
+                                    <!--<input type="text" id="idSubject" name="idSubject" value="${fieldValue(bean:testInstance,field:'idSubject')}"/>-->
+                                   <select name="idSubject" id="idSubject">
+                                   <option value="">SELECCIONA LA TEMATICA</option>
+                                      <g:each var="subject" in ="${subject}">
+                                      <option  value="${subject.id}">
+                                        ${subject.name}
+                                      </option>
+                                      </g:each>
+                                      </select>
+                                </td>
+                            </tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="idArea">Area:</label>
@@ -43,7 +74,7 @@
                                 <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idArea','errors')}">
                                   <!--  <input type="text" id="idArea" name="idArea" value="${fieldValue(bean:testInstance,field:'idArea')}"/>  -->
                                       <select name="idArea" id="idArea">
-                                   <option value="">SELECIONA EL AREA</option>
+                                   <option value="">SELECCIONA EL AREA</option>
                                       <g:each var="area" in ="${area}">
                                       <option  value="${area.id_area}">
                                         ${area.name_area}
@@ -52,32 +83,9 @@
                                       </select>
                                 </td>
                             </tr> 
+
                         
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="idSubject">Tematica:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idSubject','errors')}">
-                                    <!--<input type="text" id="idSubject" name="idSubject" value="${fieldValue(bean:testInstance,field:'idSubject')}"/>-->
-                                   <select name="idSubject" id="idSubject">
-                                   <option value="">SELECIONA LA TEMATICA</option>
-                                      <g:each var="subject" in ="${subject}">
-                                      <option  value="${subject.id}">
-                                        ${subject.name}
-                                      </option>
-                                      </g:each>
-                                      </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="nameTest">Nombre de Test:(Solo Mayusculas)</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:testInstance,field:'nameTest','errors')}">
-                                    <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:testInstance,field:'nameTest')}"/>
-                                </td>
-                            </tr> 
+
                         
                         </tbody>
                     </table>
