@@ -223,3 +223,14 @@ font-variant:small-caps;
 	left: 17px;
 	top: 94px;
 }
+#next {
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 15px;
+    margin-top: 10px;
+    overflow: hidden;
+    padding-left: 40px;
+    background: transparent url(../images/Icons/flecha.png) 10px 60% no-repeat;
+    width:625px;
+	height:30px;
+}

@@ -267,3 +267,7 @@ th.desc a {
     background: transparent url(../images/Icons/Guardar.png) 10px 50% no-repeat;
     padding-left: 40px;
 }
+.buttons input.next {
+    background: transparent url(../images/Icons/flecha.png) 10px 50% no-repeat;
+    padding-left: 40px;
+}

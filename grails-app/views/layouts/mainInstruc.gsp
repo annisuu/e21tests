@@ -99,7 +99,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 <td style="padding-bottom:12px" title ="CREAR TEMATICA">
 <a href="../subject" onMouseOver='xpe("m53h1o");' onMouseOut='xpe("m53h1n");' onMouseDown='xpe("m53h1c");'><img id="xpi_m53h1" src="${resource(dir:'images/Instructor-files',file:'btm53h1_0.gif')}" name="vbm53h1" width="150" height="35" border="0" alt="CREAR TEMATICA"/></a></td></tr><tr>
 <td style="padding-bottom:12px" title ="CREAR TEST">
-<a href="../test" onMouseOver='xpe("553h1o");' onMouseOut='xpe("553h1n");' onMouseDown='xpe("553h1c");'><img id="xpi_553h1" src="${resource(dir:'images/Instructor-files',file:'bt553h1_0.gif')}" name="vb553h1" width="150" height="35" border="0" alt="CREAR TEST"/></a></td></tr><tr>
+<a href="../doTest" onMouseOver='xpe("553h1o");' onMouseOut='xpe("553h1n");' onMouseDown='xpe("553h1c");'><img id="xpi_553h1" src="${resource(dir:'images/Instructor-files',file:'bt553h1_0.gif')}" name="vb553h1" width="150" height="35" border="0" alt="CREAR TEST"/></a></td></tr><tr>
 <td style="padding-bottom:12px" title ="MODIFICAR TEST">
 <a href="#"onMouseOver='xpe("a53h1o");' onMouseOut='xpe("a53h1n");' onMouseDown='xpe("a53h1c");'><img id="xpi_a53h1" src="${resource(dir:'images/Instructor-files',file:'bta53h1_0.gif')}" name="vba53h1" width="150" height="35" border="0" alt="MODIFICAR TEST"/></a></td></tr></table>
 
