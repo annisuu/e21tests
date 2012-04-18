@@ -10,7 +10,9 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="create" action="create">Nuevo Usuario</g:link></span>
+            <span class="menuButton"><g:link class="create" action="createWorker">Nuevo Usuario</g:link></span>
+          
+
         </div>
         <div class="body">
             <h1>Lista de Usuario</h1>
@@ -36,7 +38,7 @@
                     <tbody>
                          <g:each in="${userInstanceList}" status="i" var="userInstance">
                       <tr>
-                         <td><g:link action="show" id="${userInstance.id}">${fieldValue(bean:userInstance, field:'id')}</g:link></td>
+                         <td><g:link action="showWorker" id="${userInstance.id}">${fieldValue(bean:userInstance, field:'id')}</g:link></td>
 
                          <td>${fieldValue(bean:userInstance, field:'nameUser')}</td>
 
