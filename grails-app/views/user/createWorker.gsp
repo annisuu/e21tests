@@ -12,29 +12,25 @@
     </head>
     <body>
         <div class="nav">
-
-            <span class="menuButton"><g:link class="list" action="listWorker">Lista de Usuarios</g:link></span>
+            <span class="menuButton"><g:link class="list" action="listWorker">Lista de Trabajadores</g:link></span>
         </div>
         <div class="body">
-            <h1>Agregar Usuario</h1>
+
+            <h1>Agregar Trabajador</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${userInstance}">
-            <div class="errors">
-                <g:renderErrors bean="${userInstance}" as="list" />
-            </div>
-            </g:hasErrors>
-            <g:form action="save" method="post" >
+           
+            <g:form action="saveWorker" method="post" >
                 <div class="dialog">
                     <table>
                         <tbody>
                               <TR><TD>Buscar </TD>
                           <td>
-                           <!-- <richui:autoComplete name="user" action="${createLinkTo('dir': 'user/searchAJAX')}" />  -->
-                                 <richui:autoComplete name="searchuser" action="${createLinkTo('dir': 'user/searchAJAX')}"
-                                  onItemSelect="document.location.href = '${createLinkTo(dir: 'user/editWorker')}/' + id;" />
-                            <!--       <richui:autoComplete name="person" delimChar="," action="${createLinkTo('dir': 'user/searchAJAX')}" />    -->
+                <!-- <richui:autoComplete name="user" action="${createLinkTo('dir': 'user/searchAJAX')}" />  -->
+                     <richui:autoComplete name="searchuser" action="${createLinkTo('dir': 'user/searchAJAX')}"
+                     onItemSelect="document.location.href = '${createLinkTo(dir: 'user/editWorker')}/' + id;" />
+            <!--     <richui:autoComplete name="person" delimChar="," action="${createLinkTo('dir': 'user/searchAJAX')}" />    -->
                           </td></TR>
 
                        <tr class="prop">

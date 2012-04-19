@@ -52,7 +52,7 @@
                             </td>
                             <td valign="top" class="value ${hasErrors(bean:subjectInstance,field:'idArea','errors')}">
                             <select name="idArea" id="idarea">
-                               <option value="">SELECCIONA LA TEMATICA</option>
+                               <option value="">SELECCIONA EL AREA</option>
                             <g:each var="c" in="${area}" >
                             <option value="${c.id_area}">
                             ${c.name_area}

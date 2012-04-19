@@ -56,7 +56,7 @@ class UserController {
 
          if(!userInstance) {
              flash.message = "User not found with id ${params.id}"
-             redirect(action:list)
+             redirect(action:listWorker)
          }
          else { return [ userInstance : userInstance ,area:area,company:company,post:post,proyecto:proyecto,rol:rol] }
      }
@@ -86,16 +86,16 @@ class UserController {
             try {
                 userInstance.delete(flush:true)
                 flash.message = "User ${params.id} deleted"
-                redirect(action:list)
+                redirect(action:listWorker)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
                 flash.message = "User ${params.id} could not be deleted"
-                redirect(action:show,id:params.id)
+                redirect(action:showWorker,id:params.id)
             }
         }
         else {
             flash.message = "User not found with id ${params.id}"
-            redirect(action:list)
+            redirect(action:listWorker)
         }
     }
 
@@ -129,7 +129,7 @@ class UserController {
 
         if(!userInstance) {
             flash.message = "User not found with id ${params.id}"
-            redirect(action:list,area:area)
+            redirect(action:listWorker,area:area)
         }
         else {
 
@@ -178,7 +178,7 @@ class UserController {
             userInstance.properties = params
             if(!userInstance.hasErrors() && userInstance.save()) {
                 flash.message = "User ${params.id} updated"
-                redirect(action:show,id:userInstance.id)
+                redirect(action:showWorker,id:userInstance.id)
             }
             else {
                 render(view:'edit',model:[userInstance:userInstance])
@@ -186,7 +186,7 @@ class UserController {
         }
         else {
             flash.message = "User not found with id ${params.id}"
-            redirect(action:list)
+            redirect(action:listWorker)
         }
     }
   
@@ -256,7 +256,7 @@ class UserController {
         def userInstance = new User(params)
         if(!userInstance.hasErrors() && userInstance.save()) {
             flash.message = "User ${userInstance.id} created"
-            redirect(action:show,id:userInstance.id)
+            redirect(action:showWorker,id:userInstance.id)
         }
         else {
 
@@ -268,7 +268,7 @@ class UserController {
       def post=ConsultaService.buscaPost()
 
            flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
-            render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
+            render(view:'createWorker',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
         }
     }
 

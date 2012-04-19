@@ -3,19 +3,19 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
            <meta name="layout" content="mainInstruc" />
-        <title>Lista de Usuarios</title>
+        <title>Lista de Trabajadores</title>
 
 
     </head>
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="create" action="createWorker">Nuevo Usuario</g:link></span>
+            <span class="menuButton"><g:link class="create" action="createWorker">Nuevo Trabajador</g:link></span>
           
 
         </div>
         <div class="body">
-            <h1>Lista de Usuario</h1>
+            <h1>Lista de Trabajdores</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
