@@ -68,9 +68,9 @@
                        </td>
                        <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idProyecto','errors')}">
                        <select name="idProyecto" id="idProyecto">
-                         <option value="">SELECCIONA EL PROYECTO</option>
+                        <option value="">SELECCIONA EL PROYECTO</option>
                         <g:each var="a" in="${proyecto}">
-                        <option value="${a.id_project}" <% if(userInstance.idProyecto==a.id_project){ println "selected"}%>>${a.name_project}</option>
+                        <option value="${a.id_project}" <% if(userInstance.idProyecto.toString().equals(a.id_project.toString())){ println "selected"}%>>${a.name_project}</option>
                         </g:each>
                         </select>
                        </td>
@@ -84,7 +84,7 @@
                        <select name="idCompany" >
                          <option value="">SELECCIONA LA EMPRESA</option>
                         <g:each var="b" in="${company}">
-                        <option value="${b.id_company}">
+                        <option value="${b.id_company}" <% if(userInstance.idCompany.toString().equals(b.id_company.toString())){ println "selected"}%>>
                         ${b.name_company}
                         </option>
                         </g:each>
@@ -99,9 +99,9 @@
                         </td>
                         <td valign="top" class="value ${hasErrors(bean:userInstance,field:'idArea','errors')}">
                         <select name="idArea">
+                           <option value="">SELECCIONA EL AREA</option><% println userInstance.idArea.toString()%>
                         <g:each var="c" in="${area}">
-                          <option value="">SELECCIONA EL AREA</option>
-                        <option value="${c.id_area}" <%if(c.id_area==userInstance.idArea.toString()){println "selected"}%>>
+                        <option value="${c.id_area}" <% if(c.id_area.toString().equals(userInstance.idArea.toString())){println "selected"}%>>
                         ${c.name_area}
                         </option>
                         </g:each>
@@ -118,7 +118,7 @@
                         <select name="idPost">
                           <option value="">SELECCIONA EL CARGO</option>
                           <g:each var="e" in ="${post}">
-                          <option value="${e.id_post}">
+                          <option value="${e.id_post}"  <% if(e.id_post.toString().equals(userInstance.idPost.toString())){println "selected"}%>>
                           ${e.name_post}
                           </option>
                           </g:each>
@@ -147,7 +147,7 @@
                     </table>
                 </div>
                 <div class="buttons">
-                    <span class="button"><input class="save" type="submit" value="Create" /></span>
+                    <span class="button"><input class="save" type="submit" value="CreateWorker" /></span>
                 </div>
             </g:form>
         </div>
