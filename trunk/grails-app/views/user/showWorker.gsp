@@ -9,14 +9,17 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="list" action="listWorker">Lista de Usuarios</g:link></span>
-            <span class="menuButton"><g:link class="create" action="createWorker">Nuevo Usuario</g:link></span>
+            <span class="menuButton"><g:link class="list" action="listWorker">Lista de Trabajadores</g:link></span>
+            <span class="menuButton"><g:link class="create" action="createWorker">Nuevo Trabajador</g:link></span>
         </div>
+    
         <div class="body">
-            <h1>Usuario</h1>
+            <h1>Trabajador</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
+        <g:form  method="post" >
+                        
             <div class="dialog">
                 <table>
                     <tbody>
@@ -80,13 +83,12 @@
                         </g:each></td>
                         </tr>
 
-
-
                     </tbody>
+
                 </table>
             </div>
             <div class="buttons">
-                <g:form>
+
                     <input type="hidden" name="id" value="${userInstance?.id}" />
                     <span class="button"><g:actionSubmit class="edit" value="Edit" /></span>
                     <span class="button"><g:actionSubmit class="delete" onclick="return confirm('Are you sure?');" value="Delete" /></span>

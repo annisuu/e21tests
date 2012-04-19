@@ -72,11 +72,11 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 
 
  <td style="padding-right:20px" title ="Trabajadores">
- <a href="../user/createWorker" onMouseOver='xpe("77xq7o");' onMouseOut='xpe("77xq7n");' onMouseDown='xpe("77xq7c");'><img src="${resource(dir:'images/Instructor-files',file:'bt77xq7_0.gif')}"id="xpi_77xq7" name="vb77xq7" width="135" height="44" border="0" alt="Trabajadores"/></a></td>
+ <g:link controller="user" action="createWorker" onMouseOver="xpe('77xq7o');" onMouseOut="xpe('77xq7n');" onMouseDown="xpe('77xq7c');"><img src="${resource(dir:'images/Instructor-files',file:'bt77xq7_0.gif')}"id="xpi_77xq7" name="vb77xq7" width="135" height="44" border="0" alt="Trabajadores"/></g:link></td>
    <td style="padding-right:20px" title ="Gestor de Test">
- <a href="#" onMouseOver='xpe("q7xq7o");' onMouseOut='xpe("q7xq7n");' onMouseDown='xpe("q7xq7c");'><img src="${resource(dir:'images/Instructor-files',file:'btq7xq7_0.gif')}" id="xpi_q7xq7" name="vbq7xq7" width="135" height="44" border="0" alt="Gestor de Test"/></a></td>
+ <a href="#" onMouseOver="xpe('q7xq7o');" onMouseOut="xpe('q7xq7n');"onMouseDown="xpe('q7xq7c');"><img src="${resource(dir:'images/Instructor-files',file:'btq7xq7_0.gif')}" id="xpi_q7xq7" name="vbq7xq7" width="135" height="44" border="0" alt="Gestor de Test"/></a></td>
  <td style="padding-right:20px" title ="Cerrar Sesion">
- <a href="../login" onMouseOver='xpe("m7xq7o");' onMouseOut='xpe("m7xq7n");' onMouseDown='xpe("m7xq7c");'><img src="${resource(dir:'images/Instructor-files',file:'btm7xq7_0.gif ')}" id="xpi_m7xq7" name="vbm7xq7" width="135" height="44" border="0" alt="Cerrar Sesion"/></a></td>
+ <g:link controller="login" action="logout" onMouseOver="xpe('1xrh2o');" onMouseOut="xpe('1xrh2n');" onMouseDown="xpe('1xrh2c');"><img id="xpi_1xrh2" src="${resource(dir:'images/AltaInstructor-files',file:'bt1xrh2_0.gif')}" name="vb1xrh2" width="130" height="38" border="0" alt="Cerrar Sesion"/></g:link></td>
 </tr></table>
 
 </div>
@@ -95,11 +95,11 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 
 <table id="vista-buttons.com:idm53h1" width=0 cellpadding=0 cellspacing=0 border=0><tr>
 <td style="padding-bottom:12px" title ="CREAR TEMATICA">
-<a href="../subject" onMouseOver='xpe("m53h1o");' onMouseOut='xpe("m53h1n");' onMouseDown='xpe("m53h1c");'><img id="xpi_m53h1" src="${resource(dir:'images/Instructor-files',file:'btm53h1_0.gif')}" name="vbm53h1" width="150" height="35" border="0" alt="CREAR TEMATICA"/></a></td></tr><tr>
+<g:link controller="subject" onMouseOver="xpe('m53h1o');" onMouseOut="xpe('m53h1n');" onMouseDown="xpe('m53h1c');"><img id="xpi_m53h1" src="${resource(dir:'images/Instructor-files',file:'btm53h1_0.gif')}" name="vbm53h1" width="150" height="35" border="0" alt="CREAR TEMATICA"/></g:link></td></tr><tr>
 <td style="padding-bottom:12px" title ="CREAR TEST">
-<a href="../doTest" onMouseOver='xpe("553h1o");' onMouseOut='xpe("553h1n");' onMouseDown='xpe("553h1c");'><img id="xpi_553h1" src="${resource(dir:'images/Instructor-files',file:'bt553h1_0.gif')}" name="vb553h1" width="150" height="35" border="0" alt="CREAR TEST"/></a></td></tr><tr>
+<g:link controller="doTest"  onMouseOver="xpe('553h1o');" onMouseOut="xpe('553h1n');" onMouseDown="xpe('553h1c');"><img id="xpi_553h1" src="${resource(dir:'images/Instructor-files',file:'bt553h1_0.gif')}" name="vb553h1" width="150" height="35" border="0" alt="CREAR TEST"/></g:link></td></tr><tr>
 <td style="padding-bottom:12px" title ="MODIFICAR TEST">
-<a href="#"onMouseOver='xpe("a53h1o");' onMouseOut='xpe("a53h1n");' onMouseDown='xpe("a53h1c");'><img id="xpi_a53h1" src="${resource(dir:'images/Instructor-files',file:'bta53h1_0.gif')}" name="vba53h1" width="150" height="35" border="0" alt="MODIFICAR TEST"/></a></td></tr></table>
+<g:link controller="#" onMouseOver="xpe('a53h1o');" onMouseOut="xpe('a53h1n');" onMouseDown="xpe('a53h1c');"><img id="xpi_a53h1" src="${resource(dir:'images/Instructor-files',file:'bta53h1_0.gif')}" name="vba53h1" width="150" height="35" border="0" alt="MODIFICAR TEST"/></g:link></td></tr></table>
 
 <!-- End Vista-Buttons.com -->
 </div>

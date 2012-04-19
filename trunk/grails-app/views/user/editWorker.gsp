@@ -10,12 +10,12 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="list" action="listWorker">Lista de Usuarios</g:link></span>
-            <span class="menuButton"><g:link class="create" action="createWorker">Nuevo Usuario</g:link></span>
+            <span class="menuButton"><g:link class="list" action="listWorker">Lista de Trabajadores</g:link></span>
+            <span class="menuButton"><g:link class="create" action="createWorker">Nuevo Trabajador</g:link></span>
         
         </div>
         <div class="body">
-            <h1>Editar Usuario</h1>
+            <h1>Editar Trabajador</h1>
             <g:if test="${flash.message}">
              
             <div class="message">${flash.message}</div>
@@ -25,7 +25,7 @@
                 <g:renderErrors bean="${userInstance}" as="list" />
             </div>
             </g:hasErrors>
-            <g:form method="post" >
+            <g:form action="save" method="post" >
                 <input type="hidden" name="id" value="${userInstance?.id}" />
                 <input type="hidden" name="version" value="${userInstance?.version}" />
                 <div class="dialog">
