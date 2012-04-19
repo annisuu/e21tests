@@ -90,8 +90,8 @@
             <div class="buttons">
 
                     <input type="hidden" name="id" value="${userInstance?.id}" />
-                    <span class="button"><g:actionSubmit class="edit" value="Edit" /></span>
-                    <span class="button"><g:actionSubmit class="delete" onclick="return confirm('Are you sure?');" value="Delete" /></span>
+                    <span class="button"><g:actionSubmit class="edit" value="EditWorker" /></span>
+                    <span class="button"><g:actionSubmit class="delete" onclick="return confirm('Are you sure?');" value="DeleteWorker" /></span>
                 </g:form>
             </div>
         </div>

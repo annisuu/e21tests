@@ -37,6 +37,7 @@
 
                     <tbody>
                          <g:each in="${userInstanceList}" status="i" var="userInstance">
+                           <%if(userInstance.idrol!="1"){%>
                       <tr>
                          <td><g:link action="showWorker" id="${userInstance.id}">${fieldValue(bean:userInstance, field:'id')}</g:link></td>
 
@@ -72,7 +73,8 @@
                          <%if("${userInstance.idrol}"==e.id_rol.toString()){println e.name_rol}%>
                          </g:each></td>
 
-
+                       </tr>
+                       <%}%>    
                     </g:each>
                     </tbody>
                 </table>

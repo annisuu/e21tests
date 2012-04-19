@@ -247,27 +247,27 @@ th.desc a {
 .buttons input {
     background: #fff;
     border: 0;
-    color: #333;
+    color: #ffffff;
     cursor: pointer;
     font-size: 10px;
     font-weight: bold;
-    margin-left: 3px;
+    margin-left: 0px;
     overflow: visible;
-    padding: 10px 7px
+    padding: 15px 7px
 }
 .buttons input.delete {
-    background: transparent url(../images/Icons/Eliminar.png) 10px 50% no-repeat;
-    padding-left: 40px;
+    background: transparent url(../images/Icons/Delete.png) 10px 50% no-repeat;
+    padding-left: 60px;
 }
 .buttons input.edit {
-    background: transparent url(../images/Icons/Actualizar.png) 10px 50% no-repeat;
-    padding-left: 40px;
+    background: transparent url(../images/Icons/Update.png) 10px 50% no-repeat;
+    padding-left: 60px;
 }
 .buttons input.save {
-    background: transparent url(../images/Icons/Guardar.png) 10px 50% no-repeat;
-    padding-left: 40px;
+    background: transparent url(../images/Icons/Save.png) 10px 50% no-repeat;
+    padding-left: 60px;
 }
 .buttons input.next {
     background: transparent url(../images/Icons/flecha.png) 10px 50% no-repeat;
-    padding-left: 40px;
+    padding-left: 60px;
 }

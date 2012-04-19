@@ -74,11 +74,14 @@ class UserController {
                 redirect(action:show,id:params.id)
             }
         }
+        
         else {
             flash.message = "User not found with id ${params.id}"
             redirect(action:list)
         }
     }
+
+
 
     def deleteWorker = {
         def userInstance = User.get( params.id )
@@ -110,7 +113,7 @@ class UserController {
        
         if(!userInstance) {
             flash.message = "User not found with id ${params.id}"
-            redirect(action:list,area:area)
+            redirect(action:listWorker,proyecto:proyecto,company:company,rol:rol,post:post,area:area)
         }
         else {
 
@@ -119,7 +122,7 @@ class UserController {
     }
 
  def editWorker = {
-       def proyecto=ConsultaService.buscaProyecto()
+      def proyecto=ConsultaService.buscaProyecto()
       def company=ConsultaService.buscaCompany()
       def area=ConsultaService.buscaArea()
       def rol=ConsultaService.buscaRol()
@@ -137,6 +140,11 @@ class UserController {
         }
     }
     def update = {
+      def proyecto=ConsultaService.buscaProyecto()
+      def company=ConsultaService.buscaCompany()
+      def area=ConsultaService.buscaArea()
+      def rol=ConsultaService.buscaRol()
+      def post=ConsultaService.buscaPost()
         def userInstance = User.get( params.id )
         if(userInstance) {
             if(params.version) {
@@ -144,7 +152,7 @@ class UserController {
                 if(userInstance.version > version) {
                     
                     userInstance.errors.rejectValue("version", "user.optimistic.locking.failure", "Another user has updated this User while you were editing.")
-                    render(view:'edit',model:[userInstance:userInstance])
+                    render(view:'edit',model:[userInstance:userInstance],proyecto:proyecto,company:company,rol:rol,post:post,area:area)
                     return
                 }
             }
@@ -154,7 +162,7 @@ class UserController {
                 redirect(action:show,id:userInstance.id)
             }
             else {
-                render(view:'edit',model:[userInstance:userInstance])
+                render(view:'edit',model:[userInstance:userInstance],proyecto:proyecto,company:company,rol:rol,post:post,area:area)
             }
         }
         else {
@@ -164,6 +172,11 @@ class UserController {
     }
 
    def updateWorker = {
+     def proyecto=ConsultaService.buscaProyecto()
+      def company=ConsultaService.buscaCompany()
+      def area=ConsultaService.buscaArea()
+      def rol=ConsultaService.buscaRol()
+      def post=ConsultaService.buscaPost()
         def userInstance = User.get( params.id )
         if(userInstance) {
             if(params.version) {
@@ -171,7 +184,7 @@ class UserController {
                 if(userInstance.version > version) {
 
                     userInstance.errors.rejectValue("version", "user.optimistic.locking.failure", "Another user has updated this User while you were editing.")
-                    render(view:'edit',model:[userInstance:userInstance])
+                    render(view:'editWorker',model:[userInstance:userInstance],proyecto:proyecto,company:company,rol:rol,post:post,area:area)
                     return
                 }
             }
@@ -181,7 +194,7 @@ class UserController {
                 redirect(action:showWorker,id:userInstance.id)
             }
             else {
-                render(view:'edit',model:[userInstance:userInstance])
+                render(view:'editWorker',model:[userInstance:userInstance],proyecto:proyecto,company:company,rol:rol,post:post,area:area)
             }
         }
         else {
@@ -233,7 +246,15 @@ class UserController {
     }
 
     def save = {
+           def proyecto=ConsultaService.buscaProyecto()
+           def company=ConsultaService.buscaCompany()
+           def area=ConsultaService.buscaArea()
+           def rol=ConsultaService.buscaRol()
+           def post=ConsultaService.buscaPost()
+      
         def userInstance = new User(params)
+      if(userInstance.idArea!="" || userInstance.idCompany!="" || userInstance.idPost!="" || userInstance.idProyecto!="")
+      {
         if(!userInstance.hasErrors() && userInstance.save()) {
             flash.message = "User ${userInstance.id} created"
             redirect(action:show,id:userInstance.id)
@@ -241,35 +262,45 @@ class UserController {
         else {
 
 
-           def proyecto=ConsultaService.buscaProyecto()
-      def company=ConsultaService.buscaCompany()
-      def area=ConsultaService.buscaArea()
-      def rol=ConsultaService.buscaRol()
-      def post=ConsultaService.buscaPost()
-
            flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
             render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
         }
+      }
+      else
+      {
+        flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
+                   render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
+              
+      }
     }
 
   def saveWorker = {
         def userInstance = new User(params)
+      def proyecto=ConsultaService.buscaProyecto()
+      def company=ConsultaService.buscaCompany()
+      def area=ConsultaService.buscaArea()
+      def rol=ConsultaService.buscaRol()
+      def post=ConsultaService.buscaPost()
+     if(userInstance.idArea!="" || userInstance.idCompany!="" || userInstance.idPost!="" || userInstance.idProyecto!="")
+      {
         if(!userInstance.hasErrors() && userInstance.save()) {
             flash.message = "User ${userInstance.id} created"
             redirect(action:showWorker,id:userInstance.id)
         }
         else {
-
-
-           def proyecto=ConsultaService.buscaProyecto()
-      def company=ConsultaService.buscaCompany()
-      def area=ConsultaService.buscaArea()
-      def rol=ConsultaService.buscaRol()
-      def post=ConsultaService.buscaPost()
+          println "area: "+userInstance.idArea
 
            flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
             render(view:'createWorker',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
         }
+      }
+    else
+     {            println "area: "+userInstance.idArea
+
+       flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
+                         render(view:'createWorker',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
+
+     }
     }
 
 
