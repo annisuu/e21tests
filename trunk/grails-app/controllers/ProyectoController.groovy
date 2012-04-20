@@ -114,4 +114,8 @@ class ProyectoController {
             }
         }
     }
+  def mainProyecto={
+    render(view:'mainProyecto')
+
+  }
 }
