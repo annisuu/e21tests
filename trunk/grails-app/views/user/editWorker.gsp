@@ -60,7 +60,7 @@
                         </td>
                         </tr>
 
- <tr class="prop">
+                       <tr class="prop">
                        <td valign="top" class="name">
                        <label for="idProyecto">Proyecto:</label>
                        </td>
@@ -142,7 +142,7 @@
                     </table>
                 </div>
                 <div class="buttons">
-                    <span class="button"><g:actionSubmit class="save" value="Update" /></span>
+                    <span class="button"><g:actionSubmit class="save" value="UpdateWorker" /></span>
                     <span class="button"><g:actionSubmit class="delete" onclick="return confirm('Are you sure?');" value="Delete" /></span>
                 </div>
             </g:form>

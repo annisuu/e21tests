@@ -18,11 +18,7 @@
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${userInstance}">
-            <div class="errors">
-                <g:renderErrors bean="${userInstance}" as="list" />
-            </div>
-            </g:hasErrors>
+          
             <g:form method="post" >
                 <input type="hidden" name="id" value="${userInstance?.id}" />
                 <input type="hidden" name="version" value="${userInstance?.version}" />

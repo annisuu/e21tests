@@ -139,6 +139,7 @@ class UserController {
             return [ userInstance : userInstance,proyecto:proyecto,company:company,rol:rol,post:post,area:area ]
         }
     }
+  
     def update = {
       def proyecto=ConsultaService.buscaProyecto()
       def company=ConsultaService.buscaCompany()
@@ -237,9 +238,9 @@ class UserController {
       println("area"+ area.name_area)
       println("compañias"+company.id_company)
       println(proyecto.id_project)
-       println(proyecto.name_project)
-        def userInstance = new User()
-        userInstance.properties = params
+     println(proyecto.name_project)
+      def userInstance = new User()
+      userInstance.properties = params
 
         return ['userInstance':userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post]
 
@@ -302,12 +303,6 @@ class UserController {
 
      }
     }
-
-
-
-
-
-
 
   def searchAJAX = {
     println "xxxxx"
