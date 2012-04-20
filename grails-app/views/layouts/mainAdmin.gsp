@@ -69,7 +69,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 <g:javascript library="schyrh2-inst"></g:javascript>
 <table id="vista-buttons.com:idhyrh2" width=0 cellpadding=0 cellspacing=0 border=0>
 <tr><td style="padding-right:10px" title ="Proyecto">
-<g:link url="/etileno/images/swf/PROYECTO.swf" onMouseOver="xpe('hyrh2o');" onMouseOut="xpe('hyrh2n');" onMouseDown="xpe('hyrh2c');"><img src="${resource(dir:'images/AltaInstructor-files',file:'bthyrh2_0.gif')}" id="xpi_hyrh2"  name="vbhyrh2" width="130" height="38" border="0" alt="Proyecto"/></g:link></td>
+<g:link controller="proyecto" action="mainProyecto" onMouseOver="xpe('hyrh2o');" onMouseOut="xpe('hyrh2n');" onMouseDown="xpe('hyrh2c');"><img src="${resource(dir:'images/AltaInstructor-files',file:'bthyrh2_0.gif')}" id="xpi_hyrh2"  name="vbhyrh2" width="130" height="38" border="0" alt="Proyecto"/></g:link></td>
 <td style="padding-right:10px" title ="Administrador">
 <g:link controller="proyecto" onMouseOver="xpe('jyrh2o');" onMouseOut="xpe('jyrh2n');" onMouseDown="xpe('jyrh2c');"><img id="xpi_jyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btjyrh2_0.gif')}" name="vbjyrh2" width="130" height="38" border="0" alt="Administrador"/></g:link></td>
 <td style="padding-right:10px" title ="Instructor">
