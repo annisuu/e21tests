@@ -254,7 +254,7 @@ class UserController {
            def post=ConsultaService.buscaPost()
       
         def userInstance = new User(params)
-      if(userInstance.idArea!="" || userInstance.idCompany!="" || userInstance.idPost!="" || userInstance.idProyecto!="")
+      if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
       {
         if(!userInstance.hasErrors() && userInstance.save()) {
             flash.message = "User ${userInstance.id} created"
@@ -282,7 +282,7 @@ class UserController {
       def area=ConsultaService.buscaArea()
       def rol=ConsultaService.buscaRol()
       def post=ConsultaService.buscaPost()
-     if(userInstance.idArea!="" || userInstance.idCompany!="" || userInstance.idPost!="" || userInstance.idProyecto!="")
+     if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
       {
         if(!userInstance.hasErrors() && userInstance.save()) {
             flash.message = "User ${userInstance.id} created"

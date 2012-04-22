@@ -93,9 +93,10 @@ class DoTestController {
       def area=ConsultaService.buscaArea()
       def subject=ConsultaService.buscaSubject()
       def doTestInstance = new DoTest(params)
-      println doTestInstance.validate()
+     // println "validando..."+doTestInstance.validate()
       if(doTestInstance.validate()){
       def test =new Test()
+        println "dentrodetest"
       test.nameTest=doTestInstance.nameTest
       test.idSubject=doTestInstance.idSubject
       test.idArea=doTestInstance.idArea
