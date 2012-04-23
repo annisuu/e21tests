@@ -104,11 +104,12 @@ class TestController {
      if(testInstance.idArea!="" && testInstance.idSubject!="" )
       {
         if(!testInstance.hasErrors() && testInstance.save()) {
-            flash.message = "User ${testInstance.id} created"
+            flash.message = "Test ${testInstance.id} created"
             redirect(action:show,id:testInstance.id)
         }
         else {
           println "area: "+testInstance.idArea
+          printl"subject"+testInstance.idSubject
 
            flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
             render(view:'create',model:[testInstance:testInstance,area:area,subject:subject])
@@ -116,6 +117,7 @@ class TestController {
       }
     else
      {            println "area: "+testInstance.idArea
+                   printl"subject"+testInstance.idSubject
 
        flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
                          render(view:'create',model:[testInstance:testInstance,area:area,subject:subject])

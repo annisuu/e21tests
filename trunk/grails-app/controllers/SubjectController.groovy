@@ -98,23 +98,23 @@ class SubjectController {
        def area=ConsultaService.buscaArea()
 
         def subjectInstance = new Subject(params)
-      if(subjectInstance.idArea!="" && subjectInstance.idCompany!="" && subjectInstance.idPost!="" && subjectInstance.idProyecto!="")
+      if(subjectInstance.idArea!="")
       {
         if(!subjectInstance.hasErrors() && subjectInstance.save()) {
-            flash.message = "User ${subjectInstance.id} created"
+            flash.message = "Subject ${subjectInstance.id} created"
             redirect(action:show,id:subjectInstance.id)
         }
         else {
 
 
            flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
-            render(view:'create',model:[subjectInstance:subjectInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
+            render(view:'create',model:[subjectInstance:subjectInstance,area:area])
         }
       }
       else
       {
         flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
-                   render(view:'create',model:[subjectInstance:subjectInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
+                   render(view:'create',model:[subjectInstance:subjectInstance,area:area])
 
       }
         }

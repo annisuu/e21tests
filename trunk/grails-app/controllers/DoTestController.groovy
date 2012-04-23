@@ -289,6 +289,7 @@ class DoTestController {
 
                     }
                     else {
+
                         render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
                     }
                     }
@@ -332,14 +333,18 @@ class DoTestController {
         }
 
       }   else {
+
             render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
         }
     }
       else
       {
-        flash.message = "Verifique los campos remarcados con rojo"        
+        flash.message = "Verifique los campos remarcados con rojo de todas las preguntas"        
         render(view:'create',model:[doTestInstance:doTestInstance,area:area,subject:subject])
+
+       
       }
+
     }
 public String  subirFile(String up)
   {  println "subiedo... "

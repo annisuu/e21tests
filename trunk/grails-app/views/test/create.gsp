@@ -57,8 +57,7 @@
                                    <select name="idSubject" id="idSubject">
                                    <option value="">SELECCIONA LA TEMATICA</option>
                                       <g:each var="subject" in ="${subject}">
-                                      <option  value="${subject.id}"><% if(testInstance.idSubject.toString().equals(subject.id_subject.toString())){ println "selected"}%>>
-                                      ${subject.name}
+                                      <option  value="${subject.id}" <% if(testInstance.idSubject.toString().equals(subject.id_subject.toString())){ println "selected"}%>>${subject.name}
                                       </option>
                                       </g:each>
                                       </select>
@@ -74,9 +73,7 @@
                                       <select name="idArea" id="idArea">
                                    <option value="">SELECCIONA EL AREA</option>
                                       <g:each var="area" in ="${area}">
-                                      <option  value="${area.id_area}"><% if(testInstance.idArea.toString().equals(area.id_area.toString())){ println "selected"}%>>
-                                        ${area.name_area}
-                                      </option>
+                                      <option  value="${area.id_area}" <% if(testInstance.idArea.toString().equals(area.id_area.toString())){ println "selected"}%>>${area.name_area}                                 
                                       </g:each>
                                       </select>
                                 </td>

@@ -7,7 +7,7 @@
 
 <style type="text/css">
 body {
-	background-image: url(../images/metallic.jpg);
+     background-image: url(../images/bg_page.png);
 }
 #apDiv1 {
 	position:absolute;
