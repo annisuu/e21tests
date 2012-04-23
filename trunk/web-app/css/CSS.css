@@ -241,8 +241,8 @@ font-variant:small-caps;
 #menuUsuario{
  position:absolute;
 	width:299px;
-	height:398px;
-	z-index:7;
-	left: 17px;
-	top: 94px;
+	height:37px;
+	z-index:4;
+	left: 385px;
+	top: 132px;
 }
