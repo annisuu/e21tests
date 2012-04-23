@@ -110,7 +110,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
         <p>AREA: <b>${session.user?.name_area}</b></p>
         <p>PROYECTO: <b>${session.user?.name_project}</b></p>
         <p>LOGUEADO COMO: <b>${session.user?.name_rol}</b></p>
-        <g:link controller="login" action="logout">Logout</g:link>
+        <g:link controller="login" action="logout"></g:link>
         </g:if>
      <g:else>
        <g:link controller="login" action="login">Login</g:link>

@@ -84,8 +84,7 @@
                        <select name="idCompany" >
                          <option value="">SELECCIONA LA EMPRESA</option>
                         <g:each var="b" in="${company}">
-                        <option value="${b.id_company}" <% if(userInstance.idCompany.toString().equals(b.id_company.toString())){ println "selected"}%>>
-                        ${b.name_company}
+                        <option value="${b.id_company}" <% if(userInstance.idCompany.toString().equals(b.id_company.toString())){ println "selected"}%>> ${b.name_company}
                         </option>
                         </g:each>
                        </select>

@@ -92,7 +92,8 @@ class RolController {
             flash.message = "Rol ${rolInstance.id} created"
             redirect(action:show,id:rolInstance.id)
         }
-        else {
+       else {
+          flash.message = "Los campos marcados en rojo no deben de estar vacios para poder guardar"
             render(view:'create',model:[rolInstance:rolInstance])
         }
     }

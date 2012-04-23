@@ -14,11 +14,7 @@
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${doTestInstance}">
-            <div class="errors">
-                <g:renderErrors bean="${doTestInstance}" as="list" />
-            </div>
-            </g:hasErrors>
+
             <g:form action="save" method="post" enctype="multipart/form-data">
                <div class="dialog">
                     <table style="width: 600px;">
@@ -40,9 +36,10 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idSubject','errors')}">
                                 <select name="idSubject" id="idSubject">
-                                <g:each var="subject" in ="${subject}">
-                                      <option  value="${subject.id}">
-                                        ${subject.name}
+                                   <option value="">SELECCIONA EL PROYECTO</option>
+                                  <g:each var="subject" in ="${subject}">
+                                    <option  value="${subject.id}">
+                                     ${subject.name}
                                       </option>
                                       </g:each>
                                   </select>
@@ -57,6 +54,7 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idArea','errors')}">
                                       <select name="idArea" id="idArea">
+                                      <option value="">SELECCIONA EL AREA</option>
                                       <g:each var="area" in ="${area}">
                                       <option  value="${area.id_area}">
                                        ${area.name_area}

@@ -13,11 +13,7 @@
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${doQuestionInstance}">
-            <div class="errors">
-                <g:renderErrors bean="${doQuestionInstance}" as="list" />
-            </div>
-            </g:hasErrors>
+           
             <g:form action="save" method="post" enctype="multipart/form-data">
                 <div class="dialog">
                     <table width="589" height="288">
