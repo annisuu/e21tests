@@ -88,27 +88,36 @@ class SubjectController {
 
     def create = {
         def area=ConsultaService.buscaArea()
-      println("Area"+area.name_area)
-
-
+        println("Area"+area.name_area)
         def subjectInstance = new Subject()
         subjectInstance.properties = params
         return ['subjectInstance':subjectInstance,area:area]
     }
 
     def save = {
+       def area=ConsultaService.buscaArea()
+
         def subjectInstance = new Subject(params)
+      if(subjectInstance.idArea!="" && subjectInstance.idCompany!="" && subjectInstance.idPost!="" && subjectInstance.idProyecto!="")
+      {
         if(!subjectInstance.hasErrors() && subjectInstance.save()) {
-            flash.message = "Subject ${subjectInstance.id} created"
+            flash.message = "User ${subjectInstance.id} created"
             redirect(action:show,id:subjectInstance.id)
         }
         else {
-         flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"   
-      def area=ConsultaService.buscaArea()
-      render(view:'create',model:[subjectInstance:subjectInstance,area:area])
-        }
-    }
 
+
+           flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
+            render(view:'create',model:[subjectInstance:subjectInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
+        }
+      }
+      else
+      {
+        flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
+                   render(view:'create',model:[subjectInstance:subjectInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
+
+      }
+        }
    def searchAJAX = {
 
         def res = Subject.findAllByNameSubjectLike("%${params.query}%")

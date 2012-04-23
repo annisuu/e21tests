@@ -249,9 +249,9 @@ class UserController {
     def save = {
            def proyecto=ConsultaService.buscaProyecto()
            def company=ConsultaService.buscaCompany()
-           def area=ConsultaService.buscaArea()
-           def rol=ConsultaService.buscaRol()
+            def rol=ConsultaService.buscaRol()
            def post=ConsultaService.buscaPost()
+      def area=ConsultaService.buscaArea()
       
         def userInstance = new User(params)
       if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")

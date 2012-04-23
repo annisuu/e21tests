@@ -54,9 +54,7 @@
                             <select name="idArea" id="idarea">
                                <option value="">SELECCIONA EL AREA</option>
                             <g:each var="c" in="${area}" >
-                            <option value="${c.id_area}">
-                            ${c.name_area}
-                            </option>
+                            <option value="${c.id_area}"><%if(subjectInstance.idArea.toString().equals(c.id_area.toString())){ println "selected"}%>>${c.name_area}</option>
                             </g:each>
                             </select>
                             </td>

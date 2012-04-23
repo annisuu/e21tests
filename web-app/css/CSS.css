@@ -61,6 +61,9 @@ font-variant:small-caps;
 	border:#FF0000;
 }
 
+
+
+
 #apDiv6 {
 	position:absolute;
 	width:443px;
@@ -233,4 +236,13 @@ font-variant:small-caps;
     background: transparent url(../images/Icons/flecha.png) 10px 60% no-repeat;
     width:625px;
 	height:30px;
+}
+
+#menuUsuario{
+ position:absolute;
+	width:299px;
+	height:398px;
+	z-index:7;
+	left: 17px;
+	top: 94px;
 }

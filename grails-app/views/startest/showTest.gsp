@@ -35,7 +35,7 @@
       <td colspan="3"><%if(!image1.equals("no")){%><img src="${resource(dir:'/images/upload/imagesQuestion',file:image1)}" width="139" height="97" alt="<%=image1%>"/><%}%></td>
 	  <td colspan="3"><%if(!image2.equals("no")){%><img src="${resource(dir:'/images/upload/imagesQuestion',file:image2)}" width="139" height="97" alt="<%=image2%>"/><%}%></td>
 	  <td colspan="3"><%if(!image3.equals("no")){%><img src="${resource(dir:'/images/upload/imagesQuestion',file:image3)}" width="139" height="97" alt="<%=image3%>"/><%}%></td>
-
+      <%--         No sabia que poern jajajaja --%>
       </tr>
       <tr>
 
