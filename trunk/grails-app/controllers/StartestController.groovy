@@ -52,7 +52,7 @@ def welcome={
     {
        redirect(action:menuUser)
     }
-   
+   printl"Hola Ana...."+counter
   }
 
 }

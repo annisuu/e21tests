@@ -97,18 +97,30 @@ class TestController {
     }
 
     def save = {
-        def testInstance = new Test(params)
+      def testInstance = new Test(params)
+      def subject=ConsultaService.buscaSubject()
+      def area=ConsultaService.buscaArea()
+
+     if(testInstance.idArea!="" && testInstance.idSubject!="" )
+      {
         if(!testInstance.hasErrors() && testInstance.save()) {
-            flash.message = "Test ${testInstance.id} created"
+            flash.message = "User ${testInstance.id} created"
             redirect(action:show,id:testInstance.id)
         }
-
         else {
-            flash.message = "Los campos marcados en rojo no deben de estar vacios para poder guardar"
-          def area=ConsultaService.buscaArea()
-        def subject=ConsultaService.buscaSubject()
+          println "area: "+testInstance.idArea
+
+           flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
             render(view:'create',model:[testInstance:testInstance,area:area,subject:subject])
         }
+      }
+    else
+     {            println "area: "+testInstance.idArea
+
+       flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
+                         render(view:'create',model:[testInstance:testInstance,area:area,subject:subject])
+
+     }
     }
    def searchAJAX = {
 
