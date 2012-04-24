@@ -97,7 +97,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
      <g:else>
        <g:link controller="login" action="login">Login</g:link>
      </g:else>
-</div>
+</div>             
 </div>
 
     </body>
