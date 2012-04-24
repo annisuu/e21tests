@@ -10,8 +10,14 @@
 <html>
   <head>
       <meta name="layout" content="mainUser" />
-    <title>Simple GSP page</title></head>
-<body>
+    <title>Simple GSP page</title>
+  <g:javascript>
+   <g:if test="${flash.message}">
+            alert("${flash.message}")
+            </g:if>
+  </g:javascript>
+  </head>
+<body >
 <g:form action="save" method="post">
 
   <h2> Pregunta ${question.numberq} :</h2>
