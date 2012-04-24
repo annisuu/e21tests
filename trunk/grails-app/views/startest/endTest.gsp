@@ -10,8 +10,12 @@
 <html>
   <head><title>Simple GSP page</title>
     <meta name="layout" content="mainUser" />
-         
+     <g:javascript>
+   <g:if test="${flash.message}">
+            alert("${flash.message}")
+            </g:if>
+  </g:javascript>    
   </head>
-  <body>Gracias por Contestar el test, tu calificación es: ${score}
+  <body><div align="center"><h1>Gracias por Contestar el test, tu calificaci&oacute;n es: ${score} </h1> </div>
   </body>
 </html>

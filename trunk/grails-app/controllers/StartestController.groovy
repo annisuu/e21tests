@@ -104,9 +104,24 @@ def welcome={
   }
   def endTest={
     def calificacion=ConsultaService.finalScore(params.iduser,params.idTest);
+    def result= new Results()
+    result.userid=params.iduser
+    result.idTest=params.idTest
+    result.finalscore=calificacion.score
+    result.enddate=new Date();
+    if(result.save())
+    {
     println "final cal: "+calificacion.score
     render(view:'endTest',model:[score:calificacion.score])
-  }
+    }
+    else
+    {
+      println "no se guardo la calificacion"
+      flash.message="No se pudo guardar la calificación"
+      render(view:'endTest',model:[score:calificacion.score])
+    }
+
+    }
 
 }
 
