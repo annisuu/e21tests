@@ -169,8 +169,8 @@ class ConsultaService {
       return resultado
     }
   def startTest(def idt,def number){
+    println "parametros de la busqueda -->"+idt+"---"+number
       def sql= new Sql(dataSource)
-      println "parametros :"+idt+"-- "+number
      def examen=new Expando()
       sql.eachRow("select * from stest where id_test= '"+idt+"' and numberq='"+number+"' ") {
 
@@ -192,5 +192,15 @@ class ConsultaService {
 
       return examen
     }
+  def finalScore(def userid,def idTest)
+  {
+    def sql=new Sql(dataSource)
+    def result =new  Expando()
+    sql.eachRow("select sum(score) as score from doanswer where userid='"+userid+"' and idTest='"+idTest+"' "){
+    result.score=it.score
+
+    }
+    return result
+  }
 
 }

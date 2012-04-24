@@ -15,6 +15,6 @@
   
   Ha elegido realizar el test ${nameTest}
   De click en siguiente para realizar el test
-  <g:link action="showTest" params="[nameTest:name_test,idTest:idTest]">Ir al Examen</g:link>
+  <g:link action="showTest" params="[nameTest:nameTest,idTest:idTest]">Ir al Examen</g:link>
   </body>
 </html>

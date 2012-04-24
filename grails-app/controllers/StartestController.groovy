@@ -19,40 +19,63 @@ def welcome={
   
 }
   def showTest={
-        println "El contador esta en: "+params.counter
-    def counter=1;
-    if(params.counter!=null)
+    println params.counter
+    if(params.counter==null)
     {
-     counter=params.counter
+      params.counter=1
     }
-    println "Se va a buscar la pregunta numero: "+counter
-        println "test:: "+params.idTest
-        def question=ConsultaService.startTest(params.idTest,counter);
-        println "question"+counter+":"+ question
-        render(view:'showTest',model:[question:question,idTest:params.idTest,counter:counter]) 
+    else
+    {
+      println "traia "+params.counter
+    }
+  
+
+        def question=ConsultaService.startTest(params.idTest,params.counter);
+        println "question:: "+question+":"
+        render(view:'showTest',model:[question:question,nameTest:params.nameTest,idTest:params.idTest])
      
     
   }
   
   def save={
-    println "contador llegando: "+params.counter
-    println "contador llegando: "+params.question
-    def question=params.question
     int counter=Integer.parseInt(params.counter)
-    def idTest=params.idTest
-    println "contador en save new: "+counter
-    counter=counter+1;
-    params.counter=counter
-     println "comparando....  "+counter
-    if(counter<=10)
+    def question=ConsultaService.startTest(params.idTest,counter);
+    println params.respuesta
+    def res= new DoAnswer()
+    res.idTest=params.idTest
+    res.idquestion=question.id_question
+    res.userid=params.iduser
+    res.answer=params.respuesta
+    if(question.trueanswer.equals(params.respuesta))
     {
-     redirect(action:showTest,params:params)
+      res.score="1"
     }
     else
     {
-       redirect(action:menuUser)
+      res.score="0"
     }
-   printl"Hola Ana...."+counter
+
+    if(res.save())
+    {
+      println "se guardo..:"
+    }
+    println "se lleno con-->"+params.idTest
+    counter=counter+1;
+    params.counter=counter
+    println "result: +"+params.counter
+    if(params.counter<=10)
+    {
+    redirect (action:showTest,params:params)
+    }
+    else
+    {
+       redirect (action:endTest,params:params)
+    }
+  }
+  def endTest={
+    def calificacion=ConsultaService.finalScore(params.iduser,params.idTest);
+    println "final cal: "+calificacion.score
+    render(view:'endTest',model:[score:calificacion.score])
   }
 
 }

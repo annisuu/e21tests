@@ -12,7 +12,14 @@
       <meta name="layout" content="mainUser" />
     <title>Simple GSP page</title></head>
 <body>
-  <h2> Pregunta ${counter} : </h2>
+<g:form action="save" method="post">
+
+  <h2> Pregunta ${question.numberq} :</h2>
+  <div>
+    <input type="hidden" name="counter" value="${question.numberq}">
+    <input type="hidden" name="idTest" value="${idTest}">
+   <input type="hidden" name="iduser" value="${session.user?.idu}">
+  </div>
   <%
   String image1=question.image1!=" "?question.image1:"no"
   String image2=question.image2!=" "?question.image2:"no"
@@ -22,28 +29,27 @@
    <tr><td colspan="9"><h2>${question.questiontext}</h2></td></tr>
       <tr>
       <td width="18">A)</td>
-      <td width="22"><input type="radio" value="A"></td>
+      <td width="22"><input type="radio" name="respuesta" value="A"></td>
       <td width="128">${question.answer1}</td>
        <td width="17">B)</td>
-       <td width="22"><input type="radio" value="B"></td>
+       <td width="22"><input type="radio" name="respuesta" value="B"></td>
       <td width="128">${question.answer2}</td>
        <td width="18">C)</td>
-      <td width="20"><input type="radio" value="C"></td>
+      <td width="20"><input type="radio" name="respuesta" value="C"></td>
       <td width="130">${question.answer3}</td>
      </tr>
       <tr>
       <td colspan="3"><%if(!image1.equals("no")){%><img src="${resource(dir:'/images/upload/imagesQuestion',file:image1)}" width="139" height="97" alt="<%=image1%>"/><%}%></td>
 	  <td colspan="3"><%if(!image2.equals("no")){%><img src="${resource(dir:'/images/upload/imagesQuestion',file:image2)}" width="139" height="97" alt="<%=image2%>"/><%}%></td>
 	  <td colspan="3"><%if(!image3.equals("no")){%><img src="${resource(dir:'/images/upload/imagesQuestion',file:image3)}" width="139" height="97" alt="<%=image3%>"/><%}%></td>
-      <%--         No sabia que poern jajajaja --%>
       </tr>
       <tr>
 
       </tr>
 
       </table>
+   <input class="save" type="submit" value="Siguiente" />
+   </g:form>
 
-
-   <div id="next"> <g:link action="save" params="[counter:counter,question:question,idTest:idTest]">Siguiente Pregunta</g:link></div>
 </body>
 </html>
