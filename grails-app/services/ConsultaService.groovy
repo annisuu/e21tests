@@ -202,5 +202,15 @@ class ConsultaService {
     }
     return result
   }
+   def findQuestion(def userid,def idq)
+  {
+    println "parametros::"+userid+"--"+idq
+    def sql=new Sql(dataSource)
+    def result =false
+    sql.eachRow("select * from doanswer where userid='"+userid+"' and idquestion='"+idq+"' "){
+      result=true;
+    }
+    return result
+  }
 
 }

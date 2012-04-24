@@ -38,9 +38,37 @@ def welcome={
   }
   
   def save={
+    if(params.respuesta==null)
+    {
+      flash.message="Selecciona una respuesta "
+       redirect (action:showTest,params:params)
+    }
+    else
+    {
     int counter=Integer.parseInt(params.counter)
+    
     def question=ConsultaService.startTest(params.idTest,counter);
     println params.respuesta
+    def revisa=ConsultaService.findQuestion(params.iduser,question.id_question)
+   println "revision"+revisa
+    if(revisa==true)
+    {
+
+      flash.message= "Ya se contestó antes la pregunta "
+      counter=counter+1;
+    params.counter=counter
+      if(params.counter<=10)
+      {
+    redirect (action:showTest,params:params)
+      }
+      else
+      {
+        redirect (action:endTest,params:params)
+        
+      }
+    }
+    else
+    {
     def res= new DoAnswer()
     res.idTest=params.idTest
     res.idquestion=question.id_question
@@ -70,6 +98,8 @@ def welcome={
     else
     {
        redirect (action:endTest,params:params)
+    }
+    }
     }
   }
   def endTest={
