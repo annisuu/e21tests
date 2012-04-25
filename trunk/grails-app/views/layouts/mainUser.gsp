@@ -60,21 +60,22 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 
 
 
-
 <div id="menuUsuario">
- <g:javascript library="schyrh2-user"></g:javascript>
+
 
 <!-- Begin Vista-Buttons.com -->
-
+<g:javascript library="schyrh2-user"></g:javascript>
 <table id="vista-buttons.com:idhyrh2" width=0 cellpadding=0 cellspacing=0 border=0><tr>
-<td style="padding-right:20px" title ="Proyecto">
-<g:link controller="#"  onMouseOver="xpe('hyrh2');" onMouseOut="xpe('hyrh2n');" onMouseDown="xpe('hyrh2c');"><img id="xpi_hyrh2" src="${resource(dir:'images/usuario-files',file:'bthyrh2_0.gif')}" name=vbhyrh2 width="130" height="38" border="0" alt="Proyecto"/></g:link></td>
+<td style="padding-right:20px" title ="Proyecto">  
+<g:link controller="login" controller="logout" onMouseOver="xpe('hyrh2o');" onMouseOut="xpe('hyrh2n');" onMouseDown="xpe('hyrh2c');"><img  src="${resource(dir:'images/usuario-files',file:'bthyrh2_0.gif')}"  id="xpi_hyrh2" name="vbhyrh2" width="130" height="38" border="0" alt="Proyecto"/></g:link></td>
 <td style="padding-right:20px" title ="Cerrar Sesion">
-<g:link controller="login" action="logout"  onMouseOver="xpe('jyrh2o');" onMouseOut="xpe('jyrh2n');" onMouseDown="xpe('jyrh2c');"><img id="xpi_jyrh2" src="${resource(dir:'images/usuario-files',file:'btjyrh2_0.gif')}" name="vbjyrh2" width="130" height="38" border="0" alt="Cerrar Sesion"/></g:link></td>
+<g:link controller="login" action="logout"  onMouseOver="xpe('jyrh2o');" onMouseOut="xpe('jyrh2n');" onMouseDown="xpe('jyrh2c');"><img  src="${resource(dir:'images/usuario-files',file:'btjyrh2_0.gif')}" id="xpi_jyrh2" name="vbjyrh2" width="130" height="38" border="0" alt="Cerrar Sesion"/></g:link></td>
 </tr></table>
 <!-- End Vista-Buttons.com -->
 
 </div>
+
+
 
 <div id="margenAdmin">
  <div id="apDiv8">
@@ -92,7 +93,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
         <p></p> AREA:<b>${session.user?.name_area}</b>&nbsp;
         <p>PROYECTO: <b>${session.user?.name_project}</b>
         <p></p> LOGUEADO COMO: &nbsp;<b>${session.user?.name_rol}</b>
-        <g:link controller="login" action="logout">Salir</g:link>
+        <g:link controller="login" action="logout"></g:link>
         </g:if>
      <g:else>
        <g:link controller="login" action="login">Login</g:link>

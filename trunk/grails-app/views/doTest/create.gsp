@@ -9,6 +9,7 @@
 
     </head>
     <body>
+
             <div class="body">
             <h1>Crear Test</h1>
             <g:if test="${flash.message}">
