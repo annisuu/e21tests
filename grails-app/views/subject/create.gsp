@@ -71,7 +71,7 @@
         </div>
             <!--    // se abre el script para hacer referencia al campo que se valida  -->
         <g:javascript>
-     $('#nameSubject').alpha({allcaps:true});
+     $('#nameSubject').alpha({allcaps:true,allow:' '});
                  </g:javascript>
 
     </body>

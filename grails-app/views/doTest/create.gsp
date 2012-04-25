@@ -4,13 +4,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="mainInstruc" />
-        <title>Create DoTest</title>
+        <title>Crear TEST</title>
 <resource:accordion skin="default" />
 
     </head>
     <body>
             <div class="body">
-            <h1>Create DoTest</h1>
+            <h1>Crear Test</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -30,13 +30,16 @@
                                 </td>
                             </tr>
 
+
+
+                     
                         <tr>
                          <td valign="top" class="name">
                                     <label for="idSubject">Tematica:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idSubject','errors')}">
                                 <select name="idSubject" id="idSubject">
-                                   <option value="">SELECCIONA EL PROYECTO</option>
+                                   <option value="">SELECCIONA LA TEMATICA</option>
                                   <g:each var="subject" in ="${subject}">
                                     <option  value="${subject.id}">
                                      ${subject.name}

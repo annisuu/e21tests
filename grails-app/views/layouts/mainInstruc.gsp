@@ -52,7 +52,7 @@
 
 
 
-       <div id="apDiv2">
+   <div id="apDiv2">
   <g:javascript type="text/javascript">
 AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','916','height','88','title','LOGO','src','/etileno/images/swf/logo2','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','/etileno/images/swf/LOGO' ); //end AC code
 </g:javascript><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="916" height="88" title="logo">
@@ -99,8 +99,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 <g:link controller="subject" onMouseOver="xpe('m53h1o');" onMouseOut="xpe('m53h1n');" onMouseDown="xpe('m53h1c');"><img id="xpi_m53h1" src="${resource(dir:'images/Instructor-files',file:'btm53h1_0.gif')}" name="vbm53h1" width="150" height="35" border="0" alt="CREAR TEMATICA"/></g:link></td></tr><tr>
 <td style="padding-bottom:12px" title ="CREAR TEST">
 <g:link controller="doTest"  onMouseOver="xpe('553h1o');" onMouseOut="xpe('553h1n');" onMouseDown="xpe('553h1c');"><img id="xpi_553h1" src="${resource(dir:'images/Instructor-files',file:'bt553h1_0.gif')}" name="vb553h1" width="150" height="35" border="0" alt="CREAR TEST"/></g:link></td></tr><tr>
-<td style="padding-bottom:12px" title ="MODIFICAR TEST">
-<g:link controller="#" onMouseOver="xpe('a53h1o');" onMouseOut="xpe('a53h1n');" onMouseDown="xpe('a53h1c');"><img id="xpi_a53h1" src="${resource(dir:'images/Instructor-files',file:'bta53h1_0.gif')}" name="vba53h1" width="150" height="35" border="0" alt="MODIFICAR TEST"/></g:link></td></tr></table>
+</tr></table>
 
 <!-- End Vista-Buttons.com -->
 </div>

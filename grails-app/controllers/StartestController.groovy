@@ -28,8 +28,6 @@ def welcome={
     {
       println "traia "+params.counter
     }
-  
-
         def question=ConsultaService.startTest(params.idTest,params.counter);
         println "question:: "+question+":"
         render(view:'showTest',model:[question:question,nameTest:params.nameTest,idTest:params.idTest])

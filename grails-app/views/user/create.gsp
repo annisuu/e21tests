@@ -62,6 +62,8 @@
                        </tr>
                        <tr>
 
+                        
+
                        <tr class="prop">
                        <td valign="top" class="name">
                        <label for="idProyecto">Proyecto:</label>
