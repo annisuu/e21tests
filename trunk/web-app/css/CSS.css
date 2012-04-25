@@ -2,13 +2,9 @@
 /* CSS Document */
 
 body{
-text-align: left;
-	 margin: 0;
-	 padding: 0;
-	 margin: 0 auto;
-
+   
+	
 background-image: url(../images/bg_page.png);
-color: #333333;
 font-family:Verdana, Arial, Helvetica, sans-serif ;
     font-weight: bold;
 font-variant:small-caps;
@@ -45,11 +41,12 @@ font-variant:small-caps;
 
 #apDiv2 {
 	position:absolute;
-	width:904px;
-	height:84px;
+	width:1000px;
+	height:80px;
 	z-index:3;
-	left: 62px;
-	top: 34px;
+	left: 70px;
+   margin: 0px auto;
+	top: 38px;
 }
 #apDiv3 {
 	position:absolute;
