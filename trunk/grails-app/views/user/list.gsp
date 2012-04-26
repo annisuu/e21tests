@@ -5,10 +5,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
            <meta name="layout" content="mainAdmin" />
         <title>Lista de Usuarios</title>
+      <r:require module="export"/>
+      <link rel="stylesheet" href="${resource(dir:'css',file:'export.css')}" />
 
 
     </head>
     <body>
+    
         <div class="nav">
 
             <span class="menuButton"><g:link class="create" action="create">Nuevo Usuario</g:link></span>
@@ -79,6 +82,7 @@
             <div class="paginateButtons">
                 <g:paginate total="${userInstanceTotal}" />
             </div>
+ <export:formats formats="['excel','pdf']" action="generaReport" params="[identifier:identifier]" />
         </div>
     </body>
 </html>

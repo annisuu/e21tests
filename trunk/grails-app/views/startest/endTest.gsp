@@ -20,6 +20,10 @@
     <h1>&nbsp;</h1>
     <h1>Gracias por Contestar el test, tu calificaci&oacute;n es:</h1>
     <h1> ${score} </h1>
+    <g:link action="menuUser"><div align="center">
+      <p class="style2">Regresar al menu</p>
+    </div>
+  </g:link>
   </div>
   </body>
 </html>
