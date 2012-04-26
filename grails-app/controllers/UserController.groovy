@@ -1,10 +1,11 @@
-
+import org.codehaus.groovy.grails.commons.ConfigurationHolder
 
 class UserController {
     
     def index = { redirect(action:create,params:params) }
    def ConsultaService
-
+  def exportService
+   
     // the delete, save and update actions only accept POST requests
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
@@ -16,6 +17,28 @@ class UserController {
       def proyecto=ConsultaService.buscaProyecto()
       def rol=ConsultaService.buscaRol()
         params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
+      if(params?.format && params.format != "html"){
+			response.contentType = ConfigurationHolder.config.grails.mime.types[params.format]
+			response.setHeader("Content-disposition", "attachment; filename=Report_User.${params.extension}")
+List fields = ["nameUser", "lastName","company.name_company"]
+			Map labels = ["nameUser": "Nombre del Trabajador", "lastName": "Apellido","company.name_company":"Company"]
+
+                        /* Formatter closure in previous releases
+			def upperCase = { value ->
+				return value.toUpperCase()
+			}
+			*/
+
+                        // Formatter closure
+			def upperCase = { domain, value ->
+				return value.toUpperCase()
+			}
+
+			Map formatters = [author: upperCase]
+			Map parameters = [title: "Reporte de Usuarios", "column.widths": [0.2, 0.3, 0.5]]
+
+			exportService.export(params.format, response.outputStream, User.list(params), fields, labels, formatters, parameters)
+		}
         [ userInstanceList: User.list( params ), userInstanceTotal: User.count() ,area:area,company:company,post:post,proyecto:proyecto,rol:rol]
     }
  def listWorker = {
@@ -303,6 +326,32 @@ class UserController {
 
      }
     }
+  def generaReport={
+    def reports=ConsultaService.reports()
+     if(params?.format && params.format != "html"){
+			response.contentType = ConfigurationHolder.config.grails.mime.types[params.format]
+			response.setHeader("Content-disposition", "attachment; filename=Report_User.${params.extension}")
+List fields = ["name_user", "last_name","name_company","name_area","name_test","finalscore","enddate"]
+			Map labels = ["name_user": "Nombre del Trabajador", "last_name": "Apellido","name_company":"Compa\u00F1\u00EDa","name_area":"Area","name_test":"Nombre del Test","finalscore":"Calificaci\u00F3n del Examen","enddate":"Fecha de finalizaci\u00F3n"]
+
+                        /* Formatter closure in previous releases
+			def upperCase = { value ->
+				return value.toUpperCase()
+			}
+			*/
+
+                        // Formatter closure
+			def upperCase = { domain, value ->
+				return value.toUpperCase()
+			}
+
+			Map formatters = [author: upperCase]
+			Map parameters = [title: "Reporte de Usuarios", "column.widths": [0.2, 0.3, 0.5]]
+
+			exportService.export(params.format, response.outputStream, reports, fields, labels, formatters, parameters)
+		}
+
+  }
 
   def searchAJAX = {
     println "xxxxx"

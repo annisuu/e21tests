@@ -25,11 +25,11 @@
        for(var i=0;i<=2;i++)
    {
      var seleccionado=document.getElementsByName("respuesta")[i].checked    //esta seleccionado o no
-   alert(seleccionado)
+  // alert(seleccionado)
 
      if(seleccionado){
        valor=document.getElementsByName("respuesta")[i].value        //VAlor
-     alert(valor+" "+compara)
+   //  alert(valor+" "+compara)
      }
       
    }
@@ -42,7 +42,7 @@
          else
        {
          alert("Respuesta incorrecta");
-         return false
+         return true
        }
         }
         else

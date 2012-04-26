@@ -4,12 +4,13 @@ class StartestController {
    redirect(action:menuUser,params:params)
     }
   def menuUser={
+    def tDone=ConsultaService.findTestDone(session.user.idu)
     def idarea=session.user.id_area
-    println idarea
+    println "done_:"+tDone
    def tematicas=ConsultaService.findTematicas(idarea)
      println tematicas
    def examen=ConsultaService.findTests()
-     render(view:'menuUser',model:[tematicas:tematicas,examen:examen])
+     render(view:'menuUser',model:[tematicas:tematicas,examen:examen,tDone:tDone])
   }
 
 def welcome={

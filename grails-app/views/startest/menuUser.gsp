@@ -14,7 +14,9 @@
 
     <title>Simple GSP page</title></head>
   <body>
-
+ <%
+ int contador=0;
+ %>
   BIENVENIDO AL TEST
   ELIJE DE LA SIGUIENTE CATEGOR&Iacute;A DE TEMAS LA CATEGOR&Iacute;A QUE EL INSTRUCTOR TE INDIQUE:
   <TABLE align="center">
@@ -24,9 +26,18 @@
     <g:each var="temas" in="${tematicas}">
      <richui:accordionItem caption="${temas.name_subject}">
          <g:each var="examen" in="${examen}">
-            <%if("${temas.id_subject}"==examen.subject.toString()){%>
-          <g:link action="welcome" params="[nameTest:examen.name_test,idTest:examen.id_test]">${examen.name_test}</g:link><br>
+         <%if("${temas.id_subject}"==examen.subject.toString()){%>
+           <g:each var="tDone" in="${tDone}">
+           <%if(examen.id_test.toString().equals(tDone.idTest.toString())){contador=1;%>
            <%}%>
+           </g:each>
+             <%
+               if(contador==0){
+                %>
+             <g:link action="welcome" params="[nameTest:examen.name_test,idTest:examen.id_test]">${examen.name_test}</g:link><br>
+           <%
+               }
+             }%>
            </g:each>
         </richui:accordionItem>
       </g:each>

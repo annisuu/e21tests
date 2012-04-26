@@ -212,5 +212,36 @@ class ConsultaService {
     }
     return result
   }
+   def findTestDone(def userid)
+  {
+    println "parametros::"+userid+"--"
+    def sql=new Sql(dataSource)
+     def resultado=[]
+    sql.eachRow("select * from results where userid='"+userid+"'  "){
+       def done=new Expando()
+        done.idTest=it.idTest
+        resultado.add(done)
+    }
+    return resultado
+  }
+
+   def reports()
+  {
+    def sql=new Sql(dataSource)
+     def resultado=[]
+    sql.eachRow("select * from reports"){
+       def report=new Expando()
+      report.id_user=it.id_user
+      report.name_user=it.name_user
+      report.last_name=it.last_name
+      report.name_company=it.name_company
+      report.name_area=it.name_area
+      report.name_test=it.name_test
+      report.finalscore=it.finalscore
+      report.enddate=it.enddate
+        resultado.add(report)
+    }
+    return resultado
+  }
 
 }
