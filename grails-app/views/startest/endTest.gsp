@@ -14,8 +14,12 @@
    <g:if test="${flash.message}">
             alert("${flash.message}")
             </g:if>
-  </g:javascript>    
+  </g:javascript>
   </head>
-  <body><div align="center"><h1>Gracias por Contestar el test, tu calificaci&oacute;n es: ${score} </h1> </div>
+  <body><div align="center"><h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+    <h1>Gracias por Contestar el test, tu calificaci&oacute;n es:</h1>
+    <h1> ${score} </h1>
+  </div>
   </body>
 </html>

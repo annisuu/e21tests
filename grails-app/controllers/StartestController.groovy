@@ -36,13 +36,7 @@ def welcome={
   }
   
   def save={
-    if(params.respuesta==null)
-    {
-      flash.message="Selecciona una respuesta "
-       redirect (action:showTest,params:params)
-    }
-    else
-    {
+
     int counter=Integer.parseInt(params.counter)
     
     def question=ConsultaService.startTest(params.idTest,counter);
@@ -98,7 +92,7 @@ def welcome={
        redirect (action:endTest,params:params)
     }
     }
-    }
+    
   }
   def endTest={
     def calificacion=ConsultaService.finalScore(params.iduser,params.idTest);
