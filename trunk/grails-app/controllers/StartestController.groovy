@@ -11,7 +11,7 @@ class StartestController {
      println tematicas
    def examen=ConsultaService.findTests()
      render(view:'menuUser',model:[tematicas:tematicas,examen:examen,tDone:tDone])
-  }
+  }   
 
 def welcome={
     println params
