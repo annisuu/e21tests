@@ -91,7 +91,7 @@
 
                     <input type="hidden" name="id" value="${userInstance?.id}" />
                     <span class="button"><g:actionSubmit class="edit" value="EditWorker" /></span>
-                    <span class="button"><g:actionSubmit class="delete" onclick="return confirm('Are you sure?');" value="DeleteWorker" /></span>
+                    <span class="button"><g:actionSubmit class="delete" onclick="return confirm('¿Esta Seguro?');" value="DeleteWorker" /></span>
                 </g:form>
             </div>
         </div>
