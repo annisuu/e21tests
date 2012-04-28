@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="mainAdmin" />
-        <title>Empresa</title>
+        <title>empresa</title>
 
 
     </head>
@@ -15,7 +15,7 @@
             <span class="menuButton"><g:link class="create" action="create">Nueva Empresa</g:link></span>
         </div>
         <div class="body">
-            <h1>Empresa</h1>
+            <h1>empresa</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

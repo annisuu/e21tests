@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="mainInstruc" />
-        <title>Crear TEST</title>
+        <title>crear test</title>
 <resource:accordion skin="default" />
 
     </head>
@@ -14,7 +14,7 @@
             <span class="menuButton"><g:link class="list" controller="test" action="list">Lista de Test</g:link></span>
         </div>
             <div class="body">
-            <h1>Crear Test</h1>
+            <h1>crear test</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

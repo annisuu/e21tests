@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
           <meta name="layout" content="mainAdmin" />
-        <title>Crear Cargo</title>
+        <title>crear cargo</title>
 
       <g:javascript library="jquery"></g:javascript>
       <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
@@ -18,7 +18,7 @@
             <span class="menuButton"><g:link class="list" action="list">Lista de Cargos</g:link></span>
         </div>
         <div class="body">
-            <h1>Agregar Cargo</h1>
+            <h1>agregar cargo</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

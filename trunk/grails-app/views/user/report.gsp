@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
            <meta name="layout" content="mainAdmin" />
-        <title>Lista de Usuarios</title>
+        <title>lista de usuarios que han realizado test</title>
       <r:require module="export"/>
       <link rel="stylesheet" href="${resource(dir:'css',file:'export.css')}" />
 
@@ -14,7 +14,7 @@
 
 
         <div class="body">
-            <h1>Lista de Usuario</h1>
+            <h1>lista de usuarios que han realizado test</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

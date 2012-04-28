@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
            <meta name="layout" content="mainInstruc" />
-        <title>Lista de Trabajadores</title>
+        <title>lista de trabajadores</title>
 
 
     </head>
@@ -15,7 +15,7 @@
 
         </div>
         <div class="body">
-            <h1>Lista de Trabajdores</h1>
+            <h1>lista de trabajdores</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

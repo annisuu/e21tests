@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
            <meta name="layout" content="mainAdmin" />
-        <title>Lista de Usuarios</title>
+        <title>lista de usuarios</title>
       <r:require module="export"/>
       <link rel="stylesheet" href="${resource(dir:'css',file:'export.css')}" />
 
@@ -17,7 +17,7 @@
             <span class="menuButton"><g:link class="create" action="create">Nuevo Usuario</g:link></span>
         </div>
         <div class="body">
-            <h1>Lista de Usuario</h1>
+            <h1>lista de usuario</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -82,7 +82,7 @@
             <div class="paginateButtons">
                 <g:paginate total="${userInstanceTotal}" />
             </div>
- <export:formats formats="['excel','pdf']" action="list" params="[identifier:identifier]" />
+
         </div>
     </body>
 </html>

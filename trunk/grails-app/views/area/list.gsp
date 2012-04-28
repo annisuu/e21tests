@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
          <meta name="layout" content="mainAdmin" />
-        <title>Lista de Areas</title>
+        <title>lista de areas</title>
 
 
     </head>
@@ -13,7 +13,7 @@
         <span class="menuButton"><g:link class="create" action="create">Nueva Area</g:link></span>
         </div>
         <div class="body">
-            <h1>Lista de Areas</h1>
+            <h1>lista de areas</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

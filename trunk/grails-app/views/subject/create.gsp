@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="mainInstruc" />
-        <title>Agregar Tematica</title>
+        <title>agregar tematica</title>
          <!-- se manda a llamar el jscript desde la ruta dode se encuentra  -->
        <g:javascript library="jquery"></g:javascript>
       <g:javascript library="jquery.maskedinput-1.3.min"></g:javascript>
@@ -17,7 +17,7 @@
             <span class="menuButton"><g:link class="list" action="list">Lista de Tematicas</g:link></span>
         </div>
         <div class="body">
-            <h1>Agregar Tematica</h1>
+            <h1>agregar tematica</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

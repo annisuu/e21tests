@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="mainAdmin" />
-        <title>Agregar  Area</title>
+        <title>agregar  area</title>
     
 
        <g:javascript library="jquery"></g:javascript>
@@ -17,7 +17,7 @@
             <span class="menuButton"><g:link class="list" action="list">Lista de  Areas</g:link></span>
         </div>
         <div class="body">
-            <h1>Agregar Area</h1>
+            <h1>agregar area</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
