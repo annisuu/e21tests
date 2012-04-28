@@ -74,7 +74,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
  <td style="padding-right:20px" title ="Trabajadores">
  <g:link controller="user" action="createWorker" onMouseOver="xpe('77xq7o');" onMouseOut="xpe('77xq7n');" onMouseDown="xpe('77xq7c');"><img src="${resource(dir:'images/Instructor-files',file:'bt77xq7_0.gif')}"id="xpi_77xq7" name="vb77xq7" width="135" height="44" border="0" alt="Trabajadores"/></g:link></td>
    <td style="padding-right:20px" title ="Gestor de Test">
- <a href="#" onMouseOver="xpe('q7xq7o');" onMouseOut="xpe('q7xq7n');"onMouseDown="xpe('q7xq7c');"><img src="${resource(dir:'images/Instructor-files',file:'btq7xq7_0.gif')}" id="xpi_q7xq7" name="vbq7xq7" width="135" height="44" border="0" alt="Gestor de Test"/></a></td>
+ <g:link controller="user" action="reportWorker" onMouseOver="xpe('q7xq7o');" onMouseOut="xpe('q7xq7n');" onMouseDown="xpe('q7xq7c');"><img src="${resource(dir:'images/Instructor-files',file:'btq7xq7_0.gif')}" id="xpi_q7xq7" name="vbq7xq7" width="135" height="44" border="0" alt="Reportes"/></g:link></td>
  <td style="padding-right:20px" title ="Cerrar Sesion">
  <g:link controller="login" action="logout" onMouseOver="xpe('m7xq7o');" onMouseOut="xpe('m7xq7n');" onMouseDown="xpe('m7xq7c');"><img  src="${resource(dir:'images/Instructor-files',file:'btm7xq7_0.gif')}" id="xpi_m7xq7" name="vbm7xq7" width="135" height="44" border="0" alt="Cerrar Sesion"/></g:link></td>
 </tr></table>

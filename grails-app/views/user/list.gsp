@@ -82,7 +82,7 @@
             <div class="paginateButtons">
                 <g:paginate total="${userInstanceTotal}" />
             </div>
- <export:formats formats="['excel','pdf']" action="generaReport" params="[identifier:identifier]" />
+ <export:formats formats="['excel','pdf']" action="list" params="[identifier:identifier]" />
         </div>
     </body>
 </html>
