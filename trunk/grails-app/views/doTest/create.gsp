@@ -9,7 +9,10 @@
 
     </head>
     <body>
+           <div class="nav">
 
+            <span class="menuButton"><g:link class="list" controller="test" action="list">Lista de Test</g:link></span>
+        </div>
             <div class="body">
             <h1>Crear Test</h1>
             <g:if test="${flash.message}">
