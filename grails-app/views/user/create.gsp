@@ -15,7 +15,7 @@
             <span class="menuButton"><g:link class="list" action="list">Lista de Usuarios</g:link></span>
         </div>
         <div class="body">
-            <h1>agregar usuario</h1>
+            <h1>Agregar usuario</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
