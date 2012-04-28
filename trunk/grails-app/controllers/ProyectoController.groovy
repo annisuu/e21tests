@@ -118,4 +118,8 @@ class ProyectoController {
     render(view:'mainProyecto')
 
   }
+  def proyectoUser={
+    render(view:'proyectoUser')
+
+  }
 }
