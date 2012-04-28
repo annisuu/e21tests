@@ -227,9 +227,11 @@ class ConsultaService {
 
    def reports()
   {
+
+    def query="Select * from reports "
     def sql=new Sql(dataSource)
      def resultado=[]
-    sql.eachRow("select * from reports"){
+    sql.eachRow(query){
        def report=new Expando()
       report.id_user=it.id_user
       report.name_user=it.name_user

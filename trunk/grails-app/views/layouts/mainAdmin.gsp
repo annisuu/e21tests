@@ -71,7 +71,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 <td style="padding-right:10px" title ="Instructor">
 <g:link controller="doTest" onMouseOver="xpe('kyrh2o');" onMouseOut="xpe('kyrh2n');" onMouseDown="xpe('kyrh2c');"><img id="xpi_kyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btkyrh2_0.gif')}" name="vbkyrh2" width="130" height="38" border="0" alt="Instructor"/></g:link></td>
 <td style="padding-right:10px" title ="Reportes">
-<g:link controller="proyecto" onMouseOver="xpe('gyrh2o');" onMouseOut="xpe('gyrh2n');" onMouseDown="xpe('gyrh2c');"><img id="xpi_gyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btgyrh2_0.gif')}" name="vbgyrh2" width="130" height="38" border="0" alt="Reportes"/></g:link></td>
+<g:link controller="user" action="report" onMouseOver="xpe('gyrh2o');" onMouseOut="xpe('gyrh2n');" onMouseDown="xpe('gyrh2c');"><img id="xpi_gyrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btgyrh2_0.gif')}" name="vbgyrh2" width="130" height="38" border="0" alt="Reportes"/></g:link></td>
 <td style="padding-right:10px" title ="Test">
 <g:link controller="doTest" onMouseOver="xpe('ixrh2o');" onMouseOut="xpe('ixrh2n');" onMouseDown="xpe('ixrh2c');"><img id="xpi_ixrh2" src="${resource(dir:'images/AltaInstructor-files',file:'btixrh2_0.gif')}" name="vbixrh2" width="130" height="38" border="0" alt="Test"/></g:link></td>
 <td style="padding-right:5px" title ="Cerrar Sesion">

@@ -20,8 +20,6 @@ class UserController {
       if(params?.format && params.format != "html"){
 			response.contentType = ConfigurationHolder.config.grails.mime.types[params.format]
 			response.setHeader("Content-disposition", "attachment; filename=Report_User.${params.extension}")
-List fields = ["nameUser", "lastName","company.name_company"]
-			Map labels = ["nameUser": "Nombre del Trabajador", "lastName": "Apellido","company.name_company":"Company"]
 
                         /* Formatter closure in previous releases
 			def upperCase = { value ->
@@ -35,9 +33,9 @@ List fields = ["nameUser", "lastName","company.name_company"]
 			}
 
 			Map formatters = [author: upperCase]
-			Map parameters = [title: "Reporte de Usuarios", "column.widths": [0.2, 0.3, 0.5]]
+			Map parameters = [title: "Reporte de Usuarios"]
 
-			exportService.export(params.format, response.outputStream, User.list(params), fields, labels, formatters, parameters)
+			exportService.export(params.format, response.outputStream, User.list(params), formatters, parameters)
 		}
         [ userInstanceList: User.list( params ), userInstanceTotal: User.count() ,area:area,company:company,post:post,proyecto:proyecto,rol:rol]
     }
@@ -326,6 +324,14 @@ List fields = ["nameUser", "lastName","company.name_company"]
 
      }
     }
+  def report={
+     def reports=ConsultaService.reports()
+    render(view:'report',model:[reports:reports])
+  }
+  def reportWorker={
+     def reports=ConsultaService.reports()
+    render(view:'reportWorker',model:[reports:reports])
+  }
   def generaReport={
     def reports=ConsultaService.reports()
      if(params?.format && params.format != "html"){
