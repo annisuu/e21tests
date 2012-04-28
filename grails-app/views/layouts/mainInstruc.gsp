@@ -70,7 +70,8 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 
 <table id="vista-buttons.com:id77xq7" width=0 cellpadding=0 cellspacing=0 border=0><tr>
 
-
+  <td style="padding-right:10px" title ="Proyecto">
+  <g:link controller="proyecto" action="proyectoUser" onMouseOver="xpe('hyrh2o');" onMouseOut="xpe('hyrh2n');" onMouseDown="xpe('hyrh2c');"><img src="${resource(dir:'images/AltaInstructor-files',file:'bthyrh2_0.gif')}" id="xpi_hyrh2"  name="vbhyrh2" width="130" height="38" border="0" alt="Proyecto"/></g:link></td> 
  <td style="padding-right:20px" title ="Trabajadores">
  <g:link controller="user" action="createWorker" onMouseOver="xpe('77xq7o');" onMouseOut="xpe('77xq7n');" onMouseDown="xpe('77xq7c');"><img src="${resource(dir:'images/Instructor-files',file:'bt77xq7_0.gif')}"id="xpi_77xq7" name="vb77xq7" width="135" height="44" border="0" alt="Trabajadores"/></g:link></td>
    <td style="padding-right:20px" title ="Gestor de Test">
