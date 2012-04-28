@@ -286,7 +286,7 @@ class DoTestController {
                     if(question10.save())
                     {
                       println "question 10"
-
+                      render(view:'save')
                     }
                     else {
 
