@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
        <meta name="layout" content="mainAdmin" />
-        <title>Editar Usuario</title>
+        <title>editar usuario</title>
 
     </head>
     <body>
@@ -14,7 +14,7 @@
             <span class="menuButton"><g:link class="create" action="create">Nuevo Usuario</g:link></span>
         </div>
         <div class="body">
-            <h1>Editar Usuario</h1>
+            <h1>editar usuario</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
