@@ -116,5 +116,8 @@ def welcome={
 
     }
 
-}
+  def Welcome={
+    render (view:'Welcome')
 
+  }
+}
