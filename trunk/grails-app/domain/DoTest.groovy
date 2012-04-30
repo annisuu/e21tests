@@ -1,7 +1,6 @@
 class DoTest {
   String id_test
   String nameTest
-  String idArea
   String idSubject
   String question1
   String answer1A
@@ -86,7 +85,6 @@ class DoTest {
   
  static constraints={
        nameTest(blank:false,nullable:false)
-       idArea(blank:false,nullable:false)
        idSubject(blank:false,nullable:false)
        question1(blank:false,nullable:false)
        answer1A(blank:false,nullable:false)

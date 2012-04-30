@@ -6,7 +6,8 @@
         <meta name="layout" content="mainInstruc" />
         <title>crear test</title>
 <resource:accordion skin="default" />
-
+<g:javascript library="prototype" />
+   
     </head>
     <body>
            <div class="nav">
@@ -33,46 +34,39 @@
                                 <input type="text" id="nameTest" name="nameTest" value="${fieldValue(bean:doTestInstance,field:'nameTest')}"/>
                                 </td>
                             </tr>
+                       <tr class="prop">
+                       <td valign="top" class="name">
+                           <label for="idArea">Area:</label>
+                       </td>
+                       <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idArea','errors')}">
+                             <select name="idArea" id="idArea"  onchange="${remoteFunction(controller: 'doTest', action: 'consultarSubject', update: [success: 'idSubject', failure: 'error'], params: '\'id_area=\'+this.value')}">
+                             <option value="">SELECCIONA EL AREA</option>
+                             <g:each var="area" in ="${area}">
+                             <option  value="${area.id_area}" <%if(params.idArea==area.id_area.toString()){println "selected"}%>>
+                              ${area.name_area}
+                             </option>
+                             </g:each>
+                             </select></td>
+                             </tr>
 
-
-
-                     
                         <tr>
                          <td valign="top" class="name">
                                     <label for="idSubject">Tematica:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idSubject','errors')}">
-                                <select name="idSubject" id="idSubject">
-                                   <option value="">SELECCIONA LA TEMATICA</option>
-                                  <g:each var="subject" in ="${subject}">
-                                    <option  value="${subject.id}">
-                                     ${subject.name}
-                                      </option>
-                                      </g:each>
-                                  </select>
+                                <div id="idSubject">
+                          <select name="idSubject">
+                            <option value="">Seleccione...</option>
+                            <g:each var="subject" in="${subject}">
+                              <option value="${subject.id_subject}"<%if(doTestInstance.idSubject==subject.id_subject.toString()){println "selected"}%>>${subject.name_subject}</option>
+
+                            </g:each>
+                          </select>
+                        </div>
                                   <input type="hidden" id="id_test" name="id_test" value="${fieldValue(bean:doTestInstance,field:'id_test')}"/>
                                  </td>
                             </tr>
-
-
-                        <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="idArea">Area:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idArea','errors')}">
-                                      <select name="idArea" id="idArea">
-                                      <option value="">SELECCIONA EL AREA</option>
-                                      <g:each var="area" in ="${area}">
-                                      <option  value="${area.id_area}">
-                                       ${area.name_area}
-                                      </option>
-                                      </g:each>
-                                      </select></td>
-                                      </tr>
-
-
-
-                         </tbody>
+                      </tbody>
                       </table>
                   <richui:accordion style="width: 600px;">
     <richui:accordionItem caption="Pregunta 1">

@@ -88,10 +88,18 @@ class DoTestController {
         doTestInstance.properties = params
         return ['doTestInstance':doTestInstance,area:area,subject:subject]
     }
+  def consultarSubject={
+    println "consulta subject"
+    
+    def subject=ConsultaService.findSubjectByArea(params.id_area.toString())
+    println ":::"+subject
+     render(template:'subjects',model:[subject:subject])
+
+  }
 
     def save = {
       def area=ConsultaService.buscaArea()
-      def subject=ConsultaService.buscaSubject()
+      def subject=ConsultaService.findSubjectByArea(params.idArea.toString())
       def doTestInstance = new DoTest(params)
      // println "validando..."+doTestInstance.validate()
       if(doTestInstance.validate()){
@@ -99,7 +107,6 @@ class DoTestController {
         println "dentrodetest"
       test.nameTest=doTestInstance.nameTest
       test.idSubject=doTestInstance.idSubject
-      test.idArea=doTestInstance.idArea
        if(test.save())
       {
       def question = new DoQuestion()

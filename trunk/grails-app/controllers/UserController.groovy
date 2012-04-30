@@ -352,7 +352,7 @@ List fields = ["name_user", "last_name","name_company","name_area","name_test","
 			}
 
 			Map formatters = [author: upperCase]
-			Map parameters = [title: "Reporte de Usuarios", "column.widths": [0.2, 0.3, 0.5]]
+			Map parameters = [title: "ETILENO XXI: Reporte de Usuarios", "title.font.style":"bold"]
 
 			exportService.export(params.format, response.outputStream, reports, fields, labels, formatters, parameters)
 		}

@@ -1,6 +1,5 @@
 class Test {
 String nameTest
-  String idArea
   String idSubject
 
 
@@ -16,7 +15,6 @@ String nameTest
 
       id column: 'id_test'
       nameTest column: 'name_test'
-      idArea column: 'id_area'
       idSubject column: 'subject'
       
     }

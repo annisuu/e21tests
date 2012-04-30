@@ -245,5 +245,18 @@ class ConsultaService {
     }
     return resultado
   }
+  def findSubjectByArea(String idSubject){
+    def sql= new Sql(dataSource)
+    def resultado=[]
+    println "select * from subject where id_area= "+ idSubject +" "
+    sql.eachRow("select * from subject where id_area= "+ idSubject +" ") {
+      def tematica=new Expando()
+      tematica.id_subject=it.id_subject
+      tematica.name_subject=it.name_subject
+      resultado.add(tematica)
+    }
+
+    return resultado
+  }
 
 }
