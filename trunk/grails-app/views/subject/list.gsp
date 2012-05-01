@@ -10,7 +10,7 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="create" action="create">Nueva Tematica</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">nueva tematica</g:link></span>
         </div>
         <div class="body">
             <h1>lista de tematicas</h1>

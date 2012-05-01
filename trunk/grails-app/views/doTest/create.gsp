@@ -56,7 +56,7 @@
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idSubject','errors')}">
                                 <div id="idSubject">
                           <select name="idSubject">
-                            <option value="">Seleccione...</option>
+                            <option value="">SELECCIONE</option>
                             <g:each var="subject" in="${subject}">
                               <option value="${subject.id_subject}"<%if(doTestInstance.idSubject==subject.id_subject.toString()){println "selected"}%>>${subject.name_subject}</option>
 

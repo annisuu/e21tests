@@ -10,7 +10,7 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="create" action="create">Nuevo Proyecto</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">nuevo proyecto</g:link></span>
         </div>
         <div class="body">
             <h1>lista de proyectos</h1>

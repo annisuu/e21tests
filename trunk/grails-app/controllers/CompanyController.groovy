@@ -17,7 +17,7 @@ class CompanyController {
         def companyInstance = Company.get( params.id )
 
         if(!companyInstance) {
-            flash.message = "Company not found with id ${params.id}"
+            flash.message = "Empresa no encontrada ${params.id}"
             redirect(action:list)
         }
         else { return [ companyInstance : companyInstance ] }
@@ -28,16 +28,16 @@ class CompanyController {
         if(companyInstance) {
             try {
                 companyInstance.delete(flush:true)
-                flash.message = "Company ${params.id} deleted"
+                flash.message = "Empresa ${params.id} Eliminada"
                 redirect(action:list)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "Company ${params.id} could not be deleted"
+                flash.message = "Empresa ${params.id} no puedo ser eliminada"
                 redirect(action:show,id:params.id)
             }
         }
         else {
-            flash.message = "Company not found with id ${params.id}"
+            flash.message = "Empresa no encontrada ${params.id}"
             redirect(action:list)
         }
     }
@@ -46,7 +46,7 @@ class CompanyController {
         def companyInstance = Company.get( params.id )
 
         if(!companyInstance) {
-            flash.message = "Company not found with id ${params.id}"
+            flash.message = "Empresano encontrada ${params.id}"
             redirect(action:list)
         }
         else {
@@ -68,7 +68,7 @@ class CompanyController {
             }
             companyInstance.properties = params
             if(!companyInstance.hasErrors() && companyInstance.save()) {
-                flash.message = "Company ${params.id} updated"
+                flash.message = "Empresa ${params.id} Actualizada"
                 redirect(action:show,id:companyInstance.id)
             }
             else {
@@ -76,7 +76,7 @@ class CompanyController {
             }
         }
         else {
-            flash.message = "Company not found with id ${params.id}"
+            flash.message = "Empresa no encontrada ${params.id}"
             redirect(action:list)
         }
     }
@@ -90,7 +90,7 @@ class CompanyController {
     def save = {
         def companyInstance = new Company(params)
         if(!companyInstance.hasErrors() && companyInstance.save()) {
-            flash.message = "Company ${companyInstance.id} created"
+            flash.message = "Empresa ${companyInstance.id} Agregada"
             redirect(action:show,id:companyInstance.id)
         }
         else {

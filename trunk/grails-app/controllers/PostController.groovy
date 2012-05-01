@@ -16,7 +16,7 @@ class PostController {
         def postInstance = Post.get( params.id )
 
         if(!postInstance) {
-            flash.message = "Post not found with id ${params.id}"
+            flash.message = "Cargo no encontrado ${params.id}"
             redirect(action:list)
         }
         else { return [ postInstance : postInstance ] }
@@ -27,16 +27,16 @@ class PostController {
         if(postInstance) {
             try {
                 postInstance.delete(flush:true)
-                flash.message = "Post ${params.id} deleted"
+                flash.message = "Cergo ${params.id} Eliminado"
                 redirect(action:list)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "Post ${params.id} could not be deleted"
+                flash.message = "Cargo ${params.id} no pudp ser Eliminado"
                 redirect(action:show,id:params.id)
             }
         }
         else {
-            flash.message = "Post not found with id ${params.id}"
+            flash.message = "Cargo no encontrado ${params.id}"
             redirect(action:list)
         }
     }
@@ -45,7 +45,7 @@ class PostController {
         def postInstance = Post.get( params.id )
 
         if(!postInstance) {
-            flash.message = "Post not found with id ${params.id}"
+            flash.message = "Cargo no encontrado ${params.id}"
             redirect(action:list)
         }
         else {
@@ -67,7 +67,7 @@ class PostController {
             }
             postInstance.properties = params
             if(!postInstance.hasErrors() && postInstance.save()) {
-                flash.message = "Post ${params.id} updated"
+                flash.message = "Cargo ${params.id} Actualizado"
                 redirect(action:show,id:postInstance.id)
             }
             else {
@@ -75,7 +75,7 @@ class PostController {
             }
         }
         else {
-            flash.message = "Post not found with id ${params.id}"
+            flash.message = "Cargo no encontrado ${params.id}"
             redirect(action:list)
         }
     }
@@ -89,7 +89,7 @@ class PostController {
     def save = {
         def postInstance = new Post(params)
         if(!postInstance.hasErrors() && postInstance.save()) {
-            flash.message = "Post ${postInstance.id} created"
+            flash.message = "Cargo ${postInstance.id} Agregado"
             redirect(action:show,id:postInstance.id)
         }
         else {

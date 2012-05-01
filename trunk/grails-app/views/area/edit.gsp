@@ -11,8 +11,8 @@
     <body>
         <div class="nav">
             
-            <span class="menuButton"><g:link class="list" action="list">Lista de Areas</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">Nueva Area</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">lista de areas</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">nueva area</g:link></span>
         </div>
         <div class="body">
             <h1>editar area</h1>

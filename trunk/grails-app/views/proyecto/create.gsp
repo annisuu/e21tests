@@ -15,7 +15,7 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="list" action="list">Lista de Proyectos</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">lista de proyectos</g:link></span>
         </div>
         <div class="body">
             <h1>agregar proyecto</h1>

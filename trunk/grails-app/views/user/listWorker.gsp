@@ -10,7 +10,7 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="create" action="createWorker">Nuevo Trabajador</g:link></span>
+            <span class="menuButton"><g:link class="create" action="createWorker">nuevo trabajador</g:link></span>
           
 
         </div>

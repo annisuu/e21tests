@@ -16,7 +16,7 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="list" action="list">Lista de Test</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">lista de test</g:link></span>
         </div>
         <div class="body">
             <h1>agregar test</h1>
