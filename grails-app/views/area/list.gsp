@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="nav">
-        <span class="menuButton"><g:link class="create" action="create">Nueva Area</g:link></span>
+        <span class="menuButton"><g:link class="create" action="create">nueva area</g:link></span>
         </div>
         <div class="body">
             <h1>lista de areas</h1>

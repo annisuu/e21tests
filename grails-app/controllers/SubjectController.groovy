@@ -20,7 +20,7 @@ class SubjectController {
         def subjectInstance = Subject.get( params.id )
 
         if(!subjectInstance) {
-            flash.message = "Subject not found with id ${params.id}"
+            flash.message = "Tematica no encontrada ${params.id}"
             redirect(action:list)
         }
         else { return [ subjectInstance : subjectInstance,area:area ] }
@@ -31,16 +31,16 @@ class SubjectController {
         if(subjectInstance) {
             try {
                 subjectInstance.delete(flush:true)
-                flash.message = "Subject ${params.id} deleted"
+                flash.message = "Tematica ${params.id} Eliminada"
                 redirect(action:list)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "Subject ${params.id} could not be deleted"
+                flash.message = "Tematica ${params.id} no pudo ser eliminada"
                 redirect(action:show,id:params.id)
             }
         }
         else {
-            flash.message = "Subject not found with id ${params.id}"
+            flash.message = "Tematica no encontrada ${params.id}"
             redirect(action:list)
         }
     }
@@ -51,7 +51,7 @@ class SubjectController {
 
         def subjectInstance = Subject.get( params.id )
         if(!subjectInstance) {
-            flash.message = "Subject not found with id ${params.id}"
+            flash.message = "Tematica no encontrada ${params.id}"
             redirect(action:list,area:area)
         }
         else {
@@ -73,7 +73,7 @@ class SubjectController {
             }
             subjectInstance.properties = params
             if(!subjectInstance.hasErrors() && subjectInstance.save()) {
-                flash.message = "Subject ${params.id} updated"
+                flash.message = "Tematica ${params.id} Actualizada"
                 redirect(action:show,id:subjectInstance.id)
             }
             else {
@@ -81,7 +81,7 @@ class SubjectController {
             }
         }
         else {
-            flash.message = "Subject not found with id ${params.id}"
+            flash.message = "Tematica no encontrada ${params.id}"
             redirect(action:list)
         }
     }
@@ -101,7 +101,7 @@ class SubjectController {
       if(subjectInstance.idArea!="")
       {
         if(!subjectInstance.hasErrors() && subjectInstance.save()) {
-            flash.message = "Subject ${subjectInstance.id} created"
+            flash.message = "Tematica ${subjectInstance.id} Agregada"
             redirect(action:show,id:subjectInstance.id)
         }
         else {

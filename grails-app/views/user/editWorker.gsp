@@ -10,8 +10,8 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="list" action="listWorker">Lista de Trabajadores</g:link></span>
-            <span class="menuButton"><g:link class="create" action="createWorker">Nuevo Trabajador</g:link></span>
+            <span class="menuButton"><g:link class="list" action="listWorker">lista de trabajadores</g:link></span>
+            <span class="menuButton"><g:link class="create" action="createWorker">nuevo trabajador</g:link></span>
         
         </div>
         <div class="body">

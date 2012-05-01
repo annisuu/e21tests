@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><g:link class="list" action="list">Lista de Tematicas</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">lista de tematicas</g:link></span>
         </div>
         <div class="body">
             <h1>agregar tematica</h1>

@@ -16,7 +16,7 @@ class AreaController {
         def areaInstance = Area.get( params.id )
 
         if(!areaInstance) {
-            flash.message = "Area not found with id ${params.id}"
+            flash.message = "Area no encontrada ${params.id}"
             redirect(action:list)
         }
         else { return [ areaInstance : areaInstance ] }
@@ -27,16 +27,16 @@ class AreaController {
         if(areaInstance) {
             try {
                 areaInstance.delete(flush:true)
-                flash.message = "Area ${params.id} deleted"
+                flash.message = "Area ${params.id} Eliminada"
                 redirect(action:list)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "Area ${params.id} could not be deleted"
+                flash.message = "Area ${params.id} no pudo ser eliminada"
                 redirect(action:show,id:params.id)
             }
         }
         else {
-            flash.message = "Area not found with id ${params.id}"
+            flash.message = "Area no encontrada ${params.id}"
             redirect(action:list)
         }
     }
@@ -45,7 +45,7 @@ class AreaController {
         def areaInstance = Area.get( params.id )
 
         if(!areaInstance) {
-            flash.message = "Area not found with id ${params.id}"
+            flash.message = "Area no encontrada ${params.id}"
             redirect(action:list)
         }
         else {
@@ -67,7 +67,7 @@ class AreaController {
             }
             areaInstance.properties = params
             if(!areaInstance.hasErrors() && areaInstance.save()) {
-                flash.message = "Area ${params.id} updated"
+                flash.message = "Area ${params.id} Actualizada"
                 redirect(action:show,id:areaInstance.id)
             }
             else {
@@ -75,7 +75,7 @@ class AreaController {
             }
         }
         else {
-            flash.message = "Area not found with id ${params.id}"
+            flash.message = "Area no encontrada ${params.id}"
             redirect(action:list)
         }
     }
@@ -89,7 +89,7 @@ class AreaController {
     def save = {
         def areaInstance = new Area(params)
         if(!areaInstance.hasErrors() && areaInstance.save()) {
-            flash.message = "Area ${areaInstance.id} created"
+            flash.message = "Area ${areaInstance.id} Agregada"
             redirect(action:show,id:areaInstance.id)
         }
         else {

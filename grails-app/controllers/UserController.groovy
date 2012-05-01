@@ -59,7 +59,7 @@ class UserController {
         def userInstance = User.get( params.id )
 
         if(!userInstance) {
-            flash.message = "User not found with id ${params.id}"
+            flash.message = "Trabajador no encontrado ${params.id}"
             redirect(action:list)
         }
         else { return [ userInstance : userInstance ,area:area,company:company,post:post,proyecto:proyecto,rol:rol] }
@@ -76,7 +76,7 @@ class UserController {
          def userInstance = User.get( params.id )
 
          if(!userInstance) {
-             flash.message = "User not found with id ${params.id}"
+             flash.message = "Trabajador no encontrado ${params.id}"
              redirect(action:listWorker)
          }
          else { return [ userInstance : userInstance ,area:area,company:company,post:post,proyecto:proyecto,rol:rol] }
@@ -87,17 +87,17 @@ class UserController {
         if(userInstance) {
             try {
                 userInstance.delete(flush:true)
-                flash.message = "User ${params.id} deleted"
+                flash.message = "Trabajador ${params.id} Eliminado"
                 redirect(action:list)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "User ${params.id} could not be deleted"
+                flash.message = "Trabajador ${params.id}no pudo ser eliminado"
                 redirect(action:show,id:params.id)
             }
         }
         
         else {
-            flash.message = "User not found with id ${params.id}"
+            flash.message = "Trabajador no encotrado ${params.id}"
             redirect(action:list)
         }
     }
@@ -109,16 +109,16 @@ class UserController {
         if(userInstance) {
             try {
                 userInstance.delete(flush:true)
-                flash.message = "User ${params.id} deleted"
+                flash.message = "Trabajador ${params.id} eliminado"
                 redirect(action:listWorker)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "User ${params.id} could not be deleted"
+                flash.message = "Trabajador ${params.id} no pudo ser eliminado"
                 redirect(action:showWorker,id:params.id)
             }
         }
         else {
-            flash.message = "User not found with id ${params.id}"
+            flash.message = "Trabajador no encontrado ${params.id}"
             redirect(action:listWorker)
         }
     }
@@ -133,7 +133,7 @@ class UserController {
         def userInstance = User.get( params.id )
        
         if(!userInstance) {
-            flash.message = "User not found with id ${params.id}"
+            flash.message = "Trabajador no encontrado ${params.id}"
             redirect(action:listWorker,proyecto:proyecto,company:company,rol:rol,post:post,area:area)
         }
         else {
@@ -152,7 +152,7 @@ class UserController {
         def userInstance = User.get( params.id )
 
         if(!userInstance) {
-            flash.message = "User not found with id ${params.id}"
+            flash.message = "Trabajador  no encontrado ${params.id}"
             redirect(action:listWorker,area:area)
         }
         else {
@@ -180,7 +180,7 @@ class UserController {
             }
             userInstance.properties = params
             if(!userInstance.hasErrors() && userInstance.save()) {
-                flash.message = "User ${params.id} updated"
+                flash.message = "Trabajador ${params.id} Actualizado"
                 redirect(action:show,id:userInstance.id)
             }
             else {
@@ -188,7 +188,7 @@ class UserController {
             }
         }
         else {
-            flash.message = "User not found with id ${params.id}"
+            flash.message = "Trabajador no encontrado${params.id}"
             redirect(action:list)
         }
     }
@@ -212,7 +212,7 @@ class UserController {
             }
             userInstance.properties = params
             if(!userInstance.hasErrors() && userInstance.save()) {
-                flash.message = "User ${params.id} updated"
+                flash.message = "Trabajdor ${params.id} actualizado"
                 redirect(action:showWorker,id:userInstance.id)
             }
             else {
@@ -220,7 +220,7 @@ class UserController {
             }
         }
         else {
-            flash.message = "User not found with id ${params.id}"
+            flash.message = "Trabajdor no encontrado ${params.id}"
             redirect(action:listWorker)
         }
     }
@@ -278,7 +278,7 @@ class UserController {
       if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
       {
         if(!userInstance.hasErrors() && userInstance.save()) {
-            flash.message = "User ${userInstance.id} created"
+            flash.message = "Trabajador  ${userInstance.id} Agregado"
             redirect(action:show,id:userInstance.id)
         }
         else {
@@ -306,7 +306,7 @@ class UserController {
      if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
       {
         if(!userInstance.hasErrors() && userInstance.save()) {
-            flash.message = "User ${userInstance.id} created"
+            flash.message = "Trabajador ${userInstance.id} Agregado"
             redirect(action:showWorker,id:userInstance.id)
         }
         else {

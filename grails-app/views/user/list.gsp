@@ -14,7 +14,7 @@
     
         <div class="nav">
 
-            <span class="menuButton"><g:link class="create" action="create">Nuevo Usuario</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">nuevo usuario</g:link></span>
         </div>
         <div class="body">
             <h1>lista de usuario</h1>

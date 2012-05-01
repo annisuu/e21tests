@@ -10,8 +10,8 @@
     <body>
         <div class="nav">
           
-            <span class="menuButton"><g:link class="list" action="list">Lista de Proyectos</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">Nuevo Proyecto</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">lista de proyectos</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">nuevo proyecto</g:link></span>
         </div>
         <div class="body">
             <h1>editar proyecto</h1>

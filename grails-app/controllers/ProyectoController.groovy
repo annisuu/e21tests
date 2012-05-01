@@ -16,7 +16,7 @@ class ProyectoController {
         def proyectoInstance = Proyecto.get( params.id )
 
         if(!proyectoInstance) {
-            flash.message = "Proyecto not found with id ${params.id}"
+            flash.message = "Proyecto no encontrado ${params.id}"
             redirect(action:list)
         }
         else { return [ proyectoInstance : proyectoInstance ] }
@@ -27,16 +27,16 @@ class ProyectoController {
         if(proyectoInstance) {
             try {
                 proyectoInstance.delete(flush:true)
-                flash.message = "Proyecto ${params.id} deleted"
+                flash.message = "Proyecto ${params.id} Eliminado"
                 redirect(action:list)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "Proyecto ${params.id} could not be deleted"
+                flash.message = "Proyecto ${params.id} no pudo ser eliminado"
                 redirect(action:show,id:params.id)
             }
         }
         else {
-            flash.message = "Proyecto not found with id ${params.id}"
+            flash.message = "Proyecto no encontrado ${params.id}"
             redirect(action:list)
         }
     }
@@ -45,7 +45,7 @@ class ProyectoController {
         def proyectoInstance = Proyecto.get( params.id )
 
         if(!proyectoInstance) {
-            flash.message = "Proyecto not found with id ${params.id}"
+            flash.message = "Proyecto no encontrado ${params.id}"
             redirect(action:list)
         }
         else {
@@ -67,7 +67,7 @@ class ProyectoController {
             }
             proyectoInstance.properties = params
             if(!proyectoInstance.hasErrors() && proyectoInstance.save()) {
-                flash.message = "Proyecto ${params.id} updated"
+                flash.message = "Proyecto ${params.id} Actualizado"
                 redirect(action:show,id:proyectoInstance.id)
             }
             else {
@@ -75,7 +75,7 @@ class ProyectoController {
             }
         }
         else {
-            flash.message = "Proyecto not found with id ${params.id}"
+            flash.message = "Proyecto no encontrado ${params.id}"
             redirect(action:list)
         }
     }
@@ -89,7 +89,7 @@ class ProyectoController {
     def save = {
         def proyectoInstance = new Proyecto(params)
         if(!proyectoInstance.hasErrors() && proyectoInstance.save()) {
-            flash.message = "Proyecto ${proyectoInstance.id} created"
+            flash.message = "Proyecto ${proyectoInstance.id} Agregado"
             redirect(action:show,id:proyectoInstance.id)
         }
         else {

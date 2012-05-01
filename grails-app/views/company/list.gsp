@@ -9,7 +9,7 @@
     <body>
         <div class="nav">
 
-            <span class="menuButton"><g:link class="create" action="create">Nueva Empresa</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">nueva empresa</g:link></span>
         </div>
         <div class="body">
             <h1>lista de empresas</h1>

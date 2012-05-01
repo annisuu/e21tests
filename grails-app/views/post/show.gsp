@@ -10,8 +10,8 @@
     <body>
         <div class="nav">
            
-            <span class="menuButton"><g:link class="list" action="list">Lista de Cragos</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">Nuevo Cargo</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">lista de cargos</g:link></span>
+            <span class="menuButton"><g:link class="create" action="create">nuevo cargo</g:link></span>
         </div>
         <div class="body">
             <h1>cargo</h1>

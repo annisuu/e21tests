@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><g:link class="list" action="list">Lista de Usuarios</g:link></span>
+            <span class="menuButton"><g:link class="list" action="list">lista de usuarios</g:link></span>
         </div>
         <div class="body">
             <h1>Agregar usuario</h1>
