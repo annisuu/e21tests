@@ -12,7 +12,7 @@
     <body>
            <div class="nav">
 
-            <span class="menuButton"><g:link class="list" controller="test" action="list">Lista de Test</g:link></span>
+            <span class="menuButton"><g:link class="list" controller="test" action="list">lista de test</g:link></span>
         </div>
             <div class="body">
             <h1>crear test</h1>
