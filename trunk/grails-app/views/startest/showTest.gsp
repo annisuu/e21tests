@@ -20,8 +20,9 @@
    function checkresult()
    {
        var compara=document.getElementById("res").value
+       var answ=document.getElementById(compara).value
        var valor="";
-      // alert("respuesta"+compara)
+      // alert("respuesta"+answ)
        for(var i=0;i<=2;i++)
    {
      var seleccionado=document.getElementsByName("respuesta")[i].checked    //esta seleccionado o no
@@ -41,7 +42,7 @@
        }
          else
        {
-         alert("Fallaste!, la respuesta correcta era : ");
+         alert("Fallaste!, la respuesta correcta era : "+answ);
          return true
        }
         }
@@ -78,13 +79,13 @@
       <tr>
       <td width="18">A)</td>
       <td width="22"><input type="radio" name="respuesta" id="respuesta" value="A"></td>
-      <td width="128">${question.answer1}<input type="hidden" name="res" id="v" value="${question.trueanswer}"></td>
+      <td width="128">${question.answer1}<input type="hidden" name="res" id="A" value="${question.answer1}"></td>
        <td width="17">B)</td>
        <td width="22"><input type="radio" name="respuesta"  id="respuesta" value="B" ></td>
-      <td width="128">${question.answer2}<input type="hidden" name="res" id="x" value="${question.trueanswer}"></td>
+      <td width="128">${question.answer2}<input type="hidden" name="res" id="B" value="${question.answer2}"></td>
        <td width="18">C)</td>
       <td width="20"><input type="radio" name="respuesta"  id="respuesta" value="C"></td>
-      <td width="130">${question.answer3}<input type="hidden" name="res" id="c" value="${question.trueanswer}"></td>
+      <td width="130">${question.answer3}<input type="hidden" name="res" id="C" value="${question.answer3}"></td>
      </tr>
       <tr>
       <td colspan="3"><%if(!image1.equals("no")){%><img src="${resource(dir:'/images/upload/imagesQuestion',file:image1)}" width="139" height="97" alt="<%=image1%>"/><%}%></td>
