@@ -7,4 +7,4 @@ vbjyrh2c=xppr('jyrh2_2.gif');
 vbkyrh2n=xppr('kyrh2_0.gif');
 vbkyrh2o=xppr('kyrh2_1.gif');
 vbkyrh2c=xppr('kyrh2_2.gif');
-var btIdPref='vb';function xppr(im){var i=new Image();i.src='/etileno/images/usuario-files/bt'+im;return i;};function xpe(id){x=id.substring(0,id.length-1);if(document[btIdPref+x])document[btIdPref+x].src=eval(btIdPref+id+'.src');return false;};
+var btIdPref='vb';function xppr(im){var i=new Image();i.src='/etileno/images/usuariofiles/bt'+im;return i;};function xpe(id){x=id.substring(0,id.length-1);if(document[btIdPref+x])document[btIdPref+x].src=eval(btIdPref+id+'.src');return false;};
