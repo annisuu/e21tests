@@ -98,9 +98,13 @@ class DoTestController {
   }
 
     def save = {
+       def doTestInstance = new DoTest(params)
       def area=ConsultaService.buscaArea()
+      if(params.idArea!="")
+      {
       def subject=ConsultaService.findSubjectByArea(params.idArea.toString())
-      def doTestInstance = new DoTest(params)
+      
+
      // println "validando..."+doTestInstance.validate()
       if(doTestInstance.validate()){
       def test =new Test()
@@ -351,7 +355,14 @@ class DoTestController {
 
        
       }
+    }
+     else
+      {
+        flash.message = "Verifique los campos remarcados con rojo de todas las preguntas"
+        render(view:'create',model:[doTestInstance:doTestInstance,area:area,errorArea:"errors"])
 
+
+      }
     }
 public String  subirFile(String up)
   {  println "subiedo... "
