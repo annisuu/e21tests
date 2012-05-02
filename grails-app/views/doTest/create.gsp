@@ -38,7 +38,7 @@
                        <td valign="top" class="name">
                            <label for="idArea">Area:</label>
                        </td>
-                       <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'idArea','errors')}">
+                       <td valign="top" class="value <%println errorArea.toString() %>">
                              <select name="idArea" id="idArea"  onchange="${remoteFunction(controller: 'doTest', action: 'consultarSubject', update: [success: 'idSubject', failure: 'error'], params: '\'id_area=\'+this.value')}">
                              <option value="">SELECCIONA EL AREA</option>
                              <g:each var="area" in ="${area}">
