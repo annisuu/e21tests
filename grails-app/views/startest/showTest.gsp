@@ -41,7 +41,7 @@
        }
          else
        {
-         alert("Respuesta incorrecta");
+         alert("Fallaste!, la respuesta correcta era : ");
          return true
        }
         }

@@ -6,10 +6,11 @@ class StartestController {
   def menuUser={
     def tDone=ConsultaService.findTestDone(session.user.idu)
     def idarea=session.user.id_area
-    println "done_:"+tDone
-   def tematicas=ConsultaService.findTematicas(idarea)
-     println tematicas
-   def examen=ConsultaService.findTests()
+    def tematicas=ConsultaService.findTematicas(idarea)
+    def examen=ConsultaService.findTests()
+ //   println "examenes : "+examen
+   // println "done:"+tDone
+   //  println "tematicas : "+tematicas
      render(view:'menuUser',model:[tematicas:tematicas,examen:examen,tDone:tDone])
   }   
 
