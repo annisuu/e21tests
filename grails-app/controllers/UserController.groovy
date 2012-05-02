@@ -4,6 +4,7 @@ class UserController {
     
     def index = { redirect(action:create,params:params) }
    def ConsultaService
+  def ReportService
   def exportService
    
     // the delete, save and update actions only accept POST requests
@@ -325,15 +326,24 @@ class UserController {
      }
     }
   def report={
-     def reports=ConsultaService.reports()
+     def reports=ReportService.reports()
+
     render(view:'report',model:[reports:reports])
   }
+  def findReports={     def reports=ReportService.reportsParams(params.parametro,params.value)
+    render(view:'report',model:[reports:reports,value:params.value,parametro:params.parametro])
+
+  }
+   def findReportsw={     def reports=ReportService.reportsParams(params.parametro,params.value)
+    render(view:'reportWorker',model:[reports:reports,value:params.value,parametro:params.parametro])
+
+  }
   def reportWorker={
-     def reports=ConsultaService.reports()
+     def reports=ReportService.reports()
     render(view:'reportWorker',model:[reports:reports])
   }
   def generaReport={
-    def reports=ConsultaService.reports()
+    def reports=ReportService.reportsParams(params.parametro,params.value)
      if(params?.format && params.format != "html"){
 			response.contentType = ConfigurationHolder.config.grails.mime.types[params.format]
 			response.setHeader("Content-disposition", "attachment; filename=Reporte de Usuario.${params.extension}")
@@ -358,6 +368,7 @@ List fields = ["name_user", "last_name","name_company","name_area","name_test","
 		}
 
   }
+  
 
   def searchAJAX = {
     println "xxxxx"

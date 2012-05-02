@@ -21,6 +21,23 @@
             <div class="list">
                 <table>
                     <thead>
+                   <g:form action="findReports">
+                    <tr>
+                      <td colspan="3">Busqueda:</td>
+                      <td>
+                        <select name="parametro">
+                        <option value="name_company" <%if(parametro.toString()=="name_company"){ println "selected"}%>>Por Empresa</option>
+                        <option value="name_area" <%if(parametro.toString()=="name_area"){ println "selected"}%>>Por Area</option>
+                        <option value="name_test" <%if(parametro.toString()=="name_test"){ println "selected"}%>>Por Cuestionario</option>
+                        <option value="finalscore" <%if(parametro.toString()=="finalscore"){ println "selected"}%>>Por Calificacion</option>
+
+
+                        </select>
+                      </td>
+                      <td><input type="text" name="value" value=${value}></td>
+                      <td> <span class="button"><input class="save" type="submit" value="Buscar" /></span></td>
+                      </tr>
+                      </g:form>
                         <tr>
                    	        <g:sortableColumn property="id" title="Id"/>
                             <g:sortableColumn property="name_user" title="Nombre"/>
@@ -29,7 +46,7 @@
                    	        <g:sortableColumn property="name_area" title="Area"/>
                             <g:sortableColumn property="name_test" title="Test"/>
                             <g:sortableColumn property="finalscore" title="Calificación"/>
-                   	        <g:sortableColumn property="enddate" title="Fecha de Realización"/>
+                   	        <g:sortableColumn property="enddate" title="Fecha de Realizaci&oacute;n"/>
                         </tr>
 
                     </thead>
@@ -51,9 +68,10 @@
                     </tbody>
                 </table>
             </div>
+          
             <div class="paginateButtons">
             </div>
- <export:formats formats="['excel','pdf']" action="generaReport" params="[identifier:identifier]" />
+          <export:formats formats="['excel','pdf']" action="generaReport" params="[identifier:identifier,parametro:parametro,value:value]" />
         </div>
     </body>
 </html>
