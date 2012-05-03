@@ -74,8 +74,8 @@
   String image2=question.image2!=" "?question.image2:"no"
   String image3=question.image3!=" "?question.image2:"no"
   %>
-   <table width="435" height="248" aling="center">
-   <tr><td colspan="9"><h2>${question.questiontext}</h2></td></tr>
+   <table width="435" height="248" aling="center"  border="0" width="100%">
+   <tr><td colspan="9"><h3>${question.questiontext}</h3></td></tr>
       <tr>
       <td width="18">A)</td>
       <td width="22"><input type="radio" name="respuesta" id="respuesta" value="A"></td>

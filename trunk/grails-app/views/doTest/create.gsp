@@ -1,5 +1,4 @@
 
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -7,7 +6,28 @@
         <title>crear test</title>
 <resource:accordion skin="default" />
 <g:javascript library="prototype" />
-   
+      <style type="text/css">
+	/* Character Count styles */
+form{width:500px;}
+label{
+	display:block;
+	font-size:14px;
+	}
+
+form div{position:relative;}
+form .counter{
+
+	font-size:14px;
+	font-weight:bold;
+	color:#ffffff;
+	}
+form .warning{color:#600;}
+form .exceeded{color:#e00;}
+</style>
+      <g:javascript library="jquery-1" ></g:javascript>
+      <g:javascript library="charCount" ></g:javascript>
+  
+      
     </head>
     <body>
            <div class="nav">
@@ -76,7 +96,7 @@
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question1','errors')}" colspan="5">
                            <label for="question1">Texto de la pregunta: </label><br>
-                                    <textarea id="question1" name="question1" >${fieldValue(bean:doTestInstance,field:'question1')}</textarea>
+                                    <textarea id="question1" name="question1"  maxlength="200">${fieldValue(bean:doTestInstance,field:'question1')}</textarea>
                                 </td>
 
                           </tr>
