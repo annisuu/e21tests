@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="mainInstruc" />
         <title>test</title>
 
     </head>
@@ -41,15 +41,7 @@
                          </tr>
 
 
-                     <tr class="prop">
-                          <td valign="top" class="name">Area:</td>
-                          <td><g:each var="a" in="${area}">
-                         <%if("${testInstance.idArea}"==a.id_area.toString()){println a.name_area}%>
-                         </g:each></td>
-                        </tr>
-
-
-                    
+                                      
 
                     
                     </tbody>
