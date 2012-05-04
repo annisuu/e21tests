@@ -24,7 +24,6 @@ form .counter{
 form .warning{color:#600;}
 form .exceeded{color:#e00;}
 </style>
-      <g:javascript library="jquery-1" ></g:javascript>
       <g:javascript library="charCount" ></g:javascript>
   
       
@@ -99,7 +98,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question1','errors')}" colspan="5">
                            <label for="question1">Texto de la pregunta: </label><br>
-                                    <textarea id="question1" name="question1"  maxlength="200">${fieldValue(bean:doTestInstance,field:'question1')}</textarea>
+                                    <textarea id="question1" name="question1"  maxlength="3">${fieldValue(bean:doTestInstance,field:'question1')}</textarea>
                                 </td>
 
                           </tr>
