@@ -9,7 +9,7 @@
       <style type="text/css">
 	/* Character Count styles */
 form{width:500px;}
-label{
+label{                       
 	display:block;
 	font-size:14px;
 	}
