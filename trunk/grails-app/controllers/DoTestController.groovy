@@ -108,7 +108,7 @@ class DoTestController {
      // println "validando..."+doTestInstance.validate()
       if(doTestInstance.validate()){
       def test =new Test()
-        println "dentrodetest"
+        println "dentrode test"
       test.nameTest=doTestInstance.nameTest
       test.idSubject=doTestInstance.idSubject
        if(test.save())
