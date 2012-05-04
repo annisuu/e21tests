@@ -98,7 +98,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question1','errors')}" colspan="5">
                            <label for="question1">Texto de la pregunta: </label><br>
-                                    <textarea id="question1" name="question1"  maxlength="3">${fieldValue(bean:doTestInstance,field:'question1')}</textarea>
+                                    <textarea id="question1" name="question1"  maxlength="200">${fieldValue(bean:doTestInstance,field:'question1')}</textarea>
                                 </td>
 
                           </tr>
@@ -165,7 +165,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question2','errors')}" colspan="5">
                            <label for="question2">Texto de la pregunta: </label><br>
-                                    <textarea id="question2" name="question2" >${fieldValue(bean:doTestInstance,field:'question2')}</textarea>
+                                    <textarea id="question2" name="question2" maxlength="200">${fieldValue(bean:doTestInstance,field:'question2')}</textarea>
                                 </td>
 
                           </tr>
@@ -232,7 +232,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question3','errors')}" colspan="5">
                            <label for="question3">Texto de la pregunta: </label><br>
-                                    <textarea id="question3" name="question3" >${fieldValue(bean:doTestInstance,field:'question3')}</textarea>
+                                    <textarea id="question3" name="question3" maxlength="200">${fieldValue(bean:doTestInstance,field:'question3')}</textarea>
                                 </td>
 
                           </tr>
@@ -299,7 +299,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question4','errors')}" colspan="5">
                            <label for="question4">Texto de la pregunta: </label><br>
-                                    <textarea id="question4" name="question4" >${fieldValue(bean:doTestInstance,field:'question4')}</textarea>
+                                    <textarea id="question4" name="question4" maxlength="200">${fieldValue(bean:doTestInstance,field:'question4')}</textarea>
                                 </td>
 
                           </tr>
@@ -366,7 +366,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question5','errors')}" colspan="5">
                            <label for="question5">Texto de la pregunta: </label><br>
-                                    <textarea id="question5" name="question5" >${fieldValue(bean:doTestInstance,field:'question5')}</textarea>
+                                    <textarea id="question5" name="question5" maxlength="200" >${fieldValue(bean:doTestInstance,field:'question5')}</textarea>
                                 </td>
 
                           </tr>
@@ -433,7 +433,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question6','errors')}" colspan="6">
                            <label for="question6">Texto de la pregunta: </label><br>
-                                    <textarea id="question6" name="question6" >${fieldValue(bean:doTestInstance,field:'question6')}</textarea>
+                                    <textarea id="question6" name="question6" maxlength="200">${fieldValue(bean:doTestInstance,field:'question6')}</textarea>
                                 </td>
 
                           </tr>
@@ -500,7 +500,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question7','errors')}" colspan="5">
                            <label for="question7">Texto de la pregunta: </label><br>
-                                    <textarea id="question7" name="question7" >${fieldValue(bean:doTestInstance,field:'question7')}</textarea>
+                                    <textarea id="question7" name="question7" maxlength="200">${fieldValue(bean:doTestInstance,field:'question7')}</textarea>
                                 </td>
 
                           </tr>
@@ -567,7 +567,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question8','errors')}" colspan="5">
                            <label for="question8">Texto de la pregunta: </label><br>
-                                    <textarea id="question8" name="question8" >${fieldValue(bean:doTestInstance,field:'question8')}</textarea>
+                                    <textarea id="question8" name="question8" maxlength="200" >${fieldValue(bean:doTestInstance,field:'question8')}</textarea>
                                 </td>
 
                           </tr>
@@ -634,7 +634,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question9','errors')}" colspan="5">
                            <label for="question9">Texto de la pregunta: </label><br>
-                                    <textarea id="question9" name="question9" >${fieldValue(bean:doTestInstance,field:'question9')}</textarea>
+                                    <textarea id="question9" name="question9" maxlength="200" >${fieldValue(bean:doTestInstance,field:'question9')}</textarea>
                                 </td>
 
                           </tr>
@@ -701,7 +701,7 @@ form .exceeded{color:#e00;}
 
                           <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'question10','errors')}" colspan="5">
                            <label for="question10">Texto de la pregunta: </label><br>
-                                    <textarea id="question10" name="question10" >${fieldValue(bean:doTestInstance,field:'question10')}</textarea>
+                                    <textarea id="question10" name="question10" maxlength="200" >${fieldValue(bean:doTestInstance,field:'question10')}</textarea>
                                 </td>
 
                           </tr>

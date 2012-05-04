@@ -26,7 +26,7 @@
 .Estilo3 {
 	color: #000000;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 12px;
 }
 .Estilo4 {
 	color: #000000;
@@ -48,27 +48,27 @@
 
   <div id="apDiv2">
   <g:javascript type="text/javascript">
-AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','916','height','88','title','LOGO','src','/etileno/images/swf/logo2','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','/etileno/images/swf/LOGO' ); //end AC code
-</g:javascript><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="916" height="88" title="logo">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','955','height','85','title','LOGO','src','/etileno/images/swf/logo2','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','/etileno/images/swf/LOGO' ); //end AC code
+</g:javascript><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="955" height="85" title="logo">
     <param name="movie" value="/etileno/images/swf/LOGO.swf" />
     <param name="quality" value="high" />
-    <embed src="../images/swf/LOGO.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="916" height="88"></embed>
+    <embed src="../images/swf/LOGO.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="955" height="85"></embed>
   </object>
 </noscript></div>
 
 <div id="menuUsuario">
 
-
 <!-- Begin Vista-Buttons.com -->
-<g:javascript library="schyrh2-usuario"></g:javascript>
-   <table id="vista-buttons.com:idhyrh2" width=0 cellpadding=0 cellspacing=0 border=0><tr>
-   <td style="padding-right:20px" title ="Proyecto">
-   <g:link controller="proyecto" action="proyectoWorker" onMouseOver="xpe('hyrh2o');" onMouseOut="xpe('hyrh2n');" onMouseDown="xpe('hyrh2c');"><img  src="${resource(dir:'images/usuario-files',file:'bthyrh2_0.gif')}" id="xpi_hyrh2" name="vbhyrh2" width="130" height="38" border="0" alt="Proyecto"/></g:link></td>
-  <td style="padding-right:20px" title ="Inicio">
-     <g:link controller="startest" action="menuUser" onMouseOver="xpe('kyrh2o');" onMouseOut="xpe('kyrh2n');" onMouseDown="xpe('kyrh2c');"><img  src="${resource(dir:'images/usuario-files',file:'btkyrh2_0.gif')}" id="xpi_kyrh2" name="vbkyrh2" width="130" height="38" border="0" alt="Test"/></g:link></td>
-   <td style="padding-right:20px" title ="Cerrar Sesion">
-   <g:link controller="login" action="logout" onMouseOver="xpe('jyrh2o');" onMouseOut="xpe('jyrh2n');" onMouseDown="xpe('jyrh2c');"><img src="${resource(dir:'images/usuario-files',file:'btjyrh2_0.gif')}" id="xpi_jyrh2" name="vbjyrh2" width="130" height="38" border="0" alt="Cerrar Sesion"/></g:link></td>
-   </tr></table>
+<g:javascript library="schyrh2-user"></g:javascript>
+<table id="vista-buttons.com:idhyrh2" width=0 cellpadding=0 cellspacing=0 border=0><tr>
+<td style="padding-right:20px" title ="Proyecto">
+<g:link controller="proyecto" action="proyectoWorker" onMouseOver="xpe('hyrh2o');" onMouseOut="xpe('hyrh2n');" onMouseDown="xpe('hyrh2c');"><img  src="${resource(dir:'images/usuario-files',file:'bthyrh2_0.gif')}" id="xpi_hyrh2" name="vbhyrh2" width="130" height="38" border="0" alt="Proyecto"/></g:link></td>
+<td style="padding-right:20px" title ="Test">
+<g:link controller="startest" action="menuUser" onMouseOver="xpe('jyrh2o');" onMouseOut="xpe('jyrh2n');" onMouseDown="xpe('jyrh2c');"><img src="${resource(dir:'images/usuario-files',file:'btjyrh2_0.gif')}"   id="xpi_jyrh2" name="vbjyrh2" width="130" height="38" border="0" alt="Test"/></g:link></td>
+<td style="padding-right:5px" title ="Cerrar Sesion">
+<g:link controller="login" action="logout" onMouseOver="xpe('kyrh2o');" onMouseOut="xpe('kyrh2n');" onMouseDown="xpe('kyrh2c');"><img  src="${resource(dir:'images/usuario-files',file:'btkyrh2_0.gif')}"  id="xpi_kyrh2" name="vbkyrh2" width="130" height="38" border="0" alt="Cerrar Sesion"/></g:link></td>
+</tr></table>
+
    <!-- End Vista-Buttons.com -->
 </div>
 
@@ -78,7 +78,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
  <div id="apDiv8">
   <g:layoutBody /></div></div>
 
- 
+
 
         <div  id="Login">
         <g:if test="${session.user}">
@@ -91,7 +91,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
      <g:else>
        <g:link controller="login" action="login">Login</g:link>
      </g:else>
-</div>             
+</div>
 </div>
 
     </body>

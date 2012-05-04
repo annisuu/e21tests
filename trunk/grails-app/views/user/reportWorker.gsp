@@ -23,30 +23,34 @@
                     <thead>
                     <g:form action="findReportsw">
                     <tr>
-                      <td colspan="3">Busqueda:</td>
+                      <td colspan="3">Busqueda por:</td>
                       <td>
                         <select name="parametro">
-                        <option value="name_company" <%if(parametro.toString()=="name_company"){ println "selected"}%>>Por Empresa</option>
-                        <option value="name_area" <%if(parametro.toString()=="name_area"){ println "selected"}%>>Por Area</option>
-                        <option value="name_test" <%if(parametro.toString()=="name_test"){ println "selected"}%>>Por Cuestionario</option>
-                        <option value="finalscore" <%if(parametro.toString()=="finalscore"){ println "selected"}%>>Por Calificacion</option>
+                        <option value="name_user" <%if(parametro.toString()=="name_user"){ println "selected"}%>>NOMBRE</option>
+                        <option value="last_name" <%if(parametro.toString()=="last_name"){ println "selected"}%>>APELLIDO</option>
+                        <option value="name_company" <%if(parametro.toString()=="name_company"){ println "selected"}%>>EMPRESA</option>
+                        <option value="name_area" <%if(parametro.toString()=="name_area"){ println "selected"}%>>AREA</option>
+                        <option value="name_test" <%if(parametro.toString()=="name_test"){ println "selected"}%>>TEST</option>
+                        <option value="finalscore" <%if(parametro.toString()=="finalscore"){ println "selected"}%>>RESULTADO</option>
 
 
                         </select>
                       </td>
                       <td><input type="text" name="value" value=${value}></td>
-                      <td> <span class="button"><input class="save" type="submit" value="Buscar" /></span></td>
+                      <td><span class="button"><input class="save" type="submit" value="Buscar" /></span></td>
+                      <td></td>
+                      <td></td>
                       </tr>
                       </g:form>
                         <tr>
                    	        <g:sortableColumn property="id" title="Id"/>
-                            <g:sortableColumn property="name_user" title="Nombre"/>
-                   	        <g:sortableColumn property="last_name" title="Apellido"/>
-                   	        <g:sortableColumn property="name_company" title="Empresa"/>
-                   	        <g:sortableColumn property="name_area" title="Area"/>
-                            <g:sortableColumn property="name_test" title="Test"/>
-                            <g:sortableColumn property="finalscore" title="Calificación"/>
-                   	        <g:sortableColumn property="enddate" title="Fecha de Realización"/>
+                            <g:sortableColumn property="name_user" title="NOMBRE"/>
+                   	        <g:sortableColumn property="last_name" title="APELLIDO"/>
+                   	        <g:sortableColumn property="name_company" title="EMPRESA"/>
+                   	        <g:sortableColumn property="name_area" title="AREA"/>
+                            <g:sortableColumn property="name_test" title="TEST"/>
+                            <g:sortableColumn property="finalscore" title="RESULTADO"/>
+                   	        <g:sortableColumn property="enddate" title="FECHA"/>
                         </tr>
 
                     </thead>
