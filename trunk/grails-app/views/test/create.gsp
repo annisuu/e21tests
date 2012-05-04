@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
+        <meta name="layout" content="mainInstruc" />
         <title>agregar  test</title>
 
       <g:javascript library="jquery"></g:javascript>
@@ -64,20 +64,7 @@
                                 </td>
                             </tr>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="idArea">Area:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:testInstance,field:'idArea','errors')}">
-                                  <!--  <input type="text" id="idArea" name="idArea" value="${fieldValue(bean:testInstance,field:'idArea')}"/>  -->
-                                      <select name="idArea" id="idArea">
-                                   <option value="">SELECCIONA EL AREA</option>
-                                      <g:each var="area" in ="${area}">
-                                      <option  value="${area.id_area}" <% if(testInstance.idArea.toString().equals(area.id_area.toString())){ println "selected"}%>>${area.name_area}                                 
-                                      </g:each>
-                                      </select>
-                                </td>
-                            </tr> 
+                        
                         
                         </tbody>
                     </table>

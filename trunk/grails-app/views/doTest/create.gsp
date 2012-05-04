@@ -42,6 +42,9 @@ form .exceeded{color:#e00;}
 
             <g:form action="save" method="post" enctype="multipart/form-data">
                <div class="dialog">
+                 <richui:accordion style="width: 600px;">
+               <richui:accordionItem caption="DATOS DEL TEST">
+
                     <table style="width: 600px;">
                         <tbody>
 
@@ -88,7 +91,7 @@ form .exceeded{color:#e00;}
                             </tr>
                       </tbody>
                       </table>
-                  <richui:accordion style="width: 600px;">
+               </richui:accordionItem>
     <richui:accordionItem caption="Pregunta 1">
         <table width="464">
                               <tbody>

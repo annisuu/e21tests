@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" href="${resource(dir:'css/cssLogin/',file:'style.css')}" />
-<title>Documento sin t&iacute;tulo</title>
+<title> .:::: BIENVENIDO::::.  </title>
 
 <style type="text/css">
 body {
