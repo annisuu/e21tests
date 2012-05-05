@@ -18,17 +18,13 @@
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
             <div class="list">
                 <table>
                     <thead>
                    <g:form action="findReports">
                     <tr>
                       <td colspan="3">Busqueda por:&nbsp;&nbsp;&nbsp;
-                        
+
                         <select name="parametro">
                         <option value="name_user" <%if(parametro.toString()=="name_user"){ println "selected"}%>> NOMBRE</option>
                         <option value="last_name" <%if(parametro.toString()=="last_name"){ println "selected"}%>> APELLIDO</option>
@@ -46,8 +42,8 @@
                       </g:form>
                     </thead>
                      </table>
+                   <%if(reports!=null){%>
 
-                      &nbsp;
                    <table>
                    <thead>
                    <tr>
@@ -62,6 +58,7 @@
                         </tr>
                     </thead>
                     <tbody>
+
                          <g:each in="${reports}" status="i" var="reports">
                       <tr>
                         <td><g:link action="show" id="${reports.id_user}">${reports.id_user.toString()}</g:link></td>
@@ -75,13 +72,18 @@
                         <td>${reports.enddate}</td>
                       </tr>
                     </g:each>
+
                     </tbody>
                 </table>
+               <%if(reports.length){%>
+              <export:formats formats="['excel','pdf']" action="generaReport" params="[identifier:identifier,parametro:parametro,value:value]" />
+
+               <%}}%>
             </div>
-          
             <div class="paginateButtons">
             </div>
-          <export:formats formats="['excel','pdf']" action="generaReport" params="[identifier:identifier,parametro:parametro,value:value]" />
         </div>
+
+
     </body>
 </html>

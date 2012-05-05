@@ -1,12 +1,12 @@
 import org.codehaus.groovy.grails.commons.ConfigurationHolder
 
 class UserController {
-    
+
     def index = { redirect(action:create,params:params) }
    def ConsultaService
   def ReportService
   def exportService
-   
+
     // the delete, save and update actions only accept POST requests
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
@@ -96,7 +96,7 @@ class UserController {
                 redirect(action:show,id:params.id)
             }
         }
-        
+
         else {
             flash.message = "Trabajador no encotrado ${params.id}"
             redirect(action:list)
@@ -132,7 +132,7 @@ class UserController {
       def post=ConsultaService.buscaPost()
 
         def userInstance = User.get( params.id )
-       
+
         if(!userInstance) {
             flash.message = "Trabajador no encontrado ${params.id}"
             redirect(action:listWorker,proyecto:proyecto,company:company,rol:rol,post:post,area:area)
@@ -161,7 +161,7 @@ class UserController {
             return [ userInstance : userInstance,proyecto:proyecto,company:company,rol:rol,post:post,area:area ]
         }
     }
-  
+
     def update = {
       def proyecto=ConsultaService.buscaProyecto()
       def company=ConsultaService.buscaCompany()
@@ -173,7 +173,7 @@ class UserController {
             if(params.version) {
                 def version = params.version.toLong()
                 if(userInstance.version > version) {
-                    
+
                     userInstance.errors.rejectValue("version", "user.optimistic.locking.failure", "Another user has updated this User while you were editing.")
                     render(view:'edit',model:[userInstance:userInstance],proyecto:proyecto,company:company,rol:rol,post:post,area:area)
                     return
@@ -225,7 +225,7 @@ class UserController {
             redirect(action:listWorker)
         }
     }
-  
+
 
     def create = {
       //creo mis cariables que haran consulta mediant elos metod2
@@ -274,7 +274,7 @@ class UserController {
             def rol=ConsultaService.buscaRol()
            def post=ConsultaService.buscaPost()
       def area=ConsultaService.buscaArea()
-      
+
         def userInstance = new User(params)
       if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
       {
@@ -293,7 +293,7 @@ class UserController {
       {
         flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
                    render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
-              
+
       }
     }
 
@@ -326,9 +326,13 @@ class UserController {
      }
     }
   def report={
-     def reports=ReportService.reports()
+    // def reports=ReportService.reports()
 
-    render(view:'report',model:[reports:reports])
+    render(view:'report')
+  }
+   def reportWorker={
+    // def reports=ReportService.reports()
+    render(view:'reportWorker')
   }
   def findReports={     def reports=ReportService.reportsParams(params.parametro,params.value)
     render(view:'report',model:[reports:reports,value:params.value,parametro:params.parametro])
@@ -338,17 +342,15 @@ class UserController {
     render(view:'reportWorker',model:[reports:reports,value:params.value,parametro:params.parametro])
 
   }
-  def reportWorker={
-     def reports=ReportService.reports()
-    render(view:'reportWorker',model:[reports:reports])
-  }
+
   def generaReport={
+    println params?.format
     def reports=ReportService.reportsParams(params.parametro,params.value)
      if(params?.format && params.format != "html"){
-	response.contentType = ConfigurationHolder.config.grails.mime.types[params.format]
-	response.setHeader("Content-disposition", "attachment; filename=Reporte de Usuario.${params.extension}")
-        List fields = ["name_user", "last_name","name_company","name_area","name_test","finalscore","enddate"]
-		Map labels = ["name_user": "Trabajador", "last_name": "Apellido","name_company":"Compa\u00F1\u00EDa","name_area":"Area","name_test":"Nombre del Test","finalscore":"Resulatdo Calificaci\u00F3n del Examen","enddate":"Fecha de finalizaci\u00F3n"]
+			response.contentType = ConfigurationHolder.config.grails.mime.types[params.format]
+			response.setHeader("Content-disposition", "attachment; filename=ReportedeUsuario.${params.extension}")
+List fields = ["name_user", "last_name","name_company","name_area","name_test","finalscore","enddate"]
+			Map labels = ["name_user": "Nombre del Trabajador", "last_name": "Apellido","name_company":"Compa\u00F1\u00EDa","name_area":"Area","name_test":"Nombre del Test","finalscore":"Calificaci\u00F3n del Examen","enddate":"Fecha de finalizaci\u00F3n"]
 
                         /* Formatter closure in previous releases
 			def upperCase = { value ->
@@ -362,14 +364,13 @@ class UserController {
 			}
 
 			Map formatters = [author: upperCase]
-			Map parameters = [title: "ETILENO XXI: Reporte de Usuarios", "title.font.style":"bold"]
-          // column.widths=[title:"ETILENO XXI:Reporte de Usuarios que ha Tomado Cursos","column.withd":[05,0.5,0.8]]
+			Map parameters = [title: "ETILENO XXI: Reporte de Usuarios", "title.font.style":"bold","column.widths": [0.5, 0.5, 0.5,0.5, 0.5, 0.5,1.0]]
 
 			exportService.export(params.format, response.outputStream, reports, fields, labels, formatters, parameters)
 		}
 
   }
-  
+
 
   def searchAJAX = {
     println "xxxxx"

@@ -21,9 +21,9 @@
             <div class="list">
                 <table>
                     <thead>
-                   <g:form action="findReports">
+                   <g:form action="findReportsw">
                     <tr>
-                      <td colspan="3">Busqueda por:&nbsp;&nbsp;&nbsp;
+                      <td colspan="3">Busqueda por:&nbsp;&nbsp;&nbsp; 
 
                         <select name="parametro">
                         <option value="name_user" <%if(parametro.toString()=="name_user"){ println "selected"}%>> NOMBRE</option>
@@ -36,13 +36,14 @@
                        &nbsp;&nbsp;&nbsp;
                      <input type="text" name="value" value=${value}>
                         &nbsp;&nbsp;&nbsp;
-                     <span class="button"><input class="save" type="submit" value="Buscar" /></span>
+                     <span class="button"><input class="save" type="submit" value="Buscar" /> </span>
           </td>
                       </tr>
                       </g:form>
                     </thead>
                      </table>
 
+                   <%if(reports!=null){%>
 
                    <table>
                    <thead>
@@ -58,6 +59,7 @@
                         </tr>
                     </thead>
                     <tbody>
+
                          <g:each in="${reports}" status="i" var="reports">
                       <tr>
                         <td><g:link action="show" id="${reports.id_user}">${reports.id_user.toString()}</g:link></td>
@@ -71,12 +73,20 @@
                         <td>${reports.enddate}</td>
                       </tr>
                     </g:each>
+
                     </tbody>
                 </table>
+              <%if(reports.length){%>
+              <export:formats formats="['excel','pdf']" action="generaReport" params="[identifier:identifier,parametro:parametro,value:value]" />
+              
+               <%
+                   }
+               }%>
             </div>
             <div class="paginateButtons">
             </div>
- <export:formats formats="['excel','pdf']" action="generaReport" params="[identifier:identifier,parametro:parametro,value:value]" />
         </div>
+
+
     </body>
 </html>
