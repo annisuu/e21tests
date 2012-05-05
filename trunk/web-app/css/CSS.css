@@ -158,13 +158,14 @@ font-variant:small-caps;
 }
 #margenAdmin {
 	position:absolute;
-	width:737px;
-	height:548px;
+	width:700px;
+	height:500px;
 	z-index:6;
 	left: 250px;
 	top: 200px;
-	border:#333333;
-	background-image:url(../images/margenAdmin.png)
+	border:  7px  double #357CCA;
+    border-radius:7px;
+    padding:10px;
 }
 
 #Login {

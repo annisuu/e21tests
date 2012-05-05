@@ -8,7 +8,7 @@
 <g:javascript library="prototype" />
       <style type="text/css">
 	/* Character Count styles */
-form{width:500px;}
+form{width:650px;}
 label{                       
 	display:block;
 	font-size:14px;
@@ -764,7 +764,7 @@ form .exceeded{color:#e00;}
                      </richui:accordion>
                 </div>
                 <div class="buttons">
-                    <span class="button"><input class="save" type="submit" value="Create" /></span>
+                    <span class="button"><input class="save" type="submit" value="Create" "/></span>
                 </div>
             </g:form>
         </div>

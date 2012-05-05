@@ -345,10 +345,10 @@ class UserController {
   def generaReport={
     def reports=ReportService.reportsParams(params.parametro,params.value)
      if(params?.format && params.format != "html"){
-			response.contentType = ConfigurationHolder.config.grails.mime.types[params.format]
-			response.setHeader("Content-disposition", "attachment; filename=Reporte de Usuario.${params.extension}")
-List fields = ["name_user", "last_name","name_company","name_area","name_test","finalscore","enddate"]
-			Map labels = ["name_user": "Trabajador", "last_name": "Apellido","name_company":"Compa\u00F1\u00EDa","name_area":"Area","name_test":"Nombre del Test","finalscore":"Calificaci\u00F3n del Examen","enddate":"Fecha de finalizaci\u00F3n"]
+	response.contentType = ConfigurationHolder.config.grails.mime.types[params.format]
+	response.setHeader("Content-disposition", "attachment; filename=Reporte de Usuario.${params.extension}")
+        List fields = ["name_user", "last_name","name_company","name_area","name_test","finalscore","enddate"]
+		Map labels = ["name_user": "Trabajador", "last_name": "Apellido","name_company":"Compa\u00F1\u00EDa","name_area":"Area","name_test":"Nombre del Test","finalscore":"Resulatdo Calificaci\u00F3n del Examen","enddate":"Fecha de finalizaci\u00F3n"]
 
                         /* Formatter closure in previous releases
 			def upperCase = { value ->
@@ -363,6 +363,7 @@ List fields = ["name_user", "last_name","name_company","name_area","name_test","
 
 			Map formatters = [author: upperCase]
 			Map parameters = [title: "ETILENO XXI: Reporte de Usuarios", "title.font.style":"bold"]
+          // column.widths=[title:"ETILENO XXI:Reporte de Usuarios que ha Tomado Cursos","column.withd":[05,0.5,0.8]]
 
 			exportService.export(params.format, response.outputStream, reports, fields, labels, formatters, parameters)
 		}
