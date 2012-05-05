@@ -14,7 +14,7 @@ html * {
 body {
     background: #fff;
     color: #333;
-    font: 11px verdana, arial, helvetica, sans-serif;
+    font: 10px verdana, arial, helvetica, sans-serif;
 }
 
 a:link, a:visited, a:hover {
@@ -58,6 +58,7 @@ input:focus, select:focus, textarea:focus {
     float: left;
     margin: 0 15px 10px 15px;
 }
+
 
 /* NAVIGATION MENU */
 

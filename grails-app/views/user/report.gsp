@@ -27,26 +27,30 @@
                     <thead>
                    <g:form action="findReports">
                     <tr>
-                      <td colspan="3">Busqueda por:</td>
-                      <td>
+                      <td colspan="3">Busqueda por:&nbsp;&nbsp;&nbsp;
+                        
                         <select name="parametro">
-                        <option value="name_user" <%if(parametro.toString()=="name_user"){ println "selected"}%>>NOMBRE</option>
-                        <option value="last_name" <%if(parametro.toString()=="last_name"){ println "selected"}%>>APELLIDO</option>
+                        <option value="name_user" <%if(parametro.toString()=="name_user"){ println "selected"}%>> NOMBRE</option>
+                        <option value="last_name" <%if(parametro.toString()=="last_name"){ println "selected"}%>> APELLIDO</option>
                         <option value="name_company" <%if(parametro.toString()=="name_company"){ println "selected"}%>>EMPRESA</option>
                         <option value="name_area" <%if(parametro.toString()=="name_area"){ println "selected"}%>>AREA</option>
                         <option value="name_test" <%if(parametro.toString()=="name_test"){ println "selected"}%>>TEST</option>
                         <option value="finalscore" <%if(parametro.toString()=="finalscore"){ println "selected"}%>>RESULTADO</option>
-
-
-                        </select>
-                      </td>
-                     <td><input type="text" name="value" value=${value}></td>
-                      <td> <span class="button"><input class="save" type="submit" value="Buscar" /></span></td>
-                      <td></td>
-                      <td></td>
+                      </select>
+                       &nbsp;&nbsp;&nbsp;
+                     <input type="text" name="value" value=${value}>
+                        &nbsp;&nbsp;&nbsp;
+                     <span class="button"><input class="save" type="submit" value="Buscar" /></span>
+          </td>
                       </tr>
                       </g:form>
-                          <tr>
+                    </thead>
+                     </table>
+
+                      &nbsp;
+                   <table>
+                   <thead>
+                   <tr>
                    	        <g:sortableColumn property="id" title="Id"/>
                             <g:sortableColumn property="name_user" title="NOMBRE"/>
                    	        <g:sortableColumn property="last_name" title="APELLIDO"/>
@@ -56,10 +60,7 @@
                             <g:sortableColumn property="finalscore" title="RESULTADO"/>
                    	        <g:sortableColumn property="enddate" title="FECHA"/>
                         </tr>
-
-
                     </thead>
-
                     <tbody>
                          <g:each in="${reports}" status="i" var="reports">
                       <tr>
