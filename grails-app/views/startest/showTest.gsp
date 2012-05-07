@@ -77,15 +77,15 @@
    <table width="435" height="248" aling="center"  border="0" width="100%">
    <tr><td colspan="9"><h3>${question.questiontext}</h3></td></tr>
       <tr>
-      <td width="18">A)</td>
-      <td width="22"><input type="radio" name="respuesta" id="respuesta" value="A"></td>
-      <td width="128">${question.answer1}<input type="hidden" name="res" id="A" value="${question.answer1}"></td>
-       <td width="17">B)</td>
-       <td width="22"><input type="radio" name="respuesta"  id="respuesta" value="B" ></td>
-      <td width="128">${question.answer2}<input type="hidden" name="res" id="B" value="${question.answer2}"></td>
-       <td width="18">C)</td>
-      <td width="20"><input type="radio" name="respuesta"  id="respuesta" value="C"></td>
-      <td width="130">${question.answer3}<input type="hidden" name="res" id="C" value="${question.answer3}"></td>
+      <td width="5%">A)</td>
+      <td width="5%"><input type="radio" name="respuesta" id="respuesta" value="A"></td>
+      <td width="20%">${question.answer1}<input type="hidden" name="res" id="A" value="${question.answer1}"></td>
+       <td width="5%">B)</td>
+       <td width="5%"><input type="radio" name="respuesta"  id="respuesta" value="B" ></td>
+      <td width="20%">${question.answer2}<input type="hidden" name="res" id="B" value="${question.answer2}"></td>
+       <td width="5%">C)</td>
+      <td width="5%"><input type="radio" name="respuesta"  id="respuesta" value="C"></td>
+      <td width="20%">${question.answer3}<input type="hidden" name="res" id="C" value="${question.answer3}"></td>
      </tr>
       <tr>
       <td colspan="3"><%if(!image1.equals("no")){%><img src="${resource(dir:'/images/upload/imagesQuestion',file:image1)}" width="139" height="97" alt="<%=image1%>"/><%}%></td>
