@@ -15,8 +15,8 @@
     <title>Simple GSP page</title></head>
   <body>
 
-  BIENVENIDO AL TEST
-  ELIJE DE LA SIGUIENTE CATEGOR&Iacute;A DE TEMAS LA CATEGOR&Iacute;A QUE EL INSTRUCTOR TE INDIQUE: 
+  BIENVENIDO
+  ELIJE DE LA SIGUIENTE CATEGOR&Iacute;A DE TEMAS, LA CATEGOR&Iacute;A QUE EL INSTRUCTOR TE INDIQUE:
   <TABLE align="center">
     <tr> <td aling="center">
 

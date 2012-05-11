@@ -112,13 +112,14 @@ form .exceeded{color:#e00;}
                                   <label for="answer1A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer1A','errors')}">
-                                  <input type="text" id="answer1A" name="answer1A" value="${fieldValue(bean:doTestInstance,field:'answer1A')}"/>
-                              </td>
+                                  <input type="text"  maxlength="100" id="answer1A" name="answer1A"   value="${fieldValue(bean:doTestInstance,field:'answer1A')}"/>
+
+                                </td>
 
                              <td  colspan="2" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image1A','errors')}">
                                <input type="file" id="image1A" name="image1A" width="250px">
                               </td>
-<td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'trueanswer1','errors')}">
+                              <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'trueanswer1','errors')}">
                                 		<input type="radio" id="trueanswer1" name="trueanswer1" value="A" <%if(doTestInstance.trueanswer1=="A") println "checked"%>>
                                		 </td>
                             </tr>
@@ -128,7 +129,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer1B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer1B','errors')}">
-                                    <input type="text" id="answer1B" name="answer1B" value="${fieldValue(bean:doTestInstance,field:'answer1B')}"/>
+                                    <input type="text" maxlength="100" id="answer1B" name="answer1B"  maxlength="100" value="${fieldValue(bean:doTestInstance,field:'answer1B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image1B','errors')}">
@@ -144,7 +145,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer1C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer1C','errors')}">
-                                    <input type="text" id="answer1C" name="answer1C" value="${fieldValue(bean:doTestInstance,field:'answer1C')}"/>
+                                    <input type="text"  maxlength="100" id="answer1C" name="answer1C"  maxlength="100" value="${fieldValue(bean:doTestInstance,field:'answer1C')}"/>
                                 </td>
 
 
@@ -179,7 +180,7 @@ form .exceeded{color:#e00;}
                                   <label for="answer2A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer2A','errors')}">
-                                  <input type="text" id="answer2A" name="answer2A" value="${fieldValue(bean:doTestInstance,field:'answer2A')}"/>
+                                  <input type="text" maxlength="100" id="answer2A" name="answer2A" value="${fieldValue(bean:doTestInstance,field:'answer2A')}"/>
                               </td>
 
                              <td  colspan="2" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image2A','errors')}">
@@ -195,7 +196,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer2B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer2B','errors')}">
-                                    <input type="text" id="answer2B" name="answer2B" value="${fieldValue(bean:doTestInstance,field:'answer2B')}"/>
+                                    <input type="text" maxlength="100" id="answer2B" name="answer2B" value="${fieldValue(bean:doTestInstance,field:'answer2B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image2B','errors')}">
@@ -211,7 +212,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer2C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer2C','errors')}">
-                                    <input type="text" id="answer2C" name="answer2C" value="${fieldValue(bean:doTestInstance,field:'answer2C')}"/>
+                                    <input type="text"maxlength="100"  id="answer2C" name="answer2C" value="${fieldValue(bean:doTestInstance,field:'answer2C')}"/>
                                 </td>
 
 
@@ -246,7 +247,7 @@ form .exceeded{color:#e00;}
                                   <label for="answer3A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer3A','errors')}">
-                                  <input type="text" id="answer3A" name="answer3A" value="${fieldValue(bean:doTestInstance,field:'answer3A')}"/>
+                                  <input type="text" maxlength="100" id="answer3A" name="answer3A" value="${fieldValue(bean:doTestInstance,field:'answer3A')}"/>
                               </td>
 
                              <td  colspan="2" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image3A','errors')}">
@@ -262,7 +263,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer3B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer3B','errors')}">
-                                    <input type="text" id="answer3B" name="answer3B" value="${fieldValue(bean:doTestInstance,field:'answer3B')}"/>
+                                    <input type="text" maxlength="100" id="answer3B" name="answer3B" value="${fieldValue(bean:doTestInstance,field:'answer3B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image3B','errors')}">
@@ -278,7 +279,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer3C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer3C','errors')}">
-                                    <input type="text" id="answer3C" name="answer3C" value="${fieldValue(bean:doTestInstance,field:'answer3C')}"/>
+                                    <input type="text" maxlength="100" id="answer3C" name="answer3C" value="${fieldValue(bean:doTestInstance,field:'answer3C')}"/>
                                 </td>
 
 
@@ -313,7 +314,7 @@ form .exceeded{color:#e00;}
                                   <label for="answer4A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer4A','errors')}">
-                                  <input type="text" id="answer4A" name="answer4A" value="${fieldValue(bean:doTestInstance,field:'answer4A')}"/>
+                                  <input type="text" maxlength="100" id="answer4A" name="answer4A" value="${fieldValue(bean:doTestInstance,field:'answer4A')}"/>
                               </td>
 
                              <td  colspan="2" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image4A','errors')}">
@@ -329,7 +330,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer4B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer4B','errors')}">
-                                    <input type="text" id="answer4B" name="answer4B" value="${fieldValue(bean:doTestInstance,field:'answer4B')}"/>
+                                    <input type="text" maxlength="100" id="answer4B" name="answer4B" value="${fieldValue(bean:doTestInstance,field:'answer4B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image4B','errors')}">
@@ -345,7 +346,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer4C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer4C','errors')}">
-                                    <input type="text" id="answer4C" name="answer4C" value="${fieldValue(bean:doTestInstance,field:'answer4C')}"/>
+                                    <input type="text" maxlength="100" id="answer4C" name="answer4C" value="${fieldValue(bean:doTestInstance,field:'answer4C')}"/>
                                 </td>
 
 
@@ -380,7 +381,7 @@ form .exceeded{color:#e00;}
                                   <label for="answer5A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer5A','errors')}">
-                                  <input type="text" id="answer5A" name="answer5A" value="${fieldValue(bean:doTestInstance,field:'answer5A')}"/>
+                                  <input type="text" maxlength="100" id="answer5A" name="answer5A" value="${fieldValue(bean:doTestInstance,field:'answer5A')}"/>
                               </td>
 
                              <td  colspan="2" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image5A','errors')}">
@@ -396,7 +397,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer5B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer5B','errors')}">
-                                    <input type="text" id="answer5B" name="answer5B" value="${fieldValue(bean:doTestInstance,field:'answer5B')}"/>
+                                    <input type="text" maxlength="100"  id="answer5B" name="answer5B" value="${fieldValue(bean:doTestInstance,field:'answer5B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image5B','errors')}">
@@ -412,7 +413,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer5C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer5C','errors')}">
-                                    <input type="text" id="answer5C" name="answer5C" value="${fieldValue(bean:doTestInstance,field:'answer5C')}"/>
+                                    <input type="text" maxlength="100"  id="answer5C" name="answer5C" value="${fieldValue(bean:doTestInstance,field:'answer5C')}"/>
                                 </td>
 
 
@@ -447,7 +448,7 @@ form .exceeded{color:#e00;}
                                   <label for="answer6A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer6A','errors')}">
-                                  <input type="text" id="answer6A" name="answer6A" value="${fieldValue(bean:doTestInstance,field:'answer6A')}"/>
+                                  <input type="text" maxlength="100"id="answer6A" name="answer6A" value="${fieldValue(bean:doTestInstance,field:'answer6A')}"/>
                               </td>
 
                              <td  colspan="2" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image6A','errors')}">
@@ -463,7 +464,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer6B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer6B','errors')}">
-                                    <input type="text" id="answer6B" name="answer6B" value="${fieldValue(bean:doTestInstance,field:'answer6B')}"/>
+                                    <input type="text" maxlength="100" id="answer6B" name="answer6B" value="${fieldValue(bean:doTestInstance,field:'answer6B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image6B','errors')}">
@@ -479,7 +480,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer6C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer6C','errors')}">
-                                    <input type="text" id="answer6C" name="answer6C" value="${fieldValue(bean:doTestInstance,field:'answer6C')}"/>
+                                    <input type="text" maxlength="100"  id="answer6C" name="answer6C" value="${fieldValue(bean:doTestInstance,field:'answer6C')}"/>
                                 </td>
 
 
@@ -514,7 +515,7 @@ form .exceeded{color:#e00;}
                                   <label for="answer7A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer7A','errors')}">
-                                  <input type="text" id="answer7A" name="answer7A" value="${fieldValue(bean:doTestInstance,field:'answer7A')}"/>
+                                  <input type="text"  maxlength="100" id="answer7A" name="answer7A" value="${fieldValue(bean:doTestInstance,field:'answer7A')}"/>
                               </td>
 
                              <td  colspan="2" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image7A','errors')}">
@@ -530,7 +531,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer7B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer7B','errors')}">
-                                    <input type="text" id="answer7B" name="answer7B" value="${fieldValue(bean:doTestInstance,field:'answer7B')}"/>
+                                    <input type="text" maxlength="100" id="answer7B" name="answer7B" value="${fieldValue(bean:doTestInstance,field:'answer7B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image7B','errors')}">
@@ -546,7 +547,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer7C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer7C','errors')}">
-                                    <input type="text" id="answer7C" name="answer7C" value="${fieldValue(bean:doTestInstance,field:'answer7C')}"/>
+                                    <input type="text" maxlength="100" id="answer7C" name="answer7C" value="${fieldValue(bean:doTestInstance,field:'answer7C')}"/>
                                 </td>
 
 
@@ -581,7 +582,7 @@ form .exceeded{color:#e00;}
                                   <label for="answer8A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer8A','errors')}">
-                                  <input type="text" id="answer8A" name="answer8A" value="${fieldValue(bean:doTestInstance,field:'answer8A')}"/>
+                                  <input type="text" maxlength="100" id="answer8A" name="answer8A" value="${fieldValue(bean:doTestInstance,field:'answer8A')}"/>
                               </td>
 
                              <td  colspan="2" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image8A','errors')}">
@@ -597,7 +598,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer8B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer8B','errors')}">
-                                    <input type="text" id="answer8B" name="answer8B" value="${fieldValue(bean:doTestInstance,field:'answer8B')}"/>
+                                    <input type="text"maxlength="100"  id="answer8B" name="answer8B" value="${fieldValue(bean:doTestInstance,field:'answer8B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image8B','errors')}">
@@ -613,7 +614,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer8C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer8C','errors')}">
-                                    <input type="text" id="answer8C" name="answer8C" value="${fieldValue(bean:doTestInstance,field:'answer8C')}"/>
+                                    <input type="text" maxlength="100" id="answer8C" name="answer8C" value="${fieldValue(bean:doTestInstance,field:'answer8C')}"/>
                                 </td>
 
 
@@ -648,7 +649,7 @@ form .exceeded{color:#e00;}
                                   <label for="answer9A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer9A','errors')}">
-                                  <input type="text" id="answer9A" name="answer9A" value="${fieldValue(bean:doTestInstance,field:'answer9A')}"/>
+                                  <input type="text" maxlength="100" id="answer9A" name="answer9A" value="${fieldValue(bean:doTestInstance,field:'answer9A')}"/>
                               </td>
 
                              <td  colspan="2" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image9A','errors')}">
@@ -664,7 +665,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer9B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer9B','errors')}">
-                                    <input type="text" id="answer9B" name="answer9B" value="${fieldValue(bean:doTestInstance,field:'answer9B')}"/>
+                                    <input type="text" maxlength="100" id="answer9B" name="answer9B" value="${fieldValue(bean:doTestInstance,field:'answer9B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image9B','errors')}">
@@ -680,7 +681,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer9C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer9C','errors')}">
-                                    <input type="text" id="answer9C" name="answer9C" value="${fieldValue(bean:doTestInstance,field:'answer9C')}"/>
+                                    <input type="text" maxlength="100" id="answer9C" name="answer9C" value="${fieldValue(bean:doTestInstance,field:'answer9C')}"/>
                                 </td>
 
 
@@ -715,7 +716,7 @@ form .exceeded{color:#e00;}
                                   <label for="answer10A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer10A','errors')}">
-                                  <input type="text" id="answer10A" name="answer10A" value="${fieldValue(bean:doTestInstance,field:'answer10A')}"/>
+                                  <input type="text"  maxlength="100" id="answer10A" name="answer10A" value="${fieldValue(bean:doTestInstance,field:'answer10A')}"/>
                               </td>
 
                              <td  colspan="2" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'image10A','errors')}">
@@ -731,7 +732,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer10B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer10B','errors')}">
-                                    <input type="text" id="answer10B" name="answer10B" value="${fieldValue(bean:doTestInstance,field:'answer10B')}"/>
+                                    <input type="text" maxlength="100" id="answer10B" name="answer10B" value="${fieldValue(bean:doTestInstance,field:'answer10B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image10B','errors')}">
@@ -747,7 +748,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer10C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer10C','errors')}">
-                                    <input type="text" id="answer10C" name="answer10C" value="${fieldValue(bean:doTestInstance,field:'answer10C')}"/>
+                                    <input type="text" maxlength="100" id="answer10C" name="answer10C" value="${fieldValue(bean:doTestInstance,field:'answer10C')}"/>
                                 </td>
 
 
