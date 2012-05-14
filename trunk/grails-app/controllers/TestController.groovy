@@ -16,6 +16,7 @@ class TestController {
         [ testInstanceList: Test.list( params ), testInstanceTotal: Test.count(),area:area,subject:subject ]
     }
 
+ 
     def show = {
          def area=ConsultaService.buscaArea()
          def subject=ConsultaService.buscaSubject()
