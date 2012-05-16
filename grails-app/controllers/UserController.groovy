@@ -7,6 +7,7 @@ class UserController {
   def ReportService
   def exportService
 
+
     // the delete, save and update actions only accept POST requests
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
@@ -269,13 +270,17 @@ class UserController {
     }
 
     def save = {
-           def proyecto=ConsultaService.buscaProyecto()
-           def company=ConsultaService.buscaCompany()
-            def rol=ConsultaService.buscaRol()
-           def post=ConsultaService.buscaPost()
+      def users=ConsultaService.comparaPass(params.password)
+      println users
+      def proyecto=ConsultaService.buscaProyecto()
+      def company=ConsultaService.buscaCompany()
+      def rol=ConsultaService.buscaRol()
+      def post=ConsultaService.buscaPost()
       def area=ConsultaService.buscaArea()
 
         def userInstance = new User(params)
+      if(users){ } else { redirect }
+
       if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
       {
         if(!userInstance.hasErrors() && userInstance.save()) {
@@ -286,24 +291,25 @@ class UserController {
 
 
            flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
-            render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
+            render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
         }
       }
       else
       {
         flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
-                   render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
+                   render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
 
       }
     }
 
   def saveWorker = {
-        def userInstance = new User(params)
+      def userInstance = new User(params)
       def proyecto=ConsultaService.buscaProyecto()
       def company=ConsultaService.buscaCompany()
       def area=ConsultaService.buscaArea()
       def rol=ConsultaService.buscaRol()
       def post=ConsultaService.buscaPost()
+
      if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
       {
         if(!userInstance.hasErrors() && userInstance.save()) {
