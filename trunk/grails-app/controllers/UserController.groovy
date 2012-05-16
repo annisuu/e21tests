@@ -279,9 +279,10 @@ class UserController {
       def area=ConsultaService.buscaArea()
 
         def userInstance = new User(params)
-      if(users){ } else { redirect }
 
       if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
+      {
+        if(!users)
       {
         if(!userInstance.hasErrors() && userInstance.save()) {
             flash.message = "Trabajador  ${userInstance.id} Agregado"
@@ -293,6 +294,12 @@ class UserController {
            flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
             render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
         }
+      }else
+      {
+        flash.message =  "Ya existe un usuario con esa contraseña"
+                         render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
+
+      }
       }
       else
       {
@@ -312,6 +319,7 @@ class UserController {
 
      if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
       {
+         if(!users){
         if(!userInstance.hasErrors() && userInstance.save()) {
             flash.message = "Trabajador ${userInstance.id} Agregado"
             redirect(action:showWorker,id:userInstance.id)
@@ -322,6 +330,13 @@ class UserController {
            flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
             render(view:'createWorker',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
         }
+         }
+        else
+         {
+           flash.message =  "Ya existe un usuario con esa contraseña"
+           render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
+
+         }
       }
     else
      {            println "area: "+userInstance.idArea
