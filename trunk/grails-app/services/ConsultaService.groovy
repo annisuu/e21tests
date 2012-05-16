@@ -3,23 +3,20 @@ import groovy.sql.Sql
 class ConsultaService {
 
     boolean transactional = true
-  //declaor mi dataSource que buscara las consultas
-    def dataSource
-   //creo un metodo para hacer la consulta
+    def dataSource           //declaor mi dataSource que buscara las consultas
+  //creo un metodo para hacer la consulta
     def buscaProyecto() {
       //creo mi objeto sql para hacer la consulta
-      def sql= new Sql(dataSource)
+    def sql= new Sql(dataSource)
       //creo un arrgeglo para almacenar mis resultados
-       def resultado =[]
+    def resultado =[]
       //hago la consulta la bd con el metod eachrow dentro del metodo pongo mi sentencia d ela consulta tal y como se delcaro en la bd
-      sql.eachRow("Select id_project,name_project from project"){
-      //defino un objeto tipo expando pra crear variables dinamicas
-      def project=new Expando()
-      //creo mis varibales para almacenar los resultados de la busqueda
+      sql.eachRow("Select id_project,name_project from project")//defino un objeto tipo expando pra crear variables dinamicas
+      {def project=new Expando()       //creo mis varibales para almacenar los resultados de la busqueda
       project.id_project =it.id_project
       project.name_project= it.name_project
-      //almaceno mi objeto expando en el arreglo que se creo ""Resultado"
-      resultado.add(project)
+      resultado.add(project)    //almaceno mi objeto expando en el arreglo que se creo ""Resultado"
+
       }
       //regreso el valor dentro de mi arreglo
       return resultado
@@ -239,5 +236,17 @@ class ConsultaService {
 
     return resultado
   }
+
+  def comparaPass(String password) {
+      def sql= new Sql(dataSource)
+      def resultado=false
+      sql.eachRow("Select password_user from users where password_user  ="+password+" ")
+
+     {
+      resultado =true
+   }
+
+        return resultado
+      }
 
 }
