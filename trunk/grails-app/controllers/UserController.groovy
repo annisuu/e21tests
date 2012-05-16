@@ -324,7 +324,7 @@ class UserController {
             flash.message = "Trabajador ${userInstance.id} Agregado"
             redirect(action:showWorker,id:userInstance.id)
         }
-        else {
+        else {                  
           println "area: "+userInstance.idArea
 
            flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
