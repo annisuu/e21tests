@@ -70,7 +70,7 @@
                         <td>${reports.name_test}</td>
                         <td>${reports.finalscore}</td>
                         <td>${reports.enddate}</td>
-                      </tr>
+                       </tr>
                     </g:each>
 
                     </tbody>
