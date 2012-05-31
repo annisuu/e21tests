@@ -394,7 +394,6 @@ List fields = ["name_user", "last_name","name_company","name_area","name_test","
 
 
   def searchAJAX = {
-    println "xxxxx"
         def users = User.findAllByNameUserLike("%${params.query}%")
 
         //Create XML response
@@ -410,4 +409,11 @@ List fields = ["name_user", "last_name","name_company","name_area","name_test","
             }
         }
     }
+  def viewTest={
+     def examen=ReportService.buscarExamen(params.idT)
+    def resultados=ReportService.buscarRespuestas(params.idT,params.idu)
+    println examen
+    println resultados
+      render(view:'viewTest', model:[examen:examen,resultados:resultados])
+  }
 }
