@@ -166,6 +166,7 @@ font-variant:small-caps;
 	border:  7px  double #357CCA;
     border-radius:7px;
     padding:10px;
+   overflow: scroll ;
 }
 
 #Login {
