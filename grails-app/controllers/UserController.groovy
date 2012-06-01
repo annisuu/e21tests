@@ -391,7 +391,33 @@ List fields = ["name_user", "last_name","name_company","name_area","name_test","
 		}
 
   }
+   def scoreR={
+    println params?.format
+    def reports=ReportService.ScoreReport(params.test,params.user)
+     if(params?.format && params.format != "html"){
+			response.contentType = ConfigurationHolder.config.grails.mime.types[params.format]
+			response.setHeader("Content-disposition", "attachment; filename=CalificacionesUsuario${params.user}.${params.extension}")
+List fields = ["numberq","questiontext", "trueanswer","answer","score"]
+			Map labels = ["numberq": "N.","questiontext":"Pregunta", "trueanswer": "Respuesta correcta","answer":"Respuesta del Usuario","score":"Calificaci\u00F3n"]
 
+             /* Formatter closure in previous releases
+			def upperCase = { value ->
+				return value.toUpperCase()
+			}
+			*/
+
+                        // Formatter closure
+			def upperCase = { domain, value ->
+				return value.toUpperCase()
+			}
+
+			Map formatters = [author: upperCase]
+			Map parameters = [title: "ETILENO XXI: Examen", "title.font.style":"bold","column.widths": [0.5, 2, 0.5,0.5, 0.5]]
+
+			exportService.export(params.format, response.outputStream, reports, fields, labels, formatters, parameters)
+		}
+
+  }
 
   def searchAJAX = {
         def users = User.findAllByNameUserLike("%${params.query}%")
@@ -414,6 +440,6 @@ List fields = ["name_user", "last_name","name_company","name_area","name_test","
     def resultados=ReportService.buscarRespuestas(params.idT,params.idu)
     println examen
     println resultados
-      render(view:'viewTest', model:[examen:examen,resultados:resultados])
+      render(view:'viewTest', model:[examen:examen,resultados:resultados,nameTest:params.nameTest,nameUser:params.user])
   }
 }
