@@ -13,7 +13,7 @@
     <body>
 
 
-        <div class="body">
+        <div class="bodyReport">
             <h1>lista de usuarios que han realizado test</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
@@ -67,7 +67,7 @@
                         <td>${reports.last_name}</td>
                         <td>${reports.name_company}</td>
                         <td>${reports.name_area}</td>
-                        <td>${reports.name_test}</td>
+                         <td><g:link action="viewTest" params="[idT:reports.id_test,idu:reports.id_user]">${reports.name_test}</g:link></td>
                         <td>${reports.finalscore}</td>
                         <td>${reports.enddate}</td>
                        </tr>

@@ -11,14 +11,7 @@
 
 
 <style type="text/css">
-#InfoProyec {
-width: 700px;
-height: 548px;
-z-index: 6;
-left: 150px;
-top: 200px;
 
-}
 </style>
 
 </head>
@@ -27,19 +20,19 @@ top: 200px;
 
 
 
-<div id="InfoProyec" align="center">
+
 
   <g:javascript type="text/javascript">
-AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','680','height','450','title','proyecto','src','../swf/PROYECTO','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','/etileno/images/swf/PROYECTO' ); //end AC code
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','680','height','480','title','proyecto','src','../swf/PROYECTO','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','/etileno/images/swf/PROYECTO' ); //end AC code
   </g:javascript>
   <noscript>
-  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="732" height="450" title="proyecto">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="680" height="480" title="proyecto">
     <param name="movie" value="/etileno/images/swf/PROYECTO.swf" />
     <param name="quality" value="high" />
-    <embed src="../images/swf/PROYECTO.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="732" height="450"></embed>
+    <embed src="../images/swf/PROYECTO.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="680" height="480"></embed>
   </object>
   </noscript>
- </div>
+
 
 
 

@@ -27,7 +27,7 @@ class AreaController {
         if(areaInstance) {
             try {
                 areaInstance.delete(flush:true)
-                flash.message = "Area ${params.id} Eliminada"
+                flash.message = "AREA ${params.id} ELIMINADA"
                 redirect(action:list)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {

@@ -61,7 +61,7 @@ class UserController {
         def userInstance = User.get( params.id )
 
         if(!userInstance) {
-            flash.message = "Trabajador no encontrado ${params.id}"
+            flash.message = "TRABAJADOR NO ENCONTRADO ${params.id}"
             redirect(action:list)
         }
         else { return [ userInstance : userInstance ,area:area,company:company,post:post,proyecto:proyecto,rol:rol] }
@@ -78,7 +78,7 @@ class UserController {
          def userInstance = User.get( params.id )
 
          if(!userInstance) {
-             flash.message = "Trabajador no encontrado ${params.id}"
+             flash.message = "TRABAJADOR NO ENCONTRADO ${params.id}"
              redirect(action:listWorker)
          }
          else { return [ userInstance : userInstance ,area:area,company:company,post:post,proyecto:proyecto,rol:rol] }
@@ -89,17 +89,17 @@ class UserController {
         if(userInstance) {
             try {
                 userInstance.delete(flush:true)
-                flash.message = "Trabajador ${params.id} Eliminado"
+                flash.message = "TRABAJADOR  ${params.id} ELIMINADO"
                 redirect(action:list)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "Trabajador ${params.id}no pudo ser eliminado"
+                flash.message = "TRABAJADOR ${params.id}NO PUDO SER ELIMINADO"
                 redirect(action:show,id:params.id)
             }
         }
 
         else {
-            flash.message = "Trabajador no encotrado ${params.id}"
+            flash.message = "TRABAJADOR NO ENCONTRADO ${params.id}"
             redirect(action:list)
         }
     }
@@ -111,16 +111,16 @@ class UserController {
         if(userInstance) {
             try {
                 userInstance.delete(flush:true)
-                flash.message = "Trabajador ${params.id} eliminado"
+                flash.message = "TRABAJADOR ${params.id} ELIMINADO"
                 redirect(action:listWorker)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "Trabajador ${params.id} no pudo ser eliminado"
+                flash.message = "TRABAJADOR ${params.id} NO PUDO SER ELIMINADO"
                 redirect(action:showWorker,id:params.id)
             }
         }
         else {
-            flash.message = "Trabajador no encontrado ${params.id}"
+            flash.message = "TRABAJADOR NO ENCONTRADO${params.id}"
             redirect(action:listWorker)
         }
     }
@@ -135,7 +135,7 @@ class UserController {
         def userInstance = User.get( params.id )
 
         if(!userInstance) {
-            flash.message = "Trabajador no encontrado ${params.id}"
+            flash.message = "TRABAJADOR NO ENCONTRADO ${params.id}"
             redirect(action:listWorker,proyecto:proyecto,company:company,rol:rol,post:post,area:area)
         }
         else {
@@ -154,7 +154,7 @@ class UserController {
         def userInstance = User.get( params.id )
 
         if(!userInstance) {
-            flash.message = "Trabajador  no encontrado ${params.id}"
+            flash.message = "TRABAJADOR NO ENCONTRADO ${params.id}"
             redirect(action:listWorker,area:area)
         }
         else {
@@ -182,7 +182,7 @@ class UserController {
             }
             userInstance.properties = params
             if(!userInstance.hasErrors() && userInstance.save()) {
-                flash.message = "Trabajador ${params.id} Actualizado"
+                flash.message = "TRABAJADOR ${params.id} ACTUALIZADO"
                 redirect(action:show,id:userInstance.id)
             }
             else {
@@ -190,7 +190,7 @@ class UserController {
             }
         }
         else {
-            flash.message = "Trabajador no encontrado${params.id}"
+            flash.message = "TRABAJADOR NO ENCONTRADO ${params.id}"
             redirect(action:list)
         }
     }
@@ -214,7 +214,7 @@ class UserController {
             }
             userInstance.properties = params
             if(!userInstance.hasErrors() && userInstance.save()) {
-                flash.message = "Trabajdor ${params.id} actualizado"
+                flash.message = "TRABAJADOR ${params.id} ACTUALIZADO"
                 redirect(action:showWorker,id:userInstance.id)
             }
             else {
@@ -222,7 +222,7 @@ class UserController {
             }
         }
         else {
-            flash.message = "Trabajdor no encontrado ${params.id}"
+            flash.message = "TRABAJADOR NO ENCONTRADO ${params.id}"
             redirect(action:listWorker)
         }
     }
@@ -269,6 +269,7 @@ class UserController {
 
     }
 
+
     def save = {
       def users=ConsultaService.comparaPass(params.password)
       println users
@@ -285,67 +286,73 @@ class UserController {
         if(!users)
       {
         if(!userInstance.hasErrors() && userInstance.save()) {
-            flash.message = "Trabajador  ${userInstance.id} Agregado"
+            flash.message = "TRABAJADOR  ${userInstance.id} AGREGADO"
             redirect(action:show,id:userInstance.id)
         }
         else {
 
-
-           flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
+           flash.message =  "LOS CAMPOS MARCADOS EN ROJO NO DEBEN DE ESTAR VACIOS PARA PODER GUARDAR"
             render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
         }
       }else
       {
-        flash.message =  "Ya existe un usuario con esa contraseña"
+        flash.message =  "YA EXISTE UN TRABAJADOR CON ESA CLAVE, POR FAVOR INGRESA OTRA"
                          render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
 
       }
       }
       else
       {
-        flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
+        flash.message =  "DEJ&Oacute; ALG&Uacute;N COMBO SIN SELECCIONAR"
                    render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
 
       }
     }
 
   def saveWorker = {
-      def userInstance = new User(params)
-      def proyecto=ConsultaService.buscaProyecto()
-      def company=ConsultaService.buscaCompany()
-      def area=ConsultaService.buscaArea()
-      def rol=ConsultaService.buscaRol()
-      def post=ConsultaService.buscaPost()
+       def users=ConsultaService.comparaPass(params.password)
+       println users
+       def proyecto=ConsultaService.buscaProyecto()
+       def company=ConsultaService.buscaCompany()
+       def rol=ConsultaService.buscaRol()
+       def post=ConsultaService.buscaPost()
+       def area=ConsultaService.buscaArea()
 
-     if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
-      {
-         if(!users){
-        if(!userInstance.hasErrors() && userInstance.save()) {
-            flash.message = "Trabajador ${userInstance.id} Agregado"
-            redirect(action:showWorker,id:userInstance.id)
-        }
-        else {                  
-          println "area: "+userInstance.idArea
+         def userInstance = new User(params)
 
-           flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
-            render(view:'createWorker',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
-        }
+       if(userInstance.idArea!="" && userInstance.idCompany!="" && userInstance.idPost!="" && userInstance.idProyecto!="")
+       {
+         if(!users)
+       {
+         if(!userInstance.hasErrors() && userInstance.save()) {
+             flash.message = "TRABAJADOR  ${userInstance.id} AGREGADO"
+             redirect(action:showWorker,id:userInstance.id)
          }
-        else
-         {
-           flash.message =  "Ya existe un usuario con esa contraseña"
-           render(view:'create',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
+         else {
 
+
+            flash.message =  "LOS CAMPOS MARCADOS EN ROJO NO DEBEN DE ESTAR VACIOS PARA PODER GUARDAR"
+             render(view:'createWorker',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
          }
-      }
-    else
-     {            println "area: "+userInstance.idArea
+       }else
+       {
+         flash.message =  "YA EXISTE UN USUARIO CON ESA CLAVE,POR FAVOR INGRESE OTRA"
+                          render(view:'createWorker',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
 
-       flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
-                         render(view:'createWorker',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post])
+       }
+       }
+       else
+       {
+         flash.message =  "DEJ&Oacute; ALG&Nacute;N COMBO SIN SELECCIONAR"
+                    render(view:'createWorker',model:[userInstance:userInstance,proyecto:proyecto,company:company,area:area,rol:rol,post:post,users:users])
 
+       }
      }
-    }
+
+
+
+
+
   def report={
     // def reports=ReportService.reports()
 
@@ -441,5 +448,13 @@ List fields = ["numberq","questiontext", "trueanswer","answer","score"]
     println examen
     println resultados
       render(view:'viewTest', model:[examen:examen,resultados:resultados,nameTest:params.nameTest,nameUser:params.user])
+  }
+
+  def viewTestA={
+     def examen=ReportService.buscarExamen(params.idT)
+    def resultados=ReportService.buscarRespuestas(params.idT,params.idu)
+    println examen
+    println resultados
+      render(view:'viewTestA', model:[examen:examen,resultados:resultados,nameTest:params.nameTest,nameUser:params.user])
   }
 }

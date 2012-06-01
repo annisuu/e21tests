@@ -14,13 +14,13 @@ environments {
 	development {
 		dataSource {
 			driverClassName = "com.mysql.jdbc.Driver"
-          // se espicifca el nombre de la bd despues del puerto 3306 y se pone el user y pw que se tiene para la bd
+          // se espicifica el nombre de la bd despues del puerto 3306 y se pone el user y pw que se tiene para la bd
                          
          //url = "jdbc:mysql://localhost:3306/odebrecht"
          url = "jdbc:mysql://localhost:3306/odebrecht"
          username = "root"
-         //password = "1234"
-         password = "00562793"
+        //password = "Odebrecht2012"
+        password = "1234"
 		}
 	}
 	test {
@@ -34,7 +34,8 @@ environments {
 	 driverClassName = "com.mysql.jdbc.Driver"
          url = "jdbc:mysql://localhost:3306/odebrecht"
          username = "root"
-         password = "00562793"
+        //password = "Odebrecht2012"
+         password = "1234"
          
 
 		}

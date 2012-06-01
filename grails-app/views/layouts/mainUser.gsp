@@ -11,14 +11,7 @@
 
 <style type="text/css">
 
-#apDiv8 {
-	position:absolute;
-	width:666px;
-	height:431px;
-	z-index:7;
-	left: 17px;
-	top: 28px;
-}
+
 
 </style>
 <style type="text/css">

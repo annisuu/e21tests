@@ -370,7 +370,7 @@ public String  subirFile(String up)
      def files = request.getFileMap()
      def file=files.get(up)
      String fileName = file.getOriginalFilename()
-    def savepath=appPath+"\\webapps\\etileno\\images\\upload\\imagesQuestion\\";
+    def savepath=appPath+"\\tomcat\\webapps\\etileno\\images\\upload\\imagesQuestion\\";
     println savepath
     if(fileName!="")
     {

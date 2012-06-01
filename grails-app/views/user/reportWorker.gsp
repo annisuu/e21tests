@@ -13,7 +13,8 @@
     <body>
 
 
-        <div class="body">
+        <div class="bodyReport">
+
             <h1>lista de usuarios que han realizado test</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
@@ -48,6 +49,7 @@
                    <table>
                    <thead>
                    <tr>
+
                    	        <g:sortableColumn property="id" title="Id"/>
                             <g:sortableColumn property="name_user" title="NOMBRE"/>
                    	        <g:sortableColumn property="last_name" title="APELLIDO"/>
@@ -62,7 +64,7 @@
 
                          <g:each in="${reports}" status="i" var="reports">
                       <tr>
-                        <td><g:link action="show" id="${reports.id_user}">${reports.id_user.toString()}</g:link></td>
+                        <td><g:link action="showWorker" id="${reports.id_user}">${reports.id_user.toString()}</g:link></td>
 
                         <td>${reports.name_user}</td>
                         <td>${reports.last_name}</td>
@@ -86,7 +88,7 @@
             <div class="paginateButtons">
             </div>
         </div>
-
+      
 
     </body>
 </html>
