@@ -82,4 +82,24 @@ class ReportService {
     return resultado
   }
 
+  def ScoreReport(String test,String user)
+   {
+     def query="select * from scores where idTest= "+test+" and userid= "+user+" "
+     println query
+     def sql=new Sql(dataSource)
+      def resultado=[]
+     sql.eachRow(query){
+       def scores=new Expando()
+       scores.idTest=it.idTest
+       scores.numberq=it.numberq
+       scores.questiontext=it.questiontext
+       scores.trueanswer=it.trueanswer
+       scores.answer=it.answer
+       scores.score=it.score
+
+       resultado.add(scores)
+     }
+     return resultado
+   }
+  
 }
