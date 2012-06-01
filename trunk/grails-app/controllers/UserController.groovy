@@ -412,7 +412,7 @@ List fields = ["numberq","questiontext", "trueanswer","answer","score"]
 			}
 
 			Map formatters = [author: upperCase]
-			Map parameters = [title: "ETILENO XXI: Examen", "title.font.style":"bold","column.widths": [0.5, 2, 0.5,0.5, 0.5]]
+			Map parameters = [title: "ETILENO XXI - Test:${params.nameT}, Nombre del Trabajador: ${params.nameU} ", "title.font.style":"bold","column.widths": [0.5, 2, 0.5,0.5, 0.5]]
 
 			exportService.export(params.format, response.outputStream, reports, fields, labels, formatters, parameters)
 		}
