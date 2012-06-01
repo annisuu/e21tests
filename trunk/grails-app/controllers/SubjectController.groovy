@@ -20,7 +20,7 @@ class SubjectController {
         def subjectInstance = Subject.get( params.id )
 
         if(!subjectInstance) {
-            flash.message = "Tematica no encontrada ${params.id}"
+            flash.message = "TEMATICA ${params.id} NO ENCONTRADA "
             redirect(action:list)
         }
         else { return [ subjectInstance : subjectInstance,area:area ] }
@@ -31,16 +31,16 @@ class SubjectController {
         if(subjectInstance) {
             try {
                 subjectInstance.delete(flush:true)
-                flash.message = "Tematica ${params.id} Eliminada"
+                flash.message = "TEMATICA ${params.id} ELIMINADA"
                 redirect(action:list)
             }
             catch(org.springframework.dao.DataIntegrityViolationException e) {
-                flash.message = "Tematica ${params.id} no pudo ser eliminada"
+                flash.message = "TEMATICA ${params.id} NO PUDO SER ELIMINADA"
                 redirect(action:show,id:params.id)
             }
         }
         else {
-            flash.message = "Tematica no encontrada ${params.id}"
+            flash.message = "TEMATICA ${params.id} NO ENCONTRADA "
             redirect(action:list)
         }
     }
@@ -51,7 +51,7 @@ class SubjectController {
 
         def subjectInstance = Subject.get( params.id )
         if(!subjectInstance) {
-            flash.message = "Tematica no encontrada ${params.id}"
+            flash.message = "TEMATICA ${params.id} NO ENCONTRADA "
             redirect(action:list,area:area)
         }
         else {
@@ -73,7 +73,7 @@ class SubjectController {
             }
             subjectInstance.properties = params
             if(!subjectInstance.hasErrors() && subjectInstance.save()) {
-                flash.message = "Tematica ${params.id} Actualizada"
+                flash.message = "TEMATICA ${params.id} ACTUALIZADA"
                 redirect(action:show,id:subjectInstance.id)
             }
             else {
@@ -81,7 +81,7 @@ class SubjectController {
             }
         }
         else {
-            flash.message = "Tematica no encontrada ${params.id}"
+            flash.message = "TEMATICA ${params.id} NO ENCONTRADA "
             redirect(action:list)
         }
     }
@@ -101,19 +101,19 @@ class SubjectController {
       if(subjectInstance.idArea!="")
       {
         if(!subjectInstance.hasErrors() && subjectInstance.save()) {
-            flash.message = "Tematica ${subjectInstance.id} Agregada"
+            flash.message = "TEMATICA ${subjectInstance.id} AGREGADA"
             redirect(action:show,id:subjectInstance.id)
         }
         else {
 
 
-           flash.message =  "Los campos marcados en rojo no deben de estar vacios para poder guardar"
+           flash.message =  "LOS CAMPOS MARCADOS EN ROJO, NO DEBEN DE ESTAR VACIOS PARA PODER GUARDAR"
             render(view:'create',model:[subjectInstance:subjectInstance,area:area])
         }
       }
       else
       {
-        flash.message =  "Dej&oacute; alg&uacute;n combo sin seleccionar"
+        flash.message =  "DEJ&Oacute; ALG&Uacute;N COMBO SIN SELECCIONAR"
                    render(view:'create',model:[subjectInstance:subjectInstance,area:area])
 
       }

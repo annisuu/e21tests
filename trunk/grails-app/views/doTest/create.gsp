@@ -41,10 +41,10 @@ form .exceeded{color:#e00;}
 
             <g:form action="save" method="post" enctype="multipart/form-data">
                <div class="dialog">
-                 <richui:accordion style="width: 600px;">
+                 <richui:accordion style="width: 650px;">
                <richui:accordionItem caption="DATOS DEL TEST">
 
-                    <table style="width: 600px;">
+                    <table style="width: 650px;">
                         <tbody>
 
 
@@ -106,13 +106,13 @@ form .exceeded{color:#e00;}
                           <td colspan="2"><div align="center">Respuestas</div></td>
                           <td colspan="2"><div align="center">Im&aacute;genes</div></td>
                           <td width="183">Respuesta Correcta</td>
-              </tr>
+                           </tr>
                             <tr class="prop">
                                 <td width="16" valign="top" class="name">
                                   <label for="answer1A">A)</label>
                                 </td>
                                 <td width="144" valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer1A','errors')}">
-                                  <input type="text"  maxlength="100" id="answer1A" name="answer1A"   value="${fieldValue(bean:doTestInstance,field:'answer1A')}"/>
+                                  <input type="text" maxlength="100" id="answer1A" name="answer1A"   value="${fieldValue(bean:doTestInstance,field:'answer1A')}"/>
 
                                 </td>
 
@@ -129,7 +129,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer1B">B)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer1B','errors')}">
-                                    <input type="text" maxlength="100" id="answer1B" name="answer1B"  maxlength="100" value="${fieldValue(bean:doTestInstance,field:'answer1B')}"/>
+                                    <input type="text" maxlength="100" id="answer1B" name="answer1B"  value="${fieldValue(bean:doTestInstance,field:'answer1B')}"/>
                                 </td>
 
                                 <td valign="top" colspan="2" class="value ${hasErrors(bean:doTestInstance,field:'image1B','errors')}">
@@ -145,7 +145,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer1C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer1C','errors')}">
-                                    <input type="text"  maxlength="100" id="answer1C" name="answer1C"  maxlength="100" value="${fieldValue(bean:doTestInstance,field:'answer1C')}"/>
+                                    <input type="text"  maxlength="100" id="answer1C" name="answer1C"  value="${fieldValue(bean:doTestInstance,field:'answer1C')}"/>
                                 </td>
 
 
@@ -212,7 +212,7 @@ form .exceeded{color:#e00;}
                                     <label for="answer2C">C)</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:doTestInstance,field:'answer2C','errors')}">
-                                    <input type="text"maxlength="100"  id="answer2C" name="answer2C" value="${fieldValue(bean:doTestInstance,field:'answer2C')}"/>
+                                    <input type="text" maxlength="100"  id="answer2C" name="answer2C" value="${fieldValue(bean:doTestInstance,field:'answer2C')}"/>
                                 </td>
 
 

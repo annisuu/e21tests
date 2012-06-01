@@ -142,7 +142,9 @@ class DoQuestionController {
      def files = request.getFileMap()
      def file=up
      String fileName = file.getOriginalFilename()
-    def savepath=appPath+"\\upload\\imagesQuestion\\";
+    def savepath=appPath+"\\tomcat\\webapps\\etileno\\images\\upload\\imagesQuestion";
+    //\\webapps\\etileno\\images\\upload\\imagesQuestion
+
     println savepath
     if(fileName!="")
     {

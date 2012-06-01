@@ -11,14 +11,7 @@
             
 <style type="text/css">
 
-#apDiv8 {
-	position:absolute;
-	width:666px;
-	height:431px;
-	z-index:7;
-	left: 17px;
-	top: 28px;
-}
+
 
 </style>
 <style type="text/css">
@@ -44,7 +37,7 @@
         <g:javascript library="application" />
 
     </head>
-    <body>
+<body>
      <div id="TransparenciaInstructor" >
 
 
@@ -79,11 +72,12 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 </tr></table>
 
 </div>
-<div id="margenAdmin">
-    <div id="apDiv8">
+
+        <div id="margenAdmin">
+
         <g:layoutBody />
 
-</div>
+
 </div>
 
 <div id="menuAdmin">
