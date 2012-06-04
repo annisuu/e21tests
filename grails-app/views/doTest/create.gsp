@@ -3,7 +3,7 @@
     <head>
       <%println session.user?.id_rol
       String lrol=""
-        if(session.user?.id_rol)
+        if(session.user?.id_rol==1)
         {
           lrol="mainAdmin"
         }
