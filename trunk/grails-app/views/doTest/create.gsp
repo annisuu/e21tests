@@ -1,8 +1,19 @@
 
 <html>
     <head>
+      <%println session.user?.id_rol
+      String lrol=""
+        if(session.user?.id_rol)
+        {
+          lrol="mainAdmin"
+        }
+        else
+        {
+          lrol="mainInstruc"
+        }
+      %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="mainInstruc" />
+        <meta name="layout" content=${lrol} />
         <title>crear test</title>
 <resource:accordion skin="default" />
 <g:javascript library="prototype" />
