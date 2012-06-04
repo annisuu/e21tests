@@ -37,7 +37,7 @@
                      <input type="text" name="value" value=${value}>
                         &nbsp;&nbsp;&nbsp;
                      <span class="button"><input class="save" type="submit" value="Buscar" /></span>
-          </td>
+                   </td>
                       </tr>
                       </g:form>
                     </thead>

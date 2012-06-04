@@ -1,5 +1,3 @@
-
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -76,8 +74,6 @@
         </div>
      <g:javascript>
 $('#nameTest').alpha({allcaps:true,allow:' '});
-
-
 
 
 </g:javascript>
