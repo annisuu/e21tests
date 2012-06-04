@@ -1,19 +1,9 @@
 
 <html>
     <head>
-      <%println session.user?.id_rol
-      String lrol=""
-        if(session.user?.id_rol==1)
-        {
-          lrol="mainAdmin"
-        }
-        else
-        {
-          lrol="mainInstruc"
-        }
-      %>
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content=${lrol} />
+        <meta name="layout" content="mainInstruc" />
         <title>crear test</title>
 <resource:accordion skin="default" />
 <g:javascript library="prototype" />
@@ -41,7 +31,10 @@ form .exceeded{color:#e00;}
     </head>
     <body>
            <div class="nav">
-
+             <% if(session.user?.id_rol==1)
+        {%>
+            <span class="menuButton"><g:link class="home" controller="proyecto" action="create">Regresar como administrador</g:link></span>
+        <%}%>
             <span class="menuButton"><g:link class="list" controller="test" action="list">lista de test</g:link></span>
         </div>
             <div class="body">
