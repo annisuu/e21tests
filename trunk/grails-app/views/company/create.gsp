@@ -36,7 +36,7 @@
             </td></TR>
             <tr class="prop">
             <td valign="top" class="name">
-            <label for="nameCompany">Nombre Empresa:</label>
+            <label for="nameCompany">Nombre Empresa(Solo Mayusculas):</label>
             </td>
             <td valign="top" class="value ${hasErrors(bean:companyInstance,field:'nameCompany','errors')}">
             <input type="text" id="nameCompany" name="nameCompany" value="${fieldValue(bean:companyInstance,field:'nameCompany')}"/>
