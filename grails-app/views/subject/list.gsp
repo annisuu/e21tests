@@ -8,11 +8,13 @@
       
     </head>
     <body>
-        <div class="nav">
-              <% if(session.user?.id_rol==1)
+         <div class="nav">
+             <% if(session.user?.id_rol==1)
         {%>
             <span class="menuButton"><g:link class="home" controller="proyecto" action="create">Regresar como administrador</g:link></span>
         <%}%>
+
+
             <span class="menuButton"><g:link class="create" action="create">nueva tematica</g:link></span>
         </div>
         <div class="body">

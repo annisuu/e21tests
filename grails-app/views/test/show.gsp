@@ -11,7 +11,7 @@
         <div class="nav">
 
             <span class="menuButton"><g:link class="list" action="list">Lista de Test</g:link></span>
-            <span class="menuButton"><g:link class="create" action="create">Nuevo Test</g:link></span>
+            
         </div>
         <div class="body">
             <h1>test</h1>

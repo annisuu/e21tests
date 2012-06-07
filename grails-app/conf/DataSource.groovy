@@ -19,8 +19,8 @@ environments {
          //url = "jdbc:mysql://localhost:3306/odebrecht"
          url = "jdbc:mysql://localhost:3306/odebrecht"
          username = "root"
-        //password = "Odebrecht2012"
-        password = "1234"
+        password = "Odebrecht2012"
+        //password = "1234"
 		}
 	}
 	test {
@@ -34,8 +34,8 @@ environments {
 	 driverClassName = "com.mysql.jdbc.Driver"
          url = "jdbc:mysql://localhost:3306/odebrecht"
          username = "root"
-        //password = "Odebrecht2012"
-         password = "1234"
+        password = "Odebrecht2012"
+        // password = "1234"
          
 
 		}
