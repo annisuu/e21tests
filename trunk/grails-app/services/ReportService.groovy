@@ -15,6 +15,7 @@ class ReportService {
       report.last_name=it.last_name
       report.name_company=it.name_company
       report.name_area=it.name_area
+      report.name_post=it.name_post
       report.name_test=it.name_test
       report.finalscore=it.finalscore
       report.enddate=it.enddate
@@ -35,6 +36,7 @@ class ReportService {
       report.last_name=it.last_name
       report.name_company=it.name_company
       report.name_area=it.name_area
+      report.name_post=it.name_post
       report.id_test=it.id_test
       report.name_test=it.name_test
       report.finalscore=it.finalscore

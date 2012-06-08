@@ -30,6 +30,7 @@
                         <option value="last_name" <%if(parametro.toString()=="last_name"){ println "selected"}%>> APELLIDO</option>
                         <option value="name_company" <%if(parametro.toString()=="name_company"){ println "selected"}%>>EMPRESA</option>
                         <option value="name_area" <%if(parametro.toString()=="name_area"){ println "selected"}%>>AREA</option>
+                        <option value="name_post" <%if(parametro.toString()=="name_post"){ println "selected"}%>>CARGO</option>
                         <option value="name_test" <%if(parametro.toString()=="name_test"){ println "selected"}%>>TEST</option>
                         <option value="finalscore" <%if(parametro.toString()=="finalscore"){ println "selected"}%>>RESULTADO</option>
                       </select>
@@ -52,6 +53,7 @@
                    	        <g:sortableColumn property="last_name" title="APELLIDO"/>
                    	        <g:sortableColumn property="name_company" title="EMPRESA"/>
                    	        <g:sortableColumn property="name_area" title="AREA"/>
+                            <g:sortableColumn property="name_post" title="CARGO"/>
                             <g:sortableColumn property="name_test" title="TEST"/>
                             <g:sortableColumn property="finalscore" title="RESULTADO"/>
                    	        <g:sortableColumn property="enddate" title="FECHA"/>
@@ -67,6 +69,7 @@
                         <td>${reports.last_name}</td>
                         <td>${reports.name_company}</td>
                         <td>${reports.name_area}</td>
+                        <td>${reports.name_post}</td>
                         <td><g:link action="viewTestA" params="[idT:reports.id_test,idu:reports.id_user,nameTest:reports.name_test,user:reports.name_user+' '+reports.last_name]">${reports.name_test}</g:link></td>
                         <td>${reports.finalscore}</td>
                         <td>${reports.enddate}</td>
