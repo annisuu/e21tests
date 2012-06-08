@@ -377,8 +377,8 @@ class UserController {
      if(params?.format && params.format != "html"){
 			response.contentType = ConfigurationHolder.config.grails.mime.types[params.format]
 			response.setHeader("Content-disposition", "attachment; filename=ReportedeUsuario.${params.extension}")
-List fields = ["name_user", "last_name","name_company","name_area","name_test","finalscore","enddate"]
-			Map labels = ["name_user": "Nombre del Trabajador", "last_name": "Apellido","name_company":"Compa\u00F1\u00EDa","name_area":"Area","name_test":"Nombre del Test","finalscore":"Resultado","enddate":"Fecha de finalizaci\u00F3n"]
+List fields = ["name_user", "last_name","name_company","name_area","name_post","name_test","finalscore","enddate"]
+			Map labels = ["name_user": "Nombre del Trabajador", "last_name": "Apellido","name_company":"Compa\u00F1\u00EDa","name_area":"Area","name_post":"Cargo","name_test":"Nombre del Test","finalscore":"Resultado","enddate":"Fecha de finalizaci\u00F3n"]
 
              /* Formatter closure in previous releases
 			def upperCase = { value ->
