@@ -8,9 +8,10 @@
   <body>
 
   <table border="1">
-    <tr><td colspan="3"><div>Exportar Resultados :</div><br><div><export:formats formats="['excel','pdf']" action="scoreR" params="[identifier:identifier,test:params.idT,user:params.idu,nameT:nameTest,nameU:nameUser]" />
+    <tr><td colspan="3"><div>Exportar Resultados :</div><br><div><export:formats formats="['excel','pdf']" action="scoreR" params="[identifier:identifier,test:params.idT,user:params.idu,nameT:nameTest,nameU:nameUser,post:post]" />
 </div></td></tr>
     <tr><td colspan="3"><b>${nameTest} : ${nameUser}</b></td></tr>
+      <tr><td colspan="3"><b>CARGO : ${post}</b></td></tr>
        <g:each in="${examen}" status="i" var="examen">
     <tr>
 

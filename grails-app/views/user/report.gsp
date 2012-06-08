@@ -70,7 +70,7 @@
                         <td>${reports.name_company}</td>
                         <td>${reports.name_area}</td>
                         <td>${reports.name_post}</td>
-                        <td><g:link action="viewTestA" params="[idT:reports.id_test,idu:reports.id_user,nameTest:reports.name_test,user:reports.name_user+' '+reports.last_name]">${reports.name_test}</g:link></td>
+                        <td><g:link action="viewTestA" params="[idT:reports.id_test,idu:reports.id_user,nameTest:reports.name_test,user:reports.name_user+' '+reports.last_name,post:reports.name_post]">${reports.name_test}</g:link></td>
                         <td>${reports.finalscore}</td>
                         <td>${reports.enddate}</td>
                        </tr>
