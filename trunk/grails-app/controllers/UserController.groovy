@@ -419,7 +419,7 @@ List fields = ["numberq","questiontext", "trueanswer","answer","score"]
 			}
 
 			Map formatters = [author: upperCase]
-			Map parameters = [title: "ETILENO XXI - Test:${params.nameT}, Nombre del Trabajador: ${params.nameU} ", "title.font.style":"bold","column.widths": [0.5, 2, 0.5,0.5, 0.5]]
+			Map parameters = [title: "ETILENO XXI - Test:${params.nameT}, Nombre del Trabajador: ${params.nameU}, Cargo:${params.post} ", "title.font.style":"bold","column.widths": [0.5, 2, 0.5,0.5, 0.5]]
 
 			exportService.export(params.format, response.outputStream, reports, fields, labels, formatters, parameters)
 		}
@@ -445,16 +445,17 @@ List fields = ["numberq","questiontext", "trueanswer","answer","score"]
   def viewTest={
      def examen=ReportService.buscarExamen(params.idT)
     def resultados=ReportService.buscarRespuestas(params.idT,params.idu)
-    println examen
+    println "pooooooost"+params.post
     println resultados
-      render(view:'viewTest', model:[examen:examen,resultados:resultados,nameTest:params.nameTest,nameUser:params.user])
+      render(view:'viewTest', model:[examen:examen,resultados:resultados,nameTest:params.nameTest,nameUser:params.user,post:params.post])
   }
 
   def viewTestA={
      def examen=ReportService.buscarExamen(params.idT)
     def resultados=ReportService.buscarRespuestas(params.idT,params.idu)
     println examen
+     println "pooooooost"+params.post
     println resultados
-      render(view:'viewTestA', model:[examen:examen,resultados:resultados,nameTest:params.nameTest,nameUser:params.user])
+      render(view:'viewTestA', model:[examen:examen,resultados:resultados,nameTest:params.nameTest,nameUser:params.user,post:params.post])
   }
 }
