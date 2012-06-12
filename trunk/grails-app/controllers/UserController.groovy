@@ -392,7 +392,7 @@ List fields = ["name_user", "last_name","name_company","name_area","name_post","
 			}
 
 			Map formatters = [author: upperCase]
-			Map parameters = [title: "ETILENO XXI: Reporte de Usuarios", "title.font.style":"bold","column.widths": [0.5, 0.5, 0.5,0.5, 0.5, 0.5,1.0]]
+			Map parameters = [title: "ETILENO XXI: Reporte de Usuarios", "title.font.style":"bold","column.widths": [1.0, 0.5, 0.5,0.5, 0.5, 0.5,1.0]]
 
 			exportService.export(params.format, response.outputStream, reports, fields, labels, formatters, parameters)
 		}
@@ -443,7 +443,7 @@ List fields = ["numberq","questiontext", "trueanswer","answer","score"]
         }
     }
   def viewTest={
-     def examen=ReportService.buscarExamen(params.idT)
+    def examen=ReportService.buscarExamen(params.idT)
     def resultados=ReportService.buscarRespuestas(params.idT,params.idu)
     println "pooooooost"+params.post
     println resultados

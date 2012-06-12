@@ -1,5 +1,3 @@
-
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -27,17 +25,20 @@
                       <td colspan="3">Busqueda por:&nbsp;&nbsp;&nbsp; 
 
                         <select name="parametro">
-                        <option value="name_user" <%if(parametro.toString()=="name_user"){ println "selected"}%>> NOMBRE</option>
+                         <option value="name_user" <%if(parametro.toString()=="name_user"){ println "selected"}%>> NOMBRE</option>
                         <option value="last_name" <%if(parametro.toString()=="last_name"){ println "selected"}%>> APELLIDO</option>
                         <option value="name_company" <%if(parametro.toString()=="name_company"){ println "selected"}%>>EMPRESA</option>
                         <option value="name_area" <%if(parametro.toString()=="name_area"){ println "selected"}%>>AREA</option>
+                         <option value="name_post" <%if(parametro.toString()=="name_post"){ println "selected"}%>>CARGO</option>
                         <option value="name_test" <%if(parametro.toString()=="name_test"){ println "selected"}%>>TEST</option>
-                        <option value="finalscore" <%if(parametro.toString()=="finalscore"){ println "selected"}%>>RESULTADO</option>
+                        <option value="finalscore" <%if(parametro.toString()=="finalscore"){ println "selected"}%>>CALIFICACION</option>
+                        <option value="enddate" <%if(parametro.toString()=="enddate"){ println "selected"}%>> FECHA</option>
                       </select>
                        &nbsp;&nbsp;&nbsp;
                      <input type="text" name="value" value=${value}>
                         &nbsp;&nbsp;&nbsp;
                      <span class="button"><input class="save" type="submit" value="Buscar" /> </span>
+                       
           </td>
                       </tr>
                       </g:form>
@@ -55,8 +56,9 @@
                    	        <g:sortableColumn property="last_name" title="APELLIDO"/>
                    	        <g:sortableColumn property="name_company" title="EMPRESA"/>
                    	        <g:sortableColumn property="name_area" title="AREA"/>
+                            <g:sortableColumn property="name_post" title="CARGO"/>
                             <g:sortableColumn property="name_test" title="TEST"/>
-                            <g:sortableColumn property="finalscore" title="RESULTADO"/>
+                            <g:sortableColumn property="finalscore" title="CALIFICACION"/>
                    	        <g:sortableColumn property="enddate" title="FECHA"/>
                         </tr>
                     </thead>
@@ -70,7 +72,8 @@
                         <td>${reports.last_name}</td>
                         <td>${reports.name_company}</td>
                         <td>${reports.name_area}</td>
-                        <td><g:link action="viewTest" params="[idT:reports.id_test,idu:reports.id_user,nameTest:reports.name_test,user:reports.name_user+' '+reports.last_name,post:reports.name_post]">${reports.name_test}</g:link></td>
+                          <td>${reports.name_post}</td>
+                        <td><g:link action="viewTest" params="[idT:reports.id_test,idu:reports.id_user,nameTest:reports.name_test,user:reports.name_user+' '+reports.last_name]">${reports.name_test}</g:link></td>
                         <td>${reports.finalscore}</td>
                         <td>${reports.enddate}</td>
                       </tr>
@@ -85,7 +88,7 @@
                    }
                }%>
             </div>
-            <div class="paginateButtons">
+            <div class="paginateButtonse">
             </div>
         </div>
       
