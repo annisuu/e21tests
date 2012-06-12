@@ -12,6 +12,10 @@
     </head>
     <body>
         <div class="nav">
+             <% if(session.user?.id_rol==1)
+        {%>
+            <span class="menuButton"><g:link class="home" controller="proyecto" action="create">Regresar como administrador</g:link></span>
+        <%}%>
             <span class="menuButton"><g:link class="list" action="listWorker">lista de trabajadores</g:link></span>
         </div>
         <div class="body">

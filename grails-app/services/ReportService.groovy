@@ -41,7 +41,7 @@ class ReportService {
       report.name_test=it.name_test
       report.finalscore=it.finalscore
       report.enddate=it.enddate
-        resultado.add(report)
+      resultado.add(report)
     }
     return resultado
   }

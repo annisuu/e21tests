@@ -203,6 +203,17 @@ th.desc a {
     overflow: hidden;
     padding: 10px 3px;
 }
+
+.paginateButtonse {
+    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
+    border: 1px solid #ccc;
+    border-top: 0;
+    color: #666;
+    font-size: 10px;
+    overflow: hidden;
+    padding: 10px 3px;
+    width:745px;
+}
 .paginateButtons a {
     background: #fff;
     border: 1px solid #ccc;

@@ -75,7 +75,7 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 
         <div  id="LoginInstructor">
         <g:if test="${session.user}">
-        BIENVENIDO: <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>&nbsp;
+        BIENVENIDO:  <b>${session.user?.name_user}&nbsp;${session.user?.last_name}</b>&nbsp;
         <p></p> AREA:<b>${session.user?.name_area}</b>&nbsp;
         <p>PROYECTO: <b>${session.user?.name_project}</b>
         <p></p> LOGUEADO COMO: &nbsp;<b>${session.user?.name_rol}</b>
